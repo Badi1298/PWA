@@ -10,7 +10,7 @@
 					/>
 					<div class="images-container">
 						<VLazyImage
-							:src="HallwayBed"
+							src="/images/hallway-bed.png"
 							alt="Hallway Bed"
 							class="hallway-bed h-[560px]"
 						/>
@@ -76,7 +76,7 @@
 <script setup>
 import Logo from '@/assets/images/exblifep-logo.svg';
 import HallwayBed from '@/assets/images/hallway-bed.png';
-import ResistanceAndRecurrence from '@/assets/images/resistance-and-recurrence.png';
+import ResistanceAndRecurrence from '/images/resistance-and-recurrence.png';
 
 import VLazyImage from 'v-lazy-image';
 
