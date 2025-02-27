@@ -9,7 +9,7 @@
 					EXBLIFEP<sup>®</sup> demonstrated a favourable overall safety profile, comparable to piperacillin/tazobactam<sup>1,10</sup>
 				</h1>
 				<img
-					src="/src/assets/images/lime-green-border.png"
+					src="/lime-green-border.png"
 					alt="Lime Green Border"
 					class="h-1.5 w-[300px] my-5"
 				/>
@@ -41,7 +41,7 @@
 					</p>
 				</div>
 				<img
-					src="/src/assets/images/shield.png"
+					src="/shield.png"
 					alt="Shield"
 					class="w-[402px] h-[402px]"
 				/>

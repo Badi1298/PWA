@@ -5,12 +5,12 @@
 	>
 		<div class="flex flex-col gap-y-6 absolute top-1/2 left-[52px]">
 			<img
-				src="/src/assets/images/active-dot.png"
+				src="/active-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 			/>
 			<img
-				src="/src/assets/images/inactive-dot.png"
+				src="/inactive-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 				@click="emit('goToBottomTab')"
@@ -24,7 +24,7 @@
 				<div>
 					<h1 class="text-[32px] font-bold text-electric-blue leading-normal max-w-[920px]">Dosing and administration of EXBLIFEP<sup>®5</sup></h1>
 					<img
-						src="/src/assets/images/lime-green-border.png"
+						src="/lime-green-border.png"
 						alt="Lime Green Border"
 						class="h-1.5 w-[300px] my-5"
 					/>
@@ -34,7 +34,7 @@
 					:class="[sidebarOpen ? 'translate-x-0' : '-translate-x-52']"
 				>
 					<img
-						src="/src/assets/images/touch.png"
+						src="/touch.png"
 						alt="Touch to select tab"
 						class="w-[70px] h-[70px]"
 					/>
@@ -49,13 +49,13 @@
 					<!-- Image Section -->
 					<img
 						ref="fullDosingButton"
-						src="/src/assets/images/dosing-button-full.png"
+						src="/dosing-button-full.png"
 						alt="Dosing Full"
 						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
 						ref="emptyDosingButton"
-						src="/src/assets/images/dosing-button-empty.png"
+						src="/dosing-button-empty.png"
 						alt="Dosing Empty"
 						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
@@ -71,7 +71,7 @@
 						>
 							<div class="flex items-end">
 								<img
-									src="/src/assets/images/dosing-bottle.png"
+									src="/dosing-bottle.png"
 									alt="Dosing Bottle"
 									class="w-[150px] h-[150px]"
 								/>
@@ -93,13 +93,13 @@
 					<!-- Image Section -->
 					<img
 						ref="fullAdministrationButton"
-						src="/src/assets/images/administration-button-full.png"
+						src="/administration-button-full.png"
 						alt="Dosing Full"
 						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
 						ref="emptyAdministrationButton"
-						src="/src/assets/images/administration-button-empty.png"
+						src="/administration-button-empty.png"
 						alt="Dosing Empty"
 						class="absolute h-[704px] w-auto z-20 cursor-pointer"
 					/>
@@ -115,7 +115,7 @@
 						>
 							<div class="flex items-end">
 								<img
-									src="/src/assets/images/dosing-bottle.png"
+									src="/dosing-bottle.png"
 									alt="Dosing Bottle"
 									class="w-[150px] h-[150px]"
 								/>
@@ -137,13 +137,13 @@
 					<!-- Image Section -->
 					<img
 						ref="fullStorageButton"
-						src="/src/assets/images/storage-button-full.png"
+						src="/storage-button-full.png"
 						alt="Dosing Full"
 						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
 						ref="emptyStorageButton"
-						src="/src/assets/images/storage-button-empty.png"
+						src="/storage-button-empty.png"
 						alt="Dosing Empty"
 						class="absolute h-[704px] w-auto z-20 cursor-pointer"
 					/>
@@ -159,7 +159,7 @@
 						>
 							<div class="flex items-end">
 								<img
-									src="/src/assets/images/dosing-bottle.png"
+									src="/dosing-bottle.png"
 									alt="Dosing Bottle"
 									class="w-[150px] h-[150px]"
 								/>
@@ -189,7 +189,7 @@
 				@click="emit('goToBottomTab')"
 			>
 				<img
-					src="/src/assets/images/down-button-blue.png"
+					src="/down-button-blue.png"
 					alt="Down Button"
 					class="w-[140px] h-[50px] cursor-pointer"
 				/>
@@ -242,8 +242,8 @@ const tabs = ref([
 				>
 			</p>
 		`,
-		activeImageSrc: '/src/assets/images/dosing-button-full.png',
-		inactiveImageSrc: '/src/assets/images/dosing-button-empty.png',
+		activeImageSrc: '/dosing-button-full.png',
+		inactiveImageSrc: '/dosing-button-empty.png',
 		active: true,
 	},
 	{
@@ -267,8 +267,8 @@ const tabs = ref([
 				Every <span class="text-dark-blue font-bold">8 hours<sup>5</sup></span>
 			</p>
 		`,
-		activeImageSrc: '/src/assets/images/administration-button-full.png',
-		inactiveImageSrc: '/src/assets/images/administration-button-empty.png',
+		activeImageSrc: '/administration-button-full.png',
+		inactiveImageSrc: '/administration-button-empty.png',
 		active: false,
 	},
 	{
@@ -293,8 +293,8 @@ const tabs = ref([
 				<li class="text-dark-blue"><span class="text-cool-grey">Up to 6 hours in a refrigerator (2 °C - 8 °C)</span></li>
 			</ul>
 		`,
-		activeImageSrc: '/src/assets/images/storage-button-full.png',
-		inactiveImageSrc: '/src/assets/images/storage-button-empty.png',
+		activeImageSrc: '/storage-button-full.png',
+		inactiveImageSrc: '/storage-button-empty.png',
 		active: false,
 	},
 ]);

@@ -9,7 +9,7 @@
 					Exblifep<sup>®</sup> is where microbiological eradication* meets efficacy<sup>1</sup>
 				</h1>
 				<img
-					src="/src/assets/images/lime-green-border.png"
+					src="/lime-green-border.png"
 					alt="Lime Green Border"
 					class="h-1.5 w-[300px] my-5"
 				/>
@@ -17,7 +17,7 @@
 			<section class="grid grid-cols-2 bg-white py-6 px-8 text-xl text-cool-grey gap-y-10 gap-x-20 max-w-[1380px]">
 				<div class="flex gap-x-7 items-center col-span-2">
 					<img
-						src="/src/assets/images/summary-icon-1.png"
+						src="/summary-icon-1.png"
 						alt="Summary Icon 1"
 						class="w-[130px] h-[130px]"
 					/>
@@ -32,7 +32,7 @@
 				</div>
 				<div class="flex gap-x-7 items-center">
 					<img
-						src="/src/assets/images/summary-icon-2.png"
+						src="/summary-icon-2.png"
 						alt="Summary Icon 2"
 						class="w-[130px] h-[130px]"
 					/>
@@ -45,7 +45,7 @@
 				</div>
 				<div class="flex gap-x-7 items-center">
 					<img
-						src="/src/assets/images/summary-icon-3.png"
+						src="/summary-icon-3.png"
 						alt="Summary Icon 3"
 						class="w-[130px] h-[130px]"
 					/>
@@ -57,7 +57,7 @@
 				</div>
 				<div class="flex gap-x-7 items-center">
 					<img
-						src="/src/assets/images/summary-icon-4.png"
+						src="/summary-icon-4.png"
 						alt="Summary Icon 4"
 						class="w-[130px] h-[130px]"
 					/>
@@ -69,7 +69,7 @@
 				</div>
 				<div class="flex gap-x-7 items-center">
 					<img
-						src="/src/assets/images/summary-icon-5.png"
+						src="/summary-icon-5.png"
 						alt="Summary Icon 5"
 						class="w-[130px] h-[130px]"
 					/>
@@ -84,7 +84,7 @@
 			<section class="max-w-[1380px] bg-[#00EAFF] shadow-dark py-4 flex items-center mt-9 relative z-10 border-[6px] border-white">
 				<div class="pl-9 pr-7 py-3 border-r-[3px] border-[#002470]">
 					<img
-						src="/src/assets/images/chevron-right-bleu.png"
+						src="/chevron-right-bleu.png"
 						alt="Chevron Right Bleu"
 						class="w-[64px] h-[64px] mr-7"
 					/>

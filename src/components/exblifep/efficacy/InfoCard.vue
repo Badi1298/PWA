@@ -5,12 +5,12 @@
 			v-html="text"
 		></h4>
 		<img
-			src="/src/assets/images/lime-green-border.png"
+			src="/lime-green-border.png"
 			alt="Lime Green Border"
 			class="h-1.5 w-auto mt-5"
 		/>
 		<img
-			src="/src/assets/images/background-green-circle.png"
+			src="/background-green-circle.png"
 			alt="Green Circle"
 			class="absolute bottom-0 -right-[130px] z-0"
 		/>

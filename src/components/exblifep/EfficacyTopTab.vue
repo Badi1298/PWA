@@ -5,12 +5,12 @@
 	>
 		<div class="flex flex-col gap-y-6 absolute top-1/2 left-[52px]">
 			<img
-				src="/src/assets/images/active-dot.png"
+				src="/active-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 			/>
 			<img
-				src="/src/assets/images/inactive-dot.png"
+				src="/inactive-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 				@click="emit('goToBottomTab')"
@@ -26,7 +26,7 @@
 						EXBLIFEP® achieved superiority in overall treatment success* in patients with cUTIs vs piperacillin/tazobactam<sup>1</sup>
 					</the-title>
 					<img
-						src="/src/assets/images/lime-green-border.png"
+						src="/lime-green-border.png"
 						alt="Lime Green Border"
 						class="h-1.5 w-auto my-5"
 					/>
@@ -36,7 +36,7 @@
 					:class="[sidebarOpen ? 'translate-x-0' : '-translate-x-full']"
 				>
 					<img
-						src="/src/assets/images/touch.png"
+						src="/touch.png"
 						alt="Touch to select tab"
 						class="w-[70px] h-[70px]"
 					/>
@@ -91,7 +91,7 @@
 				</div>
 				<div class="bg-[#00EAFF] px-[22px] border-[6px] border-white">
 					<img
-						src="/src/assets/images/chart-up.png"
+						src="/chart-up.png"
 						alt="Chart Up"
 						class="w-[130px] h-[130px]"
 					/>
@@ -121,7 +121,7 @@
 				class="absolute left-1/2 -translate-x-1/2 bottom-0"
 			>
 				<img
-					src="/src/assets/images/down-button-blue.png"
+					src="/down-button-blue.png"
 					alt="Down Button"
 					class="w-[140px] h-[50px] cursor-pointer"
 				/>
@@ -135,8 +135,8 @@ import { ref, watch } from 'vue';
 
 import VLazyImage from 'v-lazy-image';
 
-import ChartA from '@/assets/images/chart-a.svg';
-import ChartB from '@/assets/images/chart-b.png';
+import ChartA from '/chart-a.svg';
+import ChartB from '/chart-b.png';
 
 import TheTitle from './TheTitle.vue';
 import TheFooter from '../exblifep/TheFooter.vue';

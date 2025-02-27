@@ -13,14 +13,14 @@
 				@click="emit('update:popupOpen', false)"
 			>
 				<img
-					src="/src/assets/images/close-button.png"
+					src="/close-button.png"
 					alt="Close Button"
 					class="w-[60px] h-[60px]"
 				/>
 			</button>
 			<the-title>{{ title }}</the-title>
 			<img
-				src="/src/assets/images/lime-green-border.png"
+				src="/lime-green-border.png"
 				alt="Lime Green Border"
 				class="h-1.5 w-auto my-5"
 			/>

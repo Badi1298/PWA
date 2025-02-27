@@ -17,7 +17,7 @@ export default {
 				'uni-grotesk': ['UniGroteskStd', 'sans-serif'],
 			},
 			backgroundImage: {
-				textured: "url('/src/assets/images/textured-background.png')",
+				textured: "url('/textured-background.png')",
 			},
 			boxShadow: {
 				'exblifep-card': '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',

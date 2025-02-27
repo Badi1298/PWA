@@ -6,7 +6,7 @@
 	>
 		<div class="w-[97%]">
 			<img
-				src="/src/assets/images/prescribing-information.png"
+				src="/prescribing-information.png"
 				alt="Prescribing Information"
 				class="w-full"
 			/>

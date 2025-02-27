@@ -5,13 +5,13 @@
 	>
 		<div class="flex flex-col gap-y-6 absolute top-1/2 left-[52px]">
 			<img
-				src="/src/assets/images/inactive-dot.png"
+				src="/inactive-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 				@click="emit('goToTopTab')"
 			/>
 			<img
-				src="/src/assets/images/active-dot.png"
+				src="/active-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 			/>
@@ -23,7 +23,7 @@
 			<div class="pt-[70px]">
 				<h1 class="text-[32px] font-bold text-electric-blue leading-normal max-w-[920px]">Reconstitution and dilution of EXBLIFEP<sup>®5</sup></h1>
 				<img
-					src="/src/assets/images/lime-green-border.png"
+					src="/lime-green-border.png"
 					alt="Lime Green Border"
 					class="h-1.5 w-[300px] my-5"
 				/>
@@ -33,21 +33,21 @@
 					<div class="relative">
 						<img
 							v-show="steps[0].active"
-							src="/src/assets/images/dosing-step-1-active.png"
+							src="/dosing-step-1-active.png"
 							:alt="`Dosing Step 1`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(0)"
 						/>
 						<img
 							v-show="!steps[0].active"
-							src="/src/assets/images/dosing-step-1-inactive.png"
+							src="/dosing-step-1-inactive.png"
 							:alt="`Dosing Step 1`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(0)"
 						/>
 						<img
 							v-if="steps[0].active"
-							src="/src/assets/images/active-arrow-down.png"
+							src="/active-arrow-down.png"
 							alt="Active Arrow Down"
 							class="absolute -bottom-16 z-0 left-1/2 -translate-x-1/2 w-[92px] h-auto"
 						/>
@@ -56,21 +56,21 @@
 					<div class="relative">
 						<img
 							v-show="steps[1].active"
-							src="/src/assets/images/dosing-step-2-active.png"
+							src="/dosing-step-2-active.png"
 							:alt="`Dosing Step 2`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(1)"
 						/>
 						<img
 							v-show="!steps[1].active"
-							src="/src/assets/images/dosing-step-2-inactive.png"
+							src="/dosing-step-2-inactive.png"
 							:alt="`Dosing Step 2`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(1)"
 						/>
 						<img
 							v-if="steps[1].active"
-							src="/src/assets/images/active-arrow-down.png"
+							src="/active-arrow-down.png"
 							alt="Active Arrow Down"
 							class="absolute -bottom-16 z-0 left-1/2 -translate-x-1/2 w-[92px] h-auto"
 						/>
@@ -79,21 +79,21 @@
 					<div class="relative">
 						<img
 							v-show="steps[2].active"
-							src="/src/assets/images/dosing-step-3-active.png"
+							src="/dosing-step-3-active.png"
 							:alt="`Dosing Step 3`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(2)"
 						/>
 						<img
 							v-show="!steps[2].active"
-							src="/src/assets/images/dosing-step-3-inactive.png"
+							src="/dosing-step-3-inactive.png"
 							:alt="`Dosing Step 3`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(2)"
 						/>
 						<img
 							v-if="steps[2].active"
-							src="/src/assets/images/active-arrow-down.png"
+							src="/active-arrow-down.png"
 							alt="Active Arrow Down"
 							class="absolute -bottom-16 z-0 left-1/2 -translate-x-1/2 w-[92px] h-auto"
 						/>
@@ -102,21 +102,21 @@
 					<div class="relative">
 						<img
 							v-show="steps[3].active"
-							src="/src/assets/images/dosing-step-4-active.png"
+							src="/dosing-step-4-active.png"
 							:alt="`Dosing Step 4`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(3)"
 						/>
 						<img
 							v-show="!steps[3].active"
-							src="/src/assets/images/dosing-step-4-inactive.png"
+							src="/dosing-step-4-inactive.png"
 							:alt="`Dosing Step 4`"
 							class="w-[216px] h-auto relative cursor-pointer z-10"
 							@click="onStepClick(3)"
 						/>
 						<img
 							v-show="steps[3].active"
-							src="/src/assets/images/active-arrow-down.png"
+							src="/active-arrow-down.png"
 							alt="Active Arrow Down"
 							class="absolute -bottom-16 z-0 left-1/2 -translate-x-1/2 w-[92px] h-auto"
 						/>
@@ -180,7 +180,7 @@
 							</p>
 						</div>
 						<img
-							src="/src/assets/images/dosing-table.png"
+							src="/dosing-table.png"
 							alt="Dosing Table"
 							class="w-[706px] h-[329px]"
 						/>

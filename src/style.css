@@ -4,42 +4,42 @@
 /* Effra */
 @font-face {
 	font-family: 'Effra';
-	src: url('/src/assets/fonts/EffraRegular.ttf') format('truetype');
+	src: url('/EffraRegular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/src/assets/fonts/EffraItalic.ttf') format('truetype');
+	src: url('/EffraItalic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/src/assets/fonts/EffraMedium.ttf') format('truetype');
+	src: url('/EffraMedium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/src/assets/fonts/EffraMediumItalic.ttf') format('truetype');
+	src: url('/EffraMediumItalic.ttf') format('truetype');
 	font-weight: 500;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/src/assets/fonts/EffraBoldItalic.ttf') format('truetype');
+	src: url('/EffraBoldItalic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/src/assets/fonts/EffraBold.ttf') format('truetype');
+	src: url('/EffraBold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -48,21 +48,21 @@
 /* Gothic */
 @font-face {
 	font-family: 'Gothic';
-	src: url('/src/assets/fonts/Gothic.TTF') format('truetype');
+	src: url('/Gothic.TTF') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Gothic';
-	src: url('/src/assets/fonts/GothicItalic.TTF') format('truetype');
+	src: url('/GothicItalic.TTF') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Gothic';
-	src: url('/src/assets/fonts/GothicBold.TTF') format('truetype');
+	src: url('/GothicBold.TTF') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -71,14 +71,14 @@
 /* StagSans */
 @font-face {
 	font-family: 'StagSans';
-	src: url('/src/assets/fonts/StagSansMedium.otf') format('opentype');
+	src: url('/StagSansMedium.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'StagSans';
-	src: url('/src/assets/fonts/StagSansBold.otf') format('opentype');
+	src: url('/StagSansBold.otf') format('opentype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -87,28 +87,28 @@
 /* UniGroteskStd */
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/src/assets/fonts/UniGroteskStdRegular.otf') format('opentype');
+	src: url('/UniGroteskStdRegular.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/src/assets/fonts/UniGroteskStdRegularItalic.otf') format('opentype');
+	src: url('/UniGroteskStdRegularItalic.otf') format('opentype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/src/assets/fonts/UniGroteskStdMedium.otf') format('opentype');
+	src: url('/UniGroteskStdMedium.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/src/assets/fonts/UniGroteskStdBold.otf') format('opentype');
+	src: url('/UniGroteskStdBold.otf') format('opentype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;

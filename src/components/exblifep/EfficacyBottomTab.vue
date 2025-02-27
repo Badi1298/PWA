@@ -5,13 +5,13 @@
 	>
 		<div class="flex flex-col gap-y-6 absolute top-1/2 left-[52px]">
 			<img
-				src="/src/assets/images/inactive-dot.png"
+				src="/inactive-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 				@click="emit('goToTopTab')"
 			/>
 			<img
-				src="/src/assets/images/active-dot.png"
+				src="/active-dot.png"
 				alt="Active Dot"
 				class="h-5 w-5 cursor-pointer"
 			/>
@@ -27,7 +27,7 @@
 						HAP/VAP<sup>6</sup>
 					</h1>
 					<img
-						src="/src/assets/images/lime-green-border.png"
+						src="/lime-green-border.png"
 						alt="Lime Green Border"
 						class="h-1.5 w-[300px] my-5"
 					/>
@@ -37,7 +37,7 @@
 					:class="[sidebarOpen ? 'translate-x-0' : '-translate-x-full']"
 				>
 					<img
-						src="/src/assets/images/touch.png"
+						src="/touch.png"
 						alt="Touch to select tab"
 						class="w-[70px] h-[70px]"
 					/>
@@ -52,19 +52,19 @@
 						@click="onClickTab(Tabs.DROP)"
 					>
 						<img
-							src="/src/assets/images/water-drop.png"
+							src="/water-drop.png"
 							alt="Water Drop"
 							class="w-[130px] h-[130px] z-10 relative"
 						/>
 						<img
 							v-if="tabsInfo[0].active"
-							src="/src/assets/images/active-arrow.png"
+							src="/active-arrow.png"
 							alt="Active Arrow"
 							class="w-[70px] h-[70px] absolute top-1/2 -right-[52px] transform -translate-y-1/2 z-0"
 						/>
 						<img
 							v-else
-							src="/src/assets/images/touch.png"
+							src="/touch.png"
 							alt="Touch"
 							class="w-[40px] h-[40px] absolute top-1/2 -right-5 transform -translate-y-1/2 z-20"
 						/>
@@ -74,19 +74,19 @@
 						@click="onClickTab(Tabs.TIME)"
 					>
 						<img
-							src="/src/assets/images/24-hours.png"
+							src="/24-hours.png"
 							alt="24 Hours"
 							class="w-[130px] h-[130px] z-10 relative"
 						/>
 						<img
 							v-if="tabsInfo[1].active"
-							src="/src/assets/images/active-arrow.png"
+							src="/active-arrow.png"
 							alt="Active Arrow"
 							class="w-[70px] h-[70px] absolute top-1/2 -right-[52px] transform -translate-y-1/2 z-0"
 						/>
 						<img
 							v-else
-							src="/src/assets/images/touch.png"
+							src="/touch.png"
 							alt="Touch"
 							class="w-[40px] h-[40px] absolute top-1/2 -right-5 transform -translate-y-1/2 z-20"
 						/>
@@ -96,19 +96,19 @@
 						@click="onClickTab(Tabs.LUNGS)"
 					>
 						<img
-							src="/src/assets/images/lungs.png"
+							src="/lungs.png"
 							alt="Lungs"
 							class="w-[130px] h-[130px] z-10 relative"
 						/>
 						<img
 							v-if="tabsInfo[2].active"
-							src="/src/assets/images/active-arrow.png"
+							src="/active-arrow.png"
 							alt="Active Arrow"
 							class="w-[70px] h-[70px] absolute top-1/2 -right-[52px] transform -translate-y-1/2 z-0"
 						/>
 						<img
 							v-else
-							src="/src/assets/images/touch.png"
+							src="/touch.png"
 							alt="Touch"
 							class="w-[40px] h-[40px] absolute top-1/2 -right-5 transform -translate-y-1/2 z-20"
 						/>
@@ -126,17 +126,17 @@
 							Cefepime and enmetazobactam have demonstrated similar concentration-time profiles in plasma and ELF.<sup>6</sup>
 						</h4>
 						<img
-							src="/src/assets/images/lime-green-border.png"
+							src="/lime-green-border.png"
 							alt="Lime Green Border"
 							class="h-1.5 w-auto mt-5"
 						/>
 						<img
-							src="/src/assets/images/background-green-circle.png"
+							src="/background-green-circle.png"
 							alt="Green Circle"
 							class="absolute bottom-0 -right-[130px] z-0"
 						/>
 						<img
-							src="/src/assets/images/water-drop.png"
+							src="/water-drop.png"
 							class="w-28 h-28 absolute bottom-3 right-6 z-10"
 						/>
 					</div>
@@ -148,17 +148,17 @@
 							Concentrations of both agents are detectable in plasma for 24 hours after last administration.<sup>6</sup>
 						</h4>
 						<img
-							src="/src/assets/images/lime-green-border.png"
+							src="/lime-green-border.png"
 							alt="Lime Green Border"
 							class="h-1.5 w-auto mt-5"
 						/>
 						<img
-							src="/src/assets/images/background-green-circle.png"
+							src="/background-green-circle.png"
 							alt="Green Circle"
 							class="absolute bottom-0 -right-[130px] z-0"
 						/>
 						<img
-							src="/src/assets/images/24-hours.png"
+							src="/24-hours.png"
 							class="w-28 h-28 absolute bottom-3 right-6 z-10"
 						/>
 					</div>
@@ -171,17 +171,17 @@
 							the management of HAP/VAP.<sup>7,8</sup>
 						</h4>
 						<img
-							src="/src/assets/images/lime-green-border.png"
+							src="/lime-green-border.png"
 							alt="Lime Green Border"
 							class="h-1.5 w-auto mt-5"
 						/>
 						<img
-							src="/src/assets/images/background-green-circle.png"
+							src="/background-green-circle.png"
 							alt="Green Circle"
 							class="absolute bottom-0 -right-[130px] z-0"
 						/>
 						<img
-							src="/src/assets/images/lungs.png"
+							src="/lungs.png"
 							class="w-28 h-28 absolute bottom-3 right-6 z-10"
 						/>
 					</div>
@@ -207,7 +207,7 @@
 			<section class="bg-[#00EAFF] py-4 flex items-center mt-9 relative z-10 border-[6px] border-white max-w-[1400px]">
 				<div class="pl-9 py-3 border-r-[3px] border-[#002470]">
 					<img
-						src="/src/assets/images/chevron-right-bleu.png"
+						src="/chevron-right-bleu.png"
 						alt="Chevron Right Bleu"
 						class="w-[62px] h-auto mr-7"
 					/>

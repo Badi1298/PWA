@@ -1,7 +1,7 @@
 <template>
 	<main class="flex justify-between bg-textured">
 		<img
-			src="/src/assets/images/exblifep-logo.svg"
+			src="/exblifep-logo.svg"
 			alt="Exblifep Logo"
 			class="absolute top-14 right-10 z-50 mt-4 ml-4"
 		/>

@@ -12,13 +12,13 @@
 				>
 					<img
 						v-if="isActive('/exblifep')"
-						src="/src/assets/images/home-sidebar-full.png"
+						src="/home-sidebar-full.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
 					<img
 						v-else
-						src="/src/assets/images/home-sidebar.png"
+						src="/home-sidebar.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
@@ -32,13 +32,13 @@
 				>
 					<img
 						v-if="isActive('/efficacy')"
-						src="/src/assets/images/chart-sidebar-full.png"
+						src="/chart-sidebar-full.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
 					<img
 						v-else
-						src="/src/assets/images/chart-sidebar.png"
+						src="/chart-sidebar.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
@@ -52,13 +52,13 @@
 				>
 					<img
 						v-if="isActive('/safety')"
-						src="/src/assets/images/shield-sidebar-full.png"
+						src="/shield-sidebar-full.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
 					<img
 						v-else
-						src="/src/assets/images/shield-sidebar.png"
+						src="/shield-sidebar.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
@@ -72,13 +72,13 @@
 				>
 					<img
 						v-if="isActive('/dosing')"
-						src="/src/assets/images/bottle-sidebar-full.png"
+						src="/bottle-sidebar-full.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
 					<img
 						v-else
-						src="/src/assets/images/bottle-sidebar.png"
+						src="/bottle-sidebar.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
@@ -92,13 +92,13 @@
 				>
 					<img
 						v-if="isActive('/summary')"
-						src="/src/assets/images/summary-sidebar-full.png"
+						src="/summary-sidebar-full.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
 					<img
 						v-else
-						src="/src/assets/images/summary-sidebar.png"
+						src="/summary-sidebar.png"
 						alt="Home Icon"
 						class="w-[30px] h-[30px]"
 					/>
@@ -112,13 +112,13 @@
 				:class="[open ? 'grid-cols-2' : 'grid-cols-1 gap-y-10']"
 			>
 				<img
-					src="/src/assets/images/book.png"
+					src="/book.png"
 					alt="Book Icon"
 					class="w-8 h-8 justify-self-center"
 					@click="referencesPopupOpen = true"
 				/>
 				<img
-					src="/src/assets/images/pi.png"
+					src="/pi.png"
 					alt="PI Icon"
 					class="w-4 h-auto justify-self-center"
 					@click="prescribingPopupOpen = true"
@@ -143,14 +143,14 @@
 			</div>
 			<img
 				v-if="open"
-				src="/src/assets/images/advanz-logo.png"
+				src="/advanz-logo.png"
 				alt="Advanz Logo"
 				:class="[open ? 'w-44' : 'w-12']"
 				class="h-auto m-auto"
 			/>
 			<img
 				v-else
-				src="/src/assets/images/advanz-logo-small.png"
+				src="/advanz-logo-small.png"
 				alt="Advanz Logo"
 				:class="[open ? 'w-44' : 'w-12']"
 				class="h-auto m-auto"
