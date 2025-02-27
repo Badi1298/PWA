@@ -72,12 +72,21 @@ export function usePageTimeTracker() {
 	// Handle route changes
 	router.beforeEach((to, from, next) => {
 		stopTracking();
+		if (from.name === 'screensaver') {
+			startNewSession();
+		}
 		next();
 	});
 
 	router.afterEach(() => {
 		startTracking();
 	});
+
+	const startNewSession = () => {
+		sessionId.value = crypto.randomUUID();
+		localStorage.setItem('sessionId', sessionId.value);
+		console.log('New session started with ID:', sessionId.value);
+	};
 
 	// Watch for changes in `route.meta.brand`
 	watch(

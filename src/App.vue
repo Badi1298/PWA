@@ -17,7 +17,6 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 import { usePageTimeTracker } from '@/composables/usePageTimeTracker.js';
 
-const route = useRoute();
 const router = useRouter();
 
 usePageTimeTracker();
@@ -32,19 +31,20 @@ const resetInactivityTimer = () => {
 };
 
 onMounted(() => {
-	// resetInactivityTimer();
-	// window.addEventListener('mousemove', resetInactivityTimer);
-	// window.addEventListener('keydown', resetInactivityTimer);
-	// window.addEventListener('click', resetInactivityTimer);
+	resetInactivityTimer();
+
+	window.addEventListener('mousemove', resetInactivityTimer);
+	window.addEventListener('keydown', resetInactivityTimer);
+	window.addEventListener('click', resetInactivityTimer);
 });
 
-// onUnmounted(() => {
-// 	clearTimeout(inactivityTimer);
+onUnmounted(() => {
+	clearTimeout(inactivityTimer);
 
-// 	window.removeEventListener('mousemove', resetInactivityTimer);
-// 	window.removeEventListener('keydown', resetInactivityTimer);
-// 	window.removeEventListener('click', resetInactivityTimer);
-// });
+	window.removeEventListener('mousemove', resetInactivityTimer);
+	window.removeEventListener('keydown', resetInactivityTimer);
+	window.removeEventListener('click', resetInactivityTimer);
+});
 </script>
 
 <style>
