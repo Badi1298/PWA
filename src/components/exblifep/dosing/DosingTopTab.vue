@@ -48,22 +48,22 @@
 				>
 					<!-- Image Section -->
 					<img
-						v-show="tabs[0].active"
+						ref="fullDosingButton"
 						src="/src/assets/images/dosing-button-full.png"
 						alt="Dosing Full"
-						class="h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
-						v-show="!tabs[0].active"
+						ref="emptyDosingButton"
 						src="/src/assets/images/dosing-button-empty.png"
 						alt="Dosing Empty"
-						class="h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 
 					<!-- Expanding Content Section -->
 					<div
 						:class="[tabs[0].class, tabs[0].active ? 'w-[806px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white border-2 border-electric-blue pl-28 rounded-r-[30px] -ml-20 z-10 overflow-hidden max-h-[704px]"
+						class="flex justify-center flex-col bg-white border-1 border-electric-blue border-l-0 pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
 					>
 						<div
 							class="opacity-0"
@@ -92,22 +92,22 @@
 				>
 					<!-- Image Section -->
 					<img
-						v-show="tabs[1].active"
+						ref="fullAdministrationButton"
 						src="/src/assets/images/administration-button-full.png"
 						alt="Dosing Full"
-						class="h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
-						v-show="!tabs[1].active"
+						ref="emptyAdministrationButton"
 						src="/src/assets/images/administration-button-empty.png"
 						alt="Dosing Empty"
-						class="h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[704px] w-auto z-20 cursor-pointer"
 					/>
 
 					<!-- Expanding Content Section -->
 					<div
 						:class="[tabs[1].class, tabs[1].active ? 'w-[806px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white border-2 border-electric-blue pl-28 rounded-r-[30px] -ml-20 z-10 overflow-hidden max-h-[704px]"
+						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
 					>
 						<div
 							class="opacity-0"
@@ -136,22 +136,22 @@
 				>
 					<!-- Image Section -->
 					<img
-						v-show="tabs[2].active"
+						ref="fullStorageButton"
 						src="/src/assets/images/storage-button-full.png"
 						alt="Dosing Full"
-						class="h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
-						v-show="!tabs[2].active"
+						ref="emptyStorageButton"
 						src="/src/assets/images/storage-button-empty.png"
 						alt="Dosing Empty"
-						class="h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[704px] w-auto z-20 cursor-pointer"
 					/>
 
 					<!-- Expanding Content Section -->
 					<div
 						:class="[tabs[2].class, tabs[2].active ? 'w-[806px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white border-2 border-electric-blue pl-28 rounded-r-[30px] -ml-20 z-10 overflow-hidden max-h-[704px]"
+						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
 					>
 						<div
 							class="opacity-0"
@@ -218,6 +218,13 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['goToBottomTab']);
+
+const fullDosingButton = ref(null);
+const emptyDosingButton = ref(null);
+const fullAdministrationButton = ref(null);
+const emptyAdministrationButton = ref(null);
+const fullStorageButton = ref(null);
+const emptyStorageButton = ref(null);
 
 const tabs = ref([
 	{
@@ -304,9 +311,36 @@ watch(
 	}
 );
 
+watch(tabs.value, (newValue) => {
+	if (newValue[0].active) {
+		gsap.to(fullDosingButton.value, { opacity: 1, display: 'block' });
+		gsap.to(emptyDosingButton.value, { opacity: 0, display: 'none' });
+	} else {
+		gsap.to(fullDosingButton.value, { opacity: 0, display: 'none' });
+		gsap.to(emptyDosingButton.value, { opacity: 1, display: 'block' });
+	}
+
+	if (newValue[1].active) {
+		gsap.to(fullAdministrationButton.value, { opacity: 1, display: 'block' });
+		gsap.to(emptyAdministrationButton.value, { opacity: 0, display: 'none' });
+	} else {
+		gsap.to(fullAdministrationButton.value, { opacity: 0, display: 'none' });
+		gsap.to(emptyAdministrationButton.value, { opacity: 1, display: 'block' });
+	}
+
+	if (newValue[2].active) {
+		gsap.to(fullStorageButton.value, { opacity: 1, display: 'block' });
+		gsap.to(emptyStorageButton.value, { opacity: 0, display: 'none' });
+	} else {
+		gsap.to(fullStorageButton.value, { opacity: 0, display: 'none' });
+		gsap.to(emptyStorageButton.value, { opacity: 1, display: 'block' });
+	}
+});
+
 onMounted(() => {
-	gsap.set('.dosing', { width: '806px', opacity: 1 });
+	gsap.set('.dosing', { width: '806px', opacity: 1, borderRight: '1px solid #1F17F6', borderTop: '1px solid #1F17F6', borderBottom: '1px solid #1F17F6' });
 	gsap.set('.dosing-content', { opacity: 1 });
+	gsap.set(fullDosingButton.value, { opacity: 1, display: 'block' });
 });
 
 const activateTab = async (newTab) => {
@@ -326,6 +360,7 @@ const activateTab = async (newTab) => {
 		.to(`.${previousTab.class}`, {
 			opacity: 0,
 			width: 0,
+			border: 0,
 			duration: 0.4,
 		})
 		.to(
@@ -333,6 +368,9 @@ const activateTab = async (newTab) => {
 			{
 				opacity: 1,
 				width: '806px',
+				borderRight: '1px solid #1F17F6',
+				borderTop: '1px solid #1F17F6',
+				borderBottom: '1px solid #1F17F6',
 				duration: 0.4,
 			},
 			'-=0.2'

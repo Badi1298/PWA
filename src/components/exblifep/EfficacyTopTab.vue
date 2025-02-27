@@ -54,14 +54,14 @@
 				<div class="flex flex-col w-[1034px]">
 					<div class="grid grid-cols-[1fr_2fr] gap-x-2">
 						<button
-							class="py-2.5 rounded-t-[20px] text-2xl transition-colors duration-300"
+							class="py-2.5 rounded-t-[20px] text-2xl transition-colors duration-500"
 							:class="[activeTab === Tabs.OVERALL_SUCCESS ? 'bg-electric-blue text-white' : 'bg-[#E4E4E4]']"
 							@click="activeTab = Tabs.OVERALL_SUCCESS"
 						>
 							Overall success*: Day 14
 						</button>
 						<button
-							class="py-2.5 rounded-t-[20px] text-2xl transition-colors duration-300"
+							class="py-2.5 rounded-t-[20px] text-2xl transition-colors duration-500"
 							:class="[activeTab === Tabs.CLINICAL_CURE ? 'bg-electric-blue text-white' : 'bg-[#E4E4E4]']"
 							@click="activeTab = Tabs.CLINICAL_CURE"
 						>
@@ -72,8 +72,8 @@
 						v-if="activeTab === Tabs.OVERALL_SUCCESS"
 						class="w-[1034px] h-[583px]"
 					>
-						<img
-							src="/src/assets/images/chart-a.svg"
+						<VLazyImage
+							:src="ChartA"
 							alt="Chart A"
 							class="w-full h-full"
 						/>
@@ -82,8 +82,8 @@
 						v-if="activeTab === Tabs.CLINICAL_CURE"
 						class="w-[1034px] h-[583px]"
 					>
-						<img
-							src="/src/assets/images/chart-b.png"
+						<VLazyImage
+							:src="ChartB"
 							alt="Chart B"
 							class="w-full h-full"
 						/>
@@ -132,6 +132,11 @@
 
 <script setup>
 import { ref, watch } from 'vue';
+
+import VLazyImage from 'v-lazy-image';
+
+import ChartA from '@/assets/images/chart-a.svg';
+import ChartB from '@/assets/images/chart-b.png';
 
 import TheTitle from './TheTitle.vue';
 import TheFooter from '../exblifep/TheFooter.vue';
