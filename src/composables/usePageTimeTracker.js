@@ -36,7 +36,7 @@ export function usePageTimeTracker() {
 		startTime.value = performance.now();
 	};
 
-	const stopTracking = (navigatedFromBy) => {
+	const stopTracking = (navigatedAwayBy) => {
 		if (!brand.value || !startTime.value) return; // Skip if brand is invalid
 
 		const timeSpent = (performance.now() - startTime.value) / 1000; // Convert to seconds
@@ -47,7 +47,7 @@ export function usePageTimeTracker() {
 		// Append to journey
 		data.brands[brand.value].sessions[sessionId.value].journey.push({
 			page: route.name,
-			navigatedFromBy,
+			navigatedAwayBy,
 			timeSpent,
 			timestamp: format(new Date(), 'pp'),
 		});
@@ -75,9 +75,9 @@ export function usePageTimeTracker() {
 
 	// Handle route changes
 	router.beforeEach((to, from, next) => {
-		const navigatedFromBy = to.query.navigatedFromBy || '';
+		const navigatedAwayBy = to.query.navigatedAwayBy || '';
 
-		stopTracking(navigatedFromBy);
+		stopTracking(navigatedAwayBy);
 		if (from.name === 'screensaver') {
 			startNewSession();
 		}

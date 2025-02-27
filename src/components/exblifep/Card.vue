@@ -48,8 +48,8 @@ const router = useRouter();
 const discoverMore = () => {
 	router.push({
 		path: props.discoverMorePath,
-		state: { navigatedFromBy: 'discover-more-button' },
-		query: { navigatedFromBy: 'discover-more-button' },
+		state: { navigatedAwayBy: 'discover-more-button' },
+		query: { navigatedAwayBy: 'discover-more-button' },
 	});
 };
 </script>
