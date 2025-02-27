@@ -7,24 +7,22 @@
 				v-html="subtitle"
 			></p>
 
-			<RouterLink
-				:to="discoverMorePath"
-				class=""
+			<button
+				class="py-3 text-sm mt-2.5 w-[150px] cursor-pointers"
+				:class="buttonClass"
+				@click="discoverMore"
 			>
-				<button
-					class="py-3 text-sm mt-2.5 w-[150px]"
-					:class="buttonClass"
-				>
-					Discover More
-				</button>
-			</RouterLink>
+				Discover More
+			</button>
 		</div>
 		<slot></slot>
 	</div>
 </template>
 
 <script setup>
-defineProps({
+import { useRouter } from 'vue-router';
+
+const props = defineProps({
 	title: {
 		type: String,
 		default: '',
@@ -42,4 +40,16 @@ defineProps({
 		default: '',
 	},
 });
+
+const emit = defineEmits(['click']);
+
+const router = useRouter();
+
+const discoverMore = () => {
+	router.push({
+		path: props.discoverMorePath,
+		state: { navigatedFromBy: 'discover-more-button' },
+		query: { navigatedFromBy: 'discover-more-button' },
+	});
+};
 </script>
