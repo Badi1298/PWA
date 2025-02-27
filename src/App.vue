@@ -10,7 +10,7 @@
 		</router-view>
 	</div>
 	<button
-		class="p-2.5 bg-electric-blue font-effra text-white rounded-md"
+		class="p-2.5 bg-electric-blue font-effra text-white text-sm rounded-md fixed top-1 right-1"
 		@click="exportData"
 	>
 		Export data
@@ -18,9 +18,10 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router';
-import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
+import { onMounted, onUnmounted } from 'vue';
 
+import { exportData } from '@/utils/analytics.js';
 import { usePageTimeTracker } from '@/composables/usePageTimeTracker.js';
 
 const router = useRouter();
@@ -51,19 +52,6 @@ onUnmounted(() => {
 	window.removeEventListener('keydown', resetInactivityTimer);
 	window.removeEventListener('click', resetInactivityTimer);
 });
-
-const exportData = () => {
-	const data = localStorage.getItem('pageMetrics');
-	const blob = new Blob([data], { type: 'application/json' });
-	const url = URL.createObjectURL(blob);
-
-	const a = document.createElement('a');
-	a.href = url;
-	a.download = 'pageMetrics.json';
-	document.body.appendChild(a);
-	a.click();
-	document.body.removeChild(a);
-};
 </script>
 
 <style>
