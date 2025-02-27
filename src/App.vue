@@ -15,6 +15,10 @@
 import { useRoute, useRouter } from 'vue-router';
 import { ref, onMounted, onUnmounted } from 'vue';
 
+import { usePageTimeTracker } from '@/composables/usePageTimeTracker.js';
+
+// usePageTimeTracker();
+
 const route = useRoute();
 const router = useRouter();
 
