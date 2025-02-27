@@ -94,21 +94,21 @@
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdRegularItalic.otf') format('opentype');
+	src: url('/UniGroteskStdRegularItalic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdMedium.otf') format('opentype');
+	src: url('/UniGroteskStdMedium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdBold.otf') format('opentype');
+	src: url('/UniGroteskStdBold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
