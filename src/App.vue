@@ -9,6 +9,12 @@
 			</transition>
 		</router-view>
 	</div>
+	<button
+		class="p-2.5 bg-electric-blue font-effra text-white rounded-md"
+		@click="exportData"
+	>
+		Export data
+	</button>
 </template>
 
 <script setup>
@@ -45,6 +51,19 @@ onUnmounted(() => {
 	window.removeEventListener('keydown', resetInactivityTimer);
 	window.removeEventListener('click', resetInactivityTimer);
 });
+
+const exportData = () => {
+	const data = localStorage.getItem('pageMetrics');
+	const blob = new Blob([data], { type: 'application/json' });
+	const url = URL.createObjectURL(blob);
+
+	const a = document.createElement('a');
+	a.href = url;
+	a.download = 'pageMetrics.json';
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+};
 </script>
 
 <style>
