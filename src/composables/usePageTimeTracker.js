@@ -21,7 +21,7 @@ export function usePageTimeTracker() {
 		}
 
 		if (!data.brands[brand.value].sessions[sessionId.value]) {
-			data.brands[brand.value].sessions[sessionId.value] = { history: [], aggregate: {} };
+			data.brands[brand.value].sessions[sessionId.value] = { journey: [], aggregate: {}, total: 0 };
 		}
 
 		return data;
@@ -40,20 +40,23 @@ export function usePageTimeTracker() {
 		if (!brand.value || !startTime.value) return; // Skip if brand is invalid
 
 		const timeSpent = (performance.now() - startTime.value) / 1000; // Convert to seconds
-		console.log(`User spent ${timeSpent} seconds on ${route.path}`);
+		console.log(`User spent ${timeSpent} seconds on ${route.name}`);
 
 		const data = getStoredData();
 
-		// Append to history
-		data.brands[brand.value].sessions[sessionId.value].history.push({
+		// Append to journey
+		data.brands[brand.value].sessions[sessionId.value].journey.push({
 			page: route.name,
 			timeSpent,
 			timestamp: format(new Date(), 'pp'),
 		});
 
 		// Update aggregate time spent on the page
-		data.brands[brand.value].sessions[sessionId.value].aggregate[route.path] =
-			(data.brands[brand.value].sessions[sessionId.value].aggregate[route.path] || 0) + timeSpent;
+		data.brands[brand.value].sessions[sessionId.value].aggregate[route.name] =
+			(data.brands[brand.value].sessions[sessionId.value].aggregate[route.name] || 0) + timeSpent;
+
+		// Update total time spent on the brand
+		data.brands[brand.value].sessions[sessionId.value].total += timeSpent;
 
 		saveData(data);
 		startTime.value = null;
