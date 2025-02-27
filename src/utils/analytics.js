@@ -20,6 +20,7 @@ export const exportData = () => {
 					SessionID: sessionId,
 					Page: entry.page,
 					'Journey / Time Spent (s)': entry.timeSpent.toFixed(2),
+					'Navigated Away By': entry.navigatedAwayBy,
 					Timestamp: entry.timestamp,
 					Aggregate: '', // Empty for journey rows
 					Total: '', // Empty for journey rows
@@ -33,6 +34,7 @@ export const exportData = () => {
 					SessionID: sessionId,
 					Page: page,
 					'Journey / Time Spent (s)': '', // Empty for aggregate rows
+					'Navigated Away By': '',
 					Timestamp: '', // Empty for aggregate rows
 					Aggregate: time.toFixed(2),
 					Total: '', // Empty for aggregate rows
@@ -45,13 +47,24 @@ export const exportData = () => {
 				SessionID: sessionId,
 				Page: 'TOTAL',
 				'Journey / Time Spent (s)': '', // Empty for total row
+				'Navigated Away By': '',
 				Timestamp: '', // Empty for total row
 				Aggregate: '', // Empty for total row
 				Total: sessionData.total.toFixed(2),
 			});
 
 			// Add an empty row for spacing between sessions
-			rows.push({});
+			rows.push({}); // Add an empty row for spacing between sessions
+			rows.push({
+				Brand: '---',
+				SessionID: '---',
+				Page: '---',
+				'Journey / Time Spent (s)': '---',
+				'Navigated Away By': '---',
+				Timestamp: '---',
+				Aggregate: '---',
+				Total: '---',
+			}); // Add a row indicating a new session
 		});
 	});
 
