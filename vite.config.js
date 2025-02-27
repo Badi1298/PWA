@@ -43,10 +43,10 @@ export default defineConfig({
 						},
 					},
 					{
-						urlPattern: /\/assets\/.*\.(?:png|jpg|jpeg|svg|gif|woff2|woff|ttf|eot)$/,
+						urlPattern: new RegExp('/.*\\.(png|jpg|jpeg|svg|gif|woff2|woff|ttf|eot)$'),
 						handler: 'CacheFirst',
 						options: {
-							cacheName: 'assets-cache',
+							cacheName: 'static-assets-cache',
 							expiration: {
 								maxEntries: 100,
 								maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
