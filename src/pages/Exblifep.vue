@@ -4,7 +4,7 @@
 			<div class="flex">
 				<section class="flex flex-col pt-24">
 					<VLazyImage
-						:src="Logo"
+						src="/exblifep-logo.svg"
 						alt="EXBLIFEP®"
 						class="w-64 ml-[74px]"
 					/>
@@ -15,7 +15,7 @@
 							class="hallway-bed h-[560px]"
 						/>
 						<VLazyImage
-							:src="ResistanceAndRecurrence"
+							src="/resistance-and-recurrence.png"
 							alt="Resistance and Recurrence"
 							class="resistance-and-recurrence"
 						/>
@@ -74,10 +74,6 @@
 </template>
 
 <script setup>
-import Logo from '/exblifep-logo.svg';
-import HallwayBed from '/hallway-bed.png';
-import ResistanceAndRecurrence from '/resistance-and-recurrence.png';
-
 import VLazyImage from 'v-lazy-image';
 
 import ChartIcon from '../icons/ChartIcon.vue';
