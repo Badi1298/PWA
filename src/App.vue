@@ -17,25 +17,10 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 import { usePageTimeTracker } from '@/composables/usePageTimeTracker.js';
 
-// usePageTimeTracker();
-
 const route = useRoute();
 const router = useRouter();
 
-const sessionId = ref(crypto.randomUUID());
-let startTime = performance.now();
-
-const startNewSession = () => {
-	sessionId.value = crypto.randomUUID(); // Invalidate the current session
-	startTime = performance.now();
-};
-
-const handleRouteChange = (_, from) => {};
-
-router.beforeEach((to, from, next) => {
-	handleRouteChange(to, from);
-	next();
-});
+usePageTimeTracker();
 
 let inactivityTimer;
 
@@ -47,20 +32,19 @@ const resetInactivityTimer = () => {
 };
 
 onMounted(() => {
-	resetInactivityTimer();
-
-	window.addEventListener('mousemove', resetInactivityTimer);
-	window.addEventListener('keydown', resetInactivityTimer);
-	window.addEventListener('click', resetInactivityTimer);
+	// resetInactivityTimer();
+	// window.addEventListener('mousemove', resetInactivityTimer);
+	// window.addEventListener('keydown', resetInactivityTimer);
+	// window.addEventListener('click', resetInactivityTimer);
 });
 
-onUnmounted(() => {
-	clearTimeout(inactivityTimer);
+// onUnmounted(() => {
+// 	clearTimeout(inactivityTimer);
 
-	window.removeEventListener('mousemove', resetInactivityTimer);
-	window.removeEventListener('keydown', resetInactivityTimer);
-	window.removeEventListener('click', resetInactivityTimer);
-});
+// 	window.removeEventListener('mousemove', resetInactivityTimer);
+// 	window.removeEventListener('keydown', resetInactivityTimer);
+// 	window.removeEventListener('click', resetInactivityTimer);
+// });
 </script>
 
 <style>
