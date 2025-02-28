@@ -26,7 +26,7 @@
 import { ref } from 'vue';
 import { RouterView } from 'vue-router';
 
-import Sidebar from '../components/exblifep/Sidebar.vue';
+import Sidebar from '../../components/exblifep/Sidebar.vue';
 
 const sidebarOpen = ref(true);
 </script>
