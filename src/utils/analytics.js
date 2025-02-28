@@ -3,7 +3,7 @@ import * as XLSX from 'xlsx';
 export const exportData = () => {
 	const data = JSON.parse(localStorage.getItem('pageMetrics') || '{}');
 
-	if (!data || !data.brands || Object.keys(data.brands).length === 0) {
+	if (!data || !data.sessions || Object.keys(data.sessions).length === 0) {
 		console.warn('No data available for export.');
 		return;
 	}
@@ -11,13 +11,13 @@ export const exportData = () => {
 	const rows = [];
 
 	// Convert JSON to a structured array for Excel
-	Object.entries(data.brands).forEach(([brand, brandData]) => {
-		Object.entries(brandData.sessions || {}).forEach(([sessionId, sessionData]) => {
+	Object.entries(data.sessions).forEach(([sessionId, sessionData]) => {
+		Object.entries(sessionData.brands || {}).forEach(([brand, brandData]) => {
 			// Add individual journey entries
-			sessionData.journey.forEach((entry) => {
+			brandData.journey.forEach((entry) => {
 				rows.push({
-					Brand: brand,
 					SessionID: sessionId,
+					Brand: brand,
 					Page: entry.page,
 					'Journey / Time Spent (s)': entry.timeSpent.toFixed(2),
 					'Navigated Away By': entry.navigatedAwayBy,
@@ -28,10 +28,10 @@ export const exportData = () => {
 			});
 
 			// Add aggregate time for each page
-			Object.entries(sessionData.aggregate || {}).forEach(([page, time]) => {
+			Object.entries(brandData.aggregate || {}).forEach(([page, time]) => {
 				rows.push({
-					Brand: brand,
 					SessionID: sessionId,
+					Brand: brand,
 					Page: page,
 					'Journey / Time Spent (s)': '', // Empty for aggregate rows
 					'Navigated Away By': '',
@@ -43,29 +43,28 @@ export const exportData = () => {
 
 			// Add total session time row
 			rows.push({
-				Brand: brand,
 				SessionID: sessionId,
+				Brand: brand,
 				Page: 'TOTAL',
 				'Journey / Time Spent (s)': '', // Empty for total row
 				'Navigated Away By': '',
 				Timestamp: '', // Empty for total row
 				Aggregate: '', // Empty for total row
-				Total: sessionData.total.toFixed(2),
+				Total: brandData.total.toFixed(2),
 			});
-
-			// Add an empty row for spacing between sessions
-			rows.push({}); // Add an empty row for spacing between sessions
-			rows.push({
-				Brand: '---',
-				SessionID: '---',
-				Page: '---',
-				'Journey / Time Spent (s)': '---',
-				'Navigated Away By': '---',
-				Timestamp: '---',
-				Aggregate: '---',
-				Total: '---',
-			}); // Add a row indicating a new session
 		});
+		// Add an empty row for spacing between sessions
+		rows.push({}); // Add an empty row for spacing between sessions
+		rows.push({
+			Brand: '---',
+			SessionID: '---',
+			Page: '---',
+			'Journey / Time Spent (s)': '---',
+			'Navigated Away By': '---',
+			Timestamp: '---',
+			Aggregate: '---',
+			Total: '---',
+		}); // Add a row indicating a new session
 	});
 
 	// Convert array to worksheet
