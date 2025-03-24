@@ -4,43 +4,50 @@
 /* Effra */
 @font-face {
 	font-family: 'Effra';
-	src: url('/EffraRegular.ttf') format('truetype');
+	src: url('/src/assets/fonts/EffraRegular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/EffraItalic.ttf') format('truetype');
+	src: url('/src/assets/fonts/EffraItalic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/EffraMedium.ttf') format('truetype');
+	src: url('/src/assets/fonts/EffraMedium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/EffraMediumItalic.ttf') format('truetype');
+	src: url('/src/assets/fonts/EffraMediumItalic.ttf') format('truetype');
 	font-weight: 500;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/EffraBoldItalic.ttf') format('truetype');
+	src: url('/src/assets/fonts/EffraBoldItalic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Effra';
-	src: url('/EffraBold.ttf') format('truetype');
+	src: url('/src/assets/fonts/EffraBold.ttf') format('truetype');
 	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Effra';
+	src: url('/src/assets/fonts/EffraXBold.ttf') format('truetype');
+	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
 }
@@ -48,37 +55,81 @@
 /* Gothic */
 @font-face {
 	font-family: 'Gothic';
-	src: url('/Gothic.TTF') format('truetype');
+	src: url('/src/assets/fonts/GOTHIC.TTF') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Gothic';
-	src: url('/GothicItalic.TTF') format('truetype');
+	src: url('/src/assets/fonts/GOTHICI.TTF') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Gothic';
-	src: url('/GothicBold.TTF') format('truetype');
+	src: url('/src/assets/fonts/GOTHICB.TTF') format('truetype');
 	font-weight: bold;
 	font-style: normal;
+	font-display: swap;
+}
+
+/* Futura */
+@font-face {
+	font-family: 'Futura';
+	src: url('/src/assets/fonts/FuturaRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('/src/assets/fonts/FuturaRegularOblique.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('/src/assets/fonts/FuturaHeavy.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('/src/assets/fonts/FuturaHeavyOblique.ttf') format('opentype');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('/src/assets/fonts/FuturaBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('/src/assets/fonts/FuturaBoldOblique.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
 	font-display: swap;
 }
 
 /* StagSans */
 @font-face {
 	font-family: 'StagSans';
-	src: url('/StagSansMedium.otf') format('opentype');
+	src: url('/src/assets/fonts/StagSansMedium.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'StagSans';
-	src: url('/StagSansBold.otf') format('opentype');
+	src: url('/src/assets/fonts/StagSansBold.otf') format('opentype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -87,28 +138,28 @@
 /* UniGroteskStd */
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdRegular.ttf') format('truetype');
+	src: url('/src/assets/fonts/UniGroteskStdReg.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdRegularItalic.ttf') format('truetype');
+	src: url('/src/assets/fonts/UniGroteskStdRegIta.otf') format('opentype');
 	font-weight: normal;
 	font-style: italic;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdMedium.ttf') format('truetype');
+	src: url('/src/assets/fonts/UniGroteskStdMed.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'UniGroteskStd';
-	src: url('/UniGroteskStdBold.ttf') format('truetype');
+	src: url('/src/assets/fonts/UniGroteskStdBld.otf') format('opentype');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
