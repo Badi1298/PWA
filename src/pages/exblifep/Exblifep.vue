@@ -114,25 +114,30 @@
 					</div>
 				</div>
 			</section>
-			<section class="flex justify-between mt-9">
+			<section class="flex justify-between items-center mt-9">
 				<explore-another />
-				<div class="flex items-center text-[10px] text-cool-grey h-[50px] px-4 border border-black max-w-[468px]">
-					▼ This medicinal product is subject to additional monitoring. This will allow quick identification of new safety information. Healthcare
-					professionals are asked to report any suspected adverse reactions.
+				<div class="flex bg-white items-center h-[40px] px-4 border border-black max-w-[488px]">
+					<the-footnotes class="text-cool-grey max-h-6"
+						>▼ This medicinal product is subject to additional monitoring. This will allow quick identification of new safety information.
+						Healthcare professionals are asked to report any suspected adverse reactions.</the-footnotes
+					>
 				</div>
 			</section>
 		</div>
-		<footer class="pt-2 font-effra">
-			<div class="flex items-end ml-[54px] max-w-[1446px] gap-x-9">
+		<footer class="pt-3.5 font-effra">
+			<div class="flex flex-col gap-y-0.5 ml-[26px] max-w-[1446px] gap-x-9">
 				<the-footnotes class="font-effra text-cool-grey"
-					>*In the ALLIUM study, microbiological eradication is defined as reduction of the qualifying baseline pathogen to less than 103 CFU/mL in
-					urine.<sup>1</sup><br />
-					For healthcare professionals only.<br />
-					This medicine has been authorised by the EMA. Product is not yet commercialised in all European markets, because it is in the reimbursement
-					phase. MAH for Europe: Advanz Pharma Limited, Unit 17 Northwood House, Northwood Crescent, Dublin 9, D09 V504, Ireland. MAH for UK: Mercury
-					Pharmaceuticals Ltd, Dashwood House, 69 Old Broad Street, London, EC2M 1QS, UK.<br />
-					©2025 ADVANZ PHARMA® | GL/CEFE/PM/0051 - Date of preparation: March 2025
+					>*In the ALLIUM study, microbiological eradication is defined as reduction of the qualifying baseline pathogen to less than 10<sup>3</sup>
+					CFU/mL in urine.<sup>1</sup><br />
+					For healthcare professionals only.
 				</the-footnotes>
+				<the-footnotes class="font-effra text-cool-grey"
+					>This medicine has been authorised by the EMA. Product is not yet commercialised in all European markets, because it is in the reimbursement
+					phase. MAH for Europe: Advanz Pharma Limited, Unit 17 Northwood House,<br />
+					Northwood Crescent, Dublin 9, D09 V504, Ireland. MAH for UK: Mercury Pharmaceuticals Ltd, Dashwood House, 69 Old Broad Street, London, EC2M
+					1QS, UK.<br />
+					©2025 ADVANZ PHARMA® | GL/CEFE/PM/0051 - Date of preparation: March 2025</the-footnotes
+				>
 			</div>
 			<div class="flex justify-between items-center mt-2 mr-12"></div>
 		</footer>
