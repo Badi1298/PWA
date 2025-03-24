@@ -1,6 +1,6 @@
 <template>
 	<div class="flex">
-		<div class="flex items-center absolute z-20 top-[17%] w-[324px]">
+		<div class="flex items-center absolute z-20 top-[17%] w-[225px]">
 			<div
 				class="relative transform w-full"
 				@click="toggleSidebar"
@@ -281,7 +281,7 @@ onMounted(() => {
 		display: 'block',
 	});
 	gsap.set(sidebar.value, {
-		width: 350,
+		width: 225,
 		marginTop: 32,
 	});
 });
@@ -323,7 +323,7 @@ const toggleSidebar = async () => {
 			.to(
 				sidebar.value,
 				{
-					width: 118,
+					width: 80,
 					clipPath: 'inset(15% 0 0 0)',
 					ease: 'power4.inOut',
 					duration: 0.5,
@@ -337,7 +337,7 @@ const toggleSidebar = async () => {
 		tl.to(
 			sidebar.value,
 			{
-				width: 350,
+				width: 250,
 				clipPath: 'inset(0% 0 0 0)',
 				ease: 'power4.inOut',
 				duration: 0.4,

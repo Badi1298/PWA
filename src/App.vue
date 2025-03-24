@@ -9,12 +9,6 @@
 			</transition>
 		</router-view>
 	</div>
-	<button
-		class="p-2.5 bg-electric-blue font-effra text-white text-sm rounded-md fixed top-1 right-1"
-		@click="exportData"
-	>
-		Export data
-	</button>
 </template>
 
 <script setup>
