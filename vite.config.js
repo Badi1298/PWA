@@ -43,7 +43,7 @@ export default defineConfig({
 						},
 					},
 					{
-						urlPattern: new RegExp('/.*\\.(png|jpg|jpeg|svg|gif|woff2|woff|ttf|eot)$'),
+						urlPattern: new RegExp('/.*\\.(png|svg|mp4|otf|ttf)$'),
 						handler: 'CacheFirst',
 						options: {
 							cacheName: 'static-assets-cache',

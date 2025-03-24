@@ -3,7 +3,7 @@
 		ref="topTab"
 		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10"
 	>
-		<div class="flex flex-col gap-y-6 absolute top-1/2 left-[52px]">
+		<!-- <div class="flex flex-col gap-y-6 absolute top-1/2 left-[52px]">
 			<img
 				src="/active-dot.png"
 				alt="Active Dot"
@@ -15,24 +15,27 @@
 				class="h-5 w-5 cursor-pointer"
 				@click="emit('goToBottomTab')"
 			/>
-		</div>
-		<div
-			class="flex flex-col justify-center font-effra transition-all duration-300 relative pb-6"
-			:class="[sidebarOpen ? 'ml-[124px]' : 'ml-[224px]']"
-		>
-			<div class="flex justify-between mr-12">
+		</div> -->
+		<img
+			src="/back-button-white.png"
+			alt="Back Button"
+			class="absolute top-1/2 -translate-y-1/2 h-[150px] cursor-pointer"
+			@click="router.push({ name: 'exblifep-safety', query: { navigatedAwayBy: 'back-button' } })"
+			@touchstart.prevent="router.push({ name: 'exblifep-safety', query: { navigatedAwayBy: 'back-button' } })"
+		/>
+		<div class="page-content flex flex-col justify-end font-effra relative pb-12">
+			<div class="relative flex justify-between mr-12">
 				<div>
-					<h1 class="text-[32px] font-bold text-electric-blue leading-normal max-w-[920px]">Dosing and administration of EXBLIFEP<sup>®5</sup></h1>
+					<h1 class="text-[32px] font-bold text-electric-blue max-w-[920px] leading-tight">
+						Dosing and administration of EXBLIFEP<span class="font-extrabold">®</span><sup class="text-[50%] font-extrabold -top-[0.8em]">5</sup>
+					</h1>
 					<img
 						src="/lime-green-border.png"
 						alt="Lime Green Border"
 						class="h-1.5 w-[300px] my-5"
 					/>
 				</div>
-				<div
-					class="flex gap-x-3.5 items-center text-cool-grey text-2xl font-medium transform transition-all duration-300"
-					:class="[sidebarOpen ? 'translate-x-0' : '-translate-x-52']"
-				>
+				<div class="select-tab absolute top-1/2 -translate-y-1/2 flex gap-x-3.5 items-center text-cool-grey text-2xl font-medium">
 					<img
 						src="/touch.png"
 						alt="Touch to select tab"
@@ -41,10 +44,11 @@
 					<span class="text-cool-grey text-2xl">Touch a step to continue</span>
 				</div>
 			</div>
-			<div class="flex pt-5 gap-x-10">
+			<div class="flex pt-10 gap-x-10">
 				<div
 					class="flex"
 					@click="activateTab(tabs[0])"
+					@touchstart.prevent="activateTab(tabs[0])"
 				>
 					<!-- Image Section -->
 					<img
@@ -62,8 +66,8 @@
 
 					<!-- Expanding Content Section -->
 					<div
-						:class="[tabs[0].class, tabs[0].active ? 'w-[806px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white border-1 border-electric-blue border-l-0 pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
+						:class="[tabs[0].class, tabs[0].active ? 'w-[1000px]' : 'w-0 opacity-0']"
+						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
 					>
 						<div
 							class="opacity-0"
@@ -89,6 +93,7 @@
 				<div
 					class="flex"
 					@click="activateTab(tabs[1])"
+					@touchstart.prevent="activateTab(tabs[1])"
 				>
 					<!-- Image Section -->
 					<img
@@ -106,16 +111,16 @@
 
 					<!-- Expanding Content Section -->
 					<div
-						:class="[tabs[1].class, tabs[1].active ? 'w-[806px]' : 'w-0 opacity-0']"
+						:class="[tabs[1].class, tabs[1].active ? 'w-[1000px]' : 'w-0 opacity-0']"
 						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
 					>
 						<div
 							class="opacity-0"
 							:class="`${tabs[1].class}-content`"
 						>
-							<div class="flex items-end">
+							<div class="flex items-end mt-8">
 								<img
-									src="/dosing-bottle.png"
+									src="/iv-bag-blue.png"
 									alt="Dosing Bottle"
 									class="w-[150px] h-[150px]"
 								/>
@@ -124,67 +129,64 @@
 								</h3>
 							</div>
 							<div
-								class="flex flex-col pl-10 text-2xl text-cool-grey"
+								class="relative flex flex-col pl-10 text-2xl text-cool-grey"
 								v-html="tabs[1].details"
 							></div>
-						</div>
-					</div>
-				</div>
-				<div
-					class="flex"
-					@click="activateTab(tabs[2])"
-				>
-					<!-- Image Section -->
-					<img
-						ref="fullStorageButton"
-						src="/storage-button-full.png"
-						alt="Dosing Full"
-						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
-					/>
-					<img
-						ref="emptyStorageButton"
-						src="/storage-button-empty.png"
-						alt="Dosing Empty"
-						class="absolute h-[704px] w-auto z-20 cursor-pointer"
-					/>
-
-					<!-- Expanding Content Section -->
-					<div
-						:class="[tabs[2].class, tabs[2].active ? 'w-[806px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
-					>
-						<div
-							class="opacity-0"
-							:class="`${tabs[2].class}-content`"
-						>
-							<div class="flex items-end">
-								<img
-									src="/dosing-bottle.png"
-									alt="Dosing Bottle"
-									class="w-[150px] h-[150px]"
-								/>
-								<h3 class="text-[40px] font-semibold text-electric-blue -translate-y-4 -translate-x-3">
-									{{ tabs[2].name }}
-								</h3>
-							</div>
 							<div
-								class="flex flex-col pl-10 text-2xl text-cool-grey"
-								v-html="tabs[2].details"
-							></div>
+								class="max-w-fit bg-[#00EAFF] shadow-dark py-4 ml-10 flex mt-4 items-center z-10 border-[3px] border-white pr-20 translate-y-14"
+							>
+								<div class="pl-7 pr-3 py-2 border-r-2 border-[#002470]">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="41"
+										height="34"
+										viewBox="0 0 41 34"
+										fill="none"
+									>
+										<g clip-path="url(#clip0_269_13454)">
+											<path
+												d="M0.165039 0.193726L16.876 16.9727L0.165039 33.7517H9.44893L26.1599 16.9727L21.518 12.316L9.44893 0.193726H0.165039Z"
+												fill="#002470"
+											/>
+											<path
+												d="M14.4766 -0.000488281L31.1876 16.7785L14.4766 33.5523H23.7604L40.4714 16.7785L35.8295 12.1165L23.7604 -0.000488281H14.4766Z"
+												fill="#002470"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_269_13454">
+												<rect
+													width="40.3065"
+													height="33.7523"
+													fill="white"
+													transform="translate(0.166016)"
+												/>
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<h2 class="pl-3 text-base font-bold text-[#002470] max-w-[1200px] leading-tight">
+									For more information on the reconstitution/dilution of EXBLIFEP®,<br />
+									speak to a member of the ADVANZ PHARMA team.
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<footer class="relative pb-6">
-			<the-footer
-				class="transition-all duration-300 mb-4"
-				:class="[sidebarOpen ? 'pl-[124px]' : 'pl-[224px]']"
+			<the-footer class="footer mb-4 font-effra"
 				>EXBLIFEP® is not indicated in children as the safety and efficacy in children below 18 years of age has not yet been established. No data are
-				available.5
+				available.<sup>5</sup>
 			</the-footer>
-			<ExploreAnother />
-			<button
+			<div class="flex justify-between items-center mr-12">
+				<ExploreAnother />
+				<RouterLink :to="{ name: 'exblifep-summary', query: { navigatedAwayBy: 'next-section-button' } }">
+					<next-section class="bg-electric-blue" />
+				</RouterLink>
+			</div>
+			<!-- <button
 				class="absolute left-1/2 -translate-x-1/2 bottom-0"
 				@click="emit('goToBottomTab')"
 			>
@@ -193,18 +195,22 @@
 					alt="Down Button"
 					class="w-[140px] h-[50px] cursor-pointer"
 				/>
-			</button>
+			</button> -->
 		</footer>
 	</div>
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { ref, computed, inject, onMounted, watch } from 'vue';
 
 import { gsap } from 'gsap';
 
-import TheFooter from '../TheFooter.vue';
-import ExploreAnother from '../ExploreAnother.vue';
+import { trackAction } from '@/utils/analytics.js';
+
+import TheFooter from '@/components/TheFooter.vue';
+import NextSection from '@/components/NextSection.vue';
+import ExploreAnother from '@/components/ExploreAnother.vue';
 
 const props = defineProps({
 	sidebarOpen: {
@@ -219,28 +225,50 @@ const props = defineProps({
 
 const emit = defineEmits(['goToBottomTab']);
 
+const route = useRoute();
+const router = useRouter();
+
+const sessionId = inject('sessionId');
+
 const fullDosingButton = ref(null);
 const emptyDosingButton = ref(null);
 const fullAdministrationButton = ref(null);
 const emptyAdministrationButton = ref(null);
-const fullStorageButton = ref(null);
-const emptyStorageButton = ref(null);
 
 const tabs = ref([
 	{
 		id: 1,
 		class: 'dosing',
 		name: 'Dosing',
+		action: 'dosing',
 		details: `
-			<p class="pr-20">
-				The recommended dose for patients with normal renal function is
-				<span class="text-dark-blue font-bold">2.0 g/0.5 g cefepime/enmetazobactam.<sup>5</sup></span>
+			<p class="pr-20 leading-tight">
+				The recommended dose for patients with normal renal<br /> function is
+				<span class="text-dark-blue font-bold">2.0 g/0.5 g cefepime/enmetazobactam.<sup class="text-[60%] font-extrabold -top-[0.6em]">5</sup></span>
 			</p>
-			<p class="pr-20 mt-5">
-				The usual duration of treatment is 7 to 10 days. In patients with bacteraemia treatment up to 14 days may be required.<sup
+			<p class="pr-20 mt-5 leading-tight">
+				The usual duration of treatment is 7 to 10 days. In patients with bacteraemia treatment up to 14 days may be required.<sup class="text-[60%] font-bold -top-[0.6em]"
 					>5</sup
 				>
 			</p>
+			<div class="max-w-fit bg-[#00EAFF] shadow-dark py-4 flex items-center mt-10 relative z-10 border-[3px] border-white pr-20 translate-y-5">
+				<div class="pl-7 pr-3 py-2 border-r-2 border-[#002470]">
+					<svg xmlns="http://www.w3.org/2000/svg" width="41" height="34" viewBox="0 0 41 34" fill="none">
+                        <g clip-path="url(#clip0_269_13454)">
+                        <path d="M0.165039 0.193726L16.876 16.9727L0.165039 33.7517H9.44893L26.1599 16.9727L21.518 12.316L9.44893 0.193726H0.165039Z" fill="#002470"/>
+                        <path d="M14.4766 -0.000488281L31.1876 16.7785L14.4766 33.5523H23.7604L40.4714 16.7785L35.8295 12.1165L23.7604 -0.000488281H14.4766Z" fill="#002470"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_269_13454">
+                        <rect width="40.3065" height="33.7523" fill="white" transform="translate(0.166016)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+				</div>
+				<h2 class="pl-3 text-base font-bold text-[#002470] max-w-[1200px] leading-tight">
+					For more information on the reconstitution/dilution of EXBLIFEP®,<br /> speak to a member of the ADVANZ PHARMA team.
+				</h2>
+			</div>
 		`,
 		activeImageSrc: '/dosing-button-full.png',
 		inactiveImageSrc: '/dosing-button-empty.png',
@@ -250,8 +278,9 @@ const tabs = ref([
 		id: 2,
 		class: 'administration',
 		name: 'Method of administration',
+		action: 'administration',
 		details: `
-			<p>Administered as:<sup>5</sup></p>
+			<p>Administered as:<sup class="text-[60%] -top-[0.6em]">5</sup></p>
 			<ul class="flex flex-col gap-y-3.5 list-disc pl-5 ml-3">
 				<li class="text-dark-blue font-bold">
 					2-hour <span class="text-cool-grey font-normal">IV infusion for cUTI, includixng AP</span>
@@ -264,43 +293,19 @@ const tabs = ref([
 				</li>
 			</ul>
 			<p class="mt-4">
-				Every <span class="text-dark-blue font-bold">8 hours<sup>5</sup></span>
+				Every <span class="text-dark-blue font-bold">8 hours<sup class="text-[60%] font-extrabold -top-[0.55em]">5</sup></span>
 			</p>
 		`,
 		activeImageSrc: '/administration-button-full.png',
 		inactiveImageSrc: '/administration-button-empty.png',
 		active: false,
 	},
-	{
-		id: 3,
-		class: 'storage',
-		name: 'Storage',
-		details: `
-			<p class="text-dark-blue font-bold">Powder vial:</p>
-			<ul class="flex flex-col gap-y-2 list-disc pl-5 ml-3 pr-12">
-				<li class="text-dark-blue"><span class="text-cool-grey">Store in a refrigerator (2 °C - 8 °C)</span></li>
-				<li class="text-dark-blue">
-					<span class="text-cool-grey">Keep the vial in the outer carton in order to protect from light</span>
-				</li>
-				<li class="text-dark-blue"><span class="text-cool-grey">2-year shelf life</span></li>
-			</ul>
-			<p class="text-dark-blue font-bold mt-4">Reconstituted solution:</p>
-			<ul class="flex flex-col gap-y-2 list-disc pl-5 ml-3 pr-5">
-				<li class="text-dark-blue"><span class="text-cool-grey">The reconstituted vial should be further diluted immediately</span></li>
-			</ul>
-			<p class="text-dark-blue font-bold mt-4">Diluted solution:</p>
-			<ul class="flex flex-col gap-y-2 list-disc pl-5 ml-3">
-				<li class="text-dark-blue"><span class="text-cool-grey">Up to 6 hours in a refrigerator (2 °C - 8 °C)</span></li>
-			</ul>
-		`,
-		activeImageSrc: '/storage-button-full.png',
-		inactiveImageSrc: '/storage-button-empty.png',
-		active: false,
-	},
 ]);
 
 const topTab = ref(null);
 const activeTab = ref(1);
+
+const brand = computed(() => route.meta.brand);
 
 watch(
 	() => props.scrollIntoView,
@@ -313,34 +318,74 @@ watch(
 
 watch(tabs.value, (newValue) => {
 	if (newValue[0].active) {
-		gsap.to(fullDosingButton.value, { opacity: 1, display: 'block' });
-		gsap.to(emptyDosingButton.value, { opacity: 0, display: 'none' });
+		gsap.to(fullDosingButton.value, { opacity: 1, display: 'block', duration: 0.3 });
+		gsap.to(emptyDosingButton.value, { opacity: 0, display: 'none', duration: 0.3 });
 	} else {
-		gsap.to(fullDosingButton.value, { opacity: 0, display: 'none' });
-		gsap.to(emptyDosingButton.value, { opacity: 1, display: 'block' });
+		gsap.to(fullDosingButton.value, { opacity: 0, display: 'none', duration: 0.3 });
+		gsap.to(emptyDosingButton.value, { opacity: 1, display: 'block', duration: 0.3 });
 	}
 
 	if (newValue[1].active) {
-		gsap.to(fullAdministrationButton.value, { opacity: 1, display: 'block' });
-		gsap.to(emptyAdministrationButton.value, { opacity: 0, display: 'none' });
+		gsap.to(fullAdministrationButton.value, { opacity: 1, display: 'block', duration: 0.3 });
+		gsap.to(emptyAdministrationButton.value, { opacity: 0, display: 'none', duration: 0.3 });
 	} else {
-		gsap.to(fullAdministrationButton.value, { opacity: 0, display: 'none' });
-		gsap.to(emptyAdministrationButton.value, { opacity: 1, display: 'block' });
-	}
-
-	if (newValue[2].active) {
-		gsap.to(fullStorageButton.value, { opacity: 1, display: 'block' });
-		gsap.to(emptyStorageButton.value, { opacity: 0, display: 'none' });
-	} else {
-		gsap.to(fullStorageButton.value, { opacity: 0, display: 'none' });
-		gsap.to(emptyStorageButton.value, { opacity: 1, display: 'block' });
+		gsap.to(fullAdministrationButton.value, { opacity: 0, display: 'none', duration: 0.3 });
+		gsap.to(emptyAdministrationButton.value, { opacity: 1, display: 'block', duration: 0.3 });
 	}
 });
 
+watch(
+	() => props.sidebarOpen,
+	(value) => {
+		if (value) {
+			const tl = gsap.timeline();
+
+			tl.to('.select-tab', {
+				opacity: 0,
+				duration: 0.3,
+			})
+				.set(
+					'.select-tab',
+					{
+						right: '0px',
+					},
+					'+=0.2'
+				)
+				.to('.select-tab', {
+					opacity: 1,
+				});
+		} else {
+			const tl = gsap.timeline();
+
+			tl.to('.select-tab', {
+				opacity: 0,
+				duration: 0.3,
+			})
+				.set(
+					'.select-tab',
+					{
+						right: '250px',
+					},
+					'+=0.2'
+				)
+				.to('.select-tab', {
+					opacity: 1,
+				});
+		}
+	}
+);
+
 onMounted(() => {
-	gsap.set('.dosing', { width: '806px', opacity: 1, borderRight: '1px solid #1F17F6', borderTop: '1px solid #1F17F6', borderBottom: '1px solid #1F17F6' });
+	gsap.set('.dosing', { width: '1000px', opacity: 1, borderRight: '2px solid #1F17F6', borderTop: '2px solid #1F17F6', borderBottom: '2px solid #1F17F6' });
+	gsap.set('.administration', { width: 20, opacity: 0, borderRight: '2px solid #1F17F6', borderTop: '2px solid #1F17F6', borderBottom: '2px solid #1F17F6' });
 	gsap.set('.dosing-content', { opacity: 1 });
 	gsap.set(fullDosingButton.value, { opacity: 1, display: 'block' });
+
+	if (props.sidebarOpen) {
+		gsap.set('.select-tab', { right: '0' });
+	} else {
+		gsap.set('.select-tab', { right: '250px' });
+	}
 });
 
 const activateTab = async (newTab) => {
@@ -348,6 +393,8 @@ const activateTab = async (newTab) => {
 
 	const previousTab = tabs.value.find((tab) => tab.id === activeTab.value);
 	const nextTab = newTab;
+
+	trackAction('Dosing and administration', newTab.action, sessionId.value, brand.value);
 
 	previousTab.active = false;
 
@@ -359,21 +406,20 @@ const activateTab = async (newTab) => {
 	})
 		.to(`.${previousTab.class}`, {
 			opacity: 0,
-			width: 0,
-			border: 0,
-			duration: 0.4,
+			width: 20,
+			duration: 0.5,
 		})
 		.to(
 			`.${nextTab.class}`,
 			{
 				opacity: 1,
-				width: '806px',
-				borderRight: '1px solid #1F17F6',
-				borderTop: '1px solid #1F17F6',
-				borderBottom: '1px solid #1F17F6',
-				duration: 0.4,
+				width: '1000px',
+				borderRight: '2px solid #1F17F6',
+				borderTop: '2px solid #1F17F6',
+				borderBottom: '2px solid #1F17F6',
+				duration: 0.5,
 			},
-			'-=0.2'
+			'-=0.3'
 		)
 		.to(`.${nextTab.class}-content`, {
 			opacity: 1,

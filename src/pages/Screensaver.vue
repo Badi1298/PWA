@@ -1,14 +1,13 @@
 <template>
-	<div
-		id="screensaver"
+	<video
+		src="@/assets/images/screensaver.mp4"
+		autoplay
+		muted
+		loop
+		style="width: 100vw; height: 100vh"
 		@click="hideScreensaver"
-		@mousemove="hideScreensaver"
-		class="fixed top-0 left-0 w-full h-full z-50 bg-black/100 cursor-pointer flex justify-center items-center"
-	>
-		<div class="bg-lightblue-500 w-full h-full flex justify-center items-center">
-			<h1 class="text-4xl font-bold text-white">Screensaver</h1>
-		</div>
-	</div>
+		@touchstart.prevent="hideScreensaver"
+	></video>
 </template>
 
 <script setup>

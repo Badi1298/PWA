@@ -1,9 +1,9 @@
 <template>
-	<main class="flex justify-between bg-textured">
+	<main class="flex bg-textured">
 		<img
-			src="/exblifep-logo.svg"
+			src="/exblifep-logo-no-triangle.png"
 			alt="Exblifep Logo"
-			class="absolute top-14 right-10 z-50 mt-4 ml-4"
+			class="absolute top-20 right-10 z-50 w-[250px]"
 		/>
 		<div class="flex flex-1 flex-col h-screen">
 			<router-view v-slot="{ Component }">
@@ -19,14 +19,47 @@
 			</router-view>
 		</div>
 		<Sidebar v-model:open="sidebarOpen" />
+		<transition
+			name="fade"
+			mode="out-in"
+		>
+			<img
+				v-if="route.name === 'exblifep-home'"
+				src="/background-green-circle.png"
+				alt="Green Circle"
+				:class="{ 'opacity-0': route.name === 'exblifep-home' }"
+				class="absolute w-[776px] bottom-0 right-0 -z-10"
+			/>
+			<img
+				v-else-if="route.name === 'exblifep-dosing'"
+				src="/background-circle-blue.png"
+				alt=" Background Circle Blue"
+				class="absolute w-[776px] bottom-0 right-0 -z-10"
+			/>
+			<img
+				v-else-if="route.name === 'exblifep-safety'"
+				src="/background-circle-grey.png"
+				alt="Background Circle Yellow"
+				class="absolute w-[776px] bottom-0 right-0 -z-10"
+			/>
+			<img
+				v-else
+				src="/background-green-circle.png"
+				alt="Green Circle"
+				class="absolute w-[776px] bottom-0 right-0 -z-10"
+			/>
+		</transition>
 	</main>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { RouterView } from 'vue-router';
+import { useRoute } from 'vue-router';
 
-import Sidebar from '../../components/exblifep/Sidebar.vue';
+import Sidebar from '@/components/exblifep/Sidebar.vue';
+import { onMounted } from 'vue';
+
+const route = useRoute();
 
 const sidebarOpen = ref(true);
 </script>

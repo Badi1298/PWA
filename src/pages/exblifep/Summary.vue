@@ -1,12 +1,12 @@
 <template>
 	<div class="grid grid-cols-1 grid-rows-1 pb-6 relative z-10 h-full">
-		<div
-			class="flex flex-col justify-center font-effra transition-all duration-300"
-			:class="[sidebarOpen ? 'ml-[124px]' : 'ml-[224px]']"
-		>
+		<div class="page-content flex flex-col justify-center font-effra">
 			<div>
-				<h1 class="text-[32px] font-bold text-electric-blue leading-normal max-w-[920px]">
-					Exblifep<sup>®</sup> is where microbiological eradication* meets efficacy<sup>1</sup>
+				<h1 class="text-[32px] font-bold text-electric-blue max-w-[920px]">
+					EXBLIFEP<span class="font-extrabold">®</span> is where microbiological eradication* meets efficacy<sup
+						class="text-[50%] font-extrabold -top-[0.8em]"
+						>1</sup
+					>
 				</h1>
 				<img
 					src="/lime-green-border.png"
@@ -14,7 +14,7 @@
 					class="h-1.5 w-[300px] my-5"
 				/>
 			</div>
-			<section class="grid grid-cols-2 bg-white py-6 px-8 text-xl text-cool-grey gap-y-10 gap-x-20 max-w-[1380px]">
+			<section class="grid grid-cols-2 bg-white py-6 px-8 text-xl text-cool-grey gap-y-10 gap-x-12 max-w-[1380px]">
 				<div class="flex gap-x-7 items-center col-span-2">
 					<img
 						src="/summary-icon-1.png"
@@ -23,11 +23,11 @@
 					/>
 					<div class="min-w-[3px] h-[66px] bg-dark-blue"></div>
 					<p>
-						EXBLIFEP<sup>®</sup> is indicated for the
+						EXBLIFEP® is indicated for the
 						<span class="text-dark-blue font-bold"
-							>treatment of adult patients with cUTI including AP, HAP/VAP and bacteraemia associated with these infections,</span
+							>treatment of adult patients with cUTI including pyelonephritis, HAP/VAP and bacteraemia associated with these infections,</span
 						>
-						caused by gram-negative bacteria<sup>5</sup>
+						caused by gram-negative bacteria<sup class="text-[60%]">5</sup>
 					</p>
 				</div>
 				<div class="flex gap-x-7 items-center">
@@ -38,9 +38,10 @@
 					/>
 					<div class="min-w-[3px] h-[66px] bg-dark-blue"></div>
 					<p>
-						EXBLIFEP<sup>®</sup> demonstrated
+						EXBLIFEP® demonstrated
 						<span class="text-dark-blue font-bold">non-inferiority and superiority vs piperacillin/tazobactam</span> in the composite endpoint of
-						clinical cure and microbiological eradication in adults with cUTIs at Day 14 in the Primary Analysis Set?<sup>†1</sup>
+						clinical cure and microbiological eradication in adults with cUTIs<br />
+						at Day 14 in the Primary Analysis Set?<sup class="text-[60%]">†1</sup>
 					</p>
 				</div>
 				<div class="flex gap-x-7 items-center">
@@ -51,8 +52,11 @@
 					/>
 					<div class="min-w-[3px] h-[66px] bg-dark-blue"></div>
 					<p>
-						EXBLIFEP<sup>®</sup> is indicated to treat HAP/VAP, and
-						<span class="text-dark-blue font-bold">could be a useful carbapenem-sparing option for ESBL-producing pathogens<sup>5,9</sup></span>
+						EXBLIFEP® is indicated to treat HAP/VAP, and<br />
+						<span class="text-dark-blue font-bold"
+							>could be a useful carbapenem-sparing option<br />
+							for ESBL Class A-producing pathogens<sup class="text-[60%]">5,10</sup></span
+						>
 					</p>
 				</div>
 				<div class="flex gap-x-7 items-center">
@@ -63,8 +67,8 @@
 					/>
 					<div class="min-w-[3px] h-[66px] bg-dark-blue"></div>
 					<p>
-						EXBLIFEP<sup>®</sup> demonstrated <span class="text-dark-blue font-bold">high intrapulmonary penetration</span> and similar distribution
-						kinetics of both compounds into the ELF, supporting its use in the treatment of HAP/VAP<sup>6,10</sup>
+						EXBLIFEP® demonstrated <span class="text-dark-blue font-bold">high intrapulmonary penetration</span> and similar distribution kinetics
+						of both compounds into the ELF, supporting its use in the treatment of HAP/VAP<sup class="text-[60%]">6,9</sup>
 					</p>
 				</div>
 				<div class="flex gap-x-7 items-center">
@@ -75,8 +79,12 @@
 					/>
 					<div class="min-w-[3px] h-[66px] bg-dark-blue"></div>
 					<p>
-						EXBLIFEP<sup>®</sup> demonstrated a
-						<span class="text-dark-blue font-bold">favourable overall safety profile, comparable to</span> piperacillin tazobactam<sup>1</sup>
+						EXBLIFEP® demonstrated a
+						<span class="text-dark-blue font-bold"
+							>favourable overall<br />
+							safety profile, comparable to</span
+						>
+						piperacillin tazobactam<sup class="text-[60%]">1,9</sup>
 					</p>
 				</div>
 			</section>
@@ -86,7 +94,7 @@
 					<img
 						src="/chevron-right-bleu.png"
 						alt="Chevron Right Bleu"
-						class="w-[64px] h-[64px] mr-7"
+						class="w-[64px] h-[64px]"
 					/>
 				</div>
 				<h2 class="pl-10 text-2xl font-bold text-[#002470] max-w-[1200px]">
@@ -96,10 +104,7 @@
 			</section>
 		</div>
 		<footer class="flex flex-col">
-			<the-footer
-				class="transition-all duration-300 max-w-[1380px]"
-				:class="[sidebarOpen ? 'ml-[124px]' : 'ml-[224px]']"
-			>
+			<the-footer class="footer max-w-[1380px] font-effra">
 				AMR, antimicrobial resistance; AP, acute pyelonephritis; CFU, colony-forming unit; cUTI, complicated urinary tract infection; ELF, epithelial
 				lining fluid; HAP/VAP, hospital-acquired pneumonia/ventilator associated pneumonia; MIC, minimum inhibitory concentration.<br />
 				*In the ALLIUM study, microbiological eradication is defined as &lt; 103 CFU/mL of qualifying baseline pathogen in urine.<sup>1</sup><br />
@@ -109,22 +114,28 @@
 				baseline pathogen in urine at 105 CFU/mL or more or the same pathogen present in both blood and urine cultures that was not resistant to either
 				cefepime/enmetazobactam (MIC ≤ 8 μg/mL) or piperacillin/tazobactam (MIC ≤ 64 μg/mL).<sup>1</sup>
 			</the-footer>
-			<div class="flex justify-between items-center mt-4 mr-12">
-				<ExploreAnother />
+			<div class="flex justify-end items-center mt-4 mr-12">
+				<explore-another-short />
 			</div>
 		</footer>
 	</div>
 </template>
 
 <script setup>
-import TheFooter from '../../components/exblifep/TheFooter.vue';
-import NextSection from '../../components/exblifep/NextSection.vue';
-import ExploreAnother from '../../components/exblifep/ExploreAnother.vue';
+import { toRef } from 'vue';
 
-defineProps({
+import { usePageAnimation } from '@/composables/usePageAnimation.js';
+
+import TheFooter from '@/components/TheFooter.vue';
+import ExploreAnotherShort from '@/components/ExploreAnotherShort.vue';
+
+const props = defineProps({
 	sidebarOpen: {
 		type: Boolean,
 		required: true,
 	},
 });
+
+const sidebarOpenRef = toRef(props, 'sidebarOpen');
+usePageAnimation(sidebarOpenRef);
 </script>
