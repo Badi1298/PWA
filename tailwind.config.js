@@ -8,6 +8,12 @@ export default {
 			'electric-blue': '#1F17F6',
 			'dark-blue': '#002470',
 			'cool-grey': '#646469',
+			'dark-grey': '#414042',
+			charcoal: '#2E2E2E',
+			'primary-green': '#009656',
+			'primary-purple': '#982384',
+			'primary-turqoise': '#276B88',
+			'primary-light-orange': '#FFA94D',
 		},
 		extend: {
 			fontFamily: {
@@ -15,15 +21,25 @@ export default {
 				gothic: ['Gothic', 'sans-serif'],
 				'stag-sans': ['StagSans', 'sans-serif'],
 				'uni-grotesk': ['UniGroteskStd', 'sans-serif'],
+				futura: ['Futura', 'sans-serif'],
 			},
 			backgroundImage: {
 				textured: "url('/textured-background.png')",
+				zevtera: "url('/zevtera-bg.png')",
+				home: "url('/home-background.png')",
 			},
 			boxShadow: {
-				'exblifep-card': '0px 4px 14px 0px rgba(0, 0, 0, 0.25)',
+				'exblifep-card': '0px 2.932px 10.261px 0px rgba(0, 0, 0, 0.25)',
 				sidebar: '0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
 				explore: '0px 0px 4px 0px rgba(0, 0, 0, 0.08)',
+				treatment: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 				dark: '3px 4px 10px 2px rgba(0, 0, 0, 0.25)',
+				'zevtera-efficacy-card':
+					'-39px 347px 98px 0px rgba(0, 0, 0, 0.00), -25px 222px 89px 0px rgba(0, 0, 0, 0.01), -14px 125px 75px 0px rgba(0, 0, 0, 0.05), -6px 56px 56px 0px rgba(0, 0, 0, 0.09), -2px 14px 31px 0px rgba(0, 0, 0, 0.10)',
+				'zevtera-efficacy-pathogens-card':
+					'-49px 114px 35px 0px rgba(0, 0, 0, 0.00), -31px 73px 32px 0px rgba(0, 0, 0, 0.01), -18px 41px 27px 0px rgba(0, 0, 0, 0.05), -8px 18px 20px 0px rgba(0, 0, 0, 0.09), -2px 5px 11px 0px rgba(0, 0, 0, 0.10)',
+				'zevtera-efficacy-more-pathogens-card':
+					'0px 4px 4px 0px rgba(0, 0, 0, 0.25), -49px 114px 35px 0px rgba(0, 0, 0, 0.00), -31px 73px 32px 0px rgba(0, 0, 0, 0.01), -18px 41px 27px 0px rgba(0, 0, 0, 0.05), -8px 18px 20px 0px rgba(0, 0, 0, 0.09), -2px 5px 11px 0px rgba(0, 0, 0, 0.10)',
 			},
 		},
 	},
