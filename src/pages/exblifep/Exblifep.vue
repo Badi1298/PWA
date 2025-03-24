@@ -1,31 +1,18 @@
 <template>
 	<div class="grid grid-cols-1 grid-rows-1 pb-6 h-full">
-		<div class="flex flex-col justify-center">
-			<div class="flex">
-				<section class="flex flex-col pt-24">
+		<div class="flex flex-col">
+			<section class="flex pl-14">
+				<div>
 					<VLazyImage
 						:src="Logo"
 						alt="EXBLIFEP®"
-						class="w-[270px] h-[60px] object-contain ml-[50px]"
+						class="w-[154px]"
 					/>
-					<div class="images-container z-20 mt-10">
-						<VLazyImage
-							:src="HallwayBed"
-							alt="Hallway Bed"
-							class="hallway-bed w-[738px] h-[522px] object-contain"
-						/>
-						<VLazyImage
-							:src="ResistanceAndRecurrence"
-							alt="Resistance and Recurrence"
-							class="absolute bottom-0 right-0 h-[727px] object-contain"
-						/>
-					</div>
-					<div class="relative flex items-center gap-x-9 pt-5 pb-8 pl-14 pr-6 max-w-[1078px] font-effra">
-						<chevron-right class="min-w-[62px] min-h-[64px]" />
+					<div class="relative flex items-center gap-x-9 py-8 font-effra mt-6">
 						<img
 							src="/exblifep-blue-line.png"
 							alt="Top Blue Line"
-							class="absolute -top-0.5 left-0 w-full"
+							class="absolute top-0 left-0 w-full"
 						/>
 						<img
 							src="/exblifep-blue-line.png"
@@ -53,41 +40,50 @@
 							</div>
 						</div>
 					</div>
-				</section>
-				<section class="pt-[172px] -translate-x-1">
+				</div>
+				<div class="min-w-[587px]">
+					<VLazyImage
+						:src="ResistanceAndRecurrence"
+						alt="Resistance and Recurrence"
+						class="w-full h-full"
+					/>
+				</div>
+			</section>
+			<!-- <section class="pt-[172px] -translate-x-1">
 					<h2 class="text-[32px] font-bold text-electric-blue font-effra">I'm interested in:</h2>
-					<card
-						title="Efficacy"
-						subtitle="EXBLIFEP® superiority in primary<br /> endpoint vs. piperacillin/tazobactam<sup class='text-[65%]'>1</sup>"
-						button-class="bg-[#97D700] text-black"
-						button-text-class="max-h-4"
-						discover-more-path="/exblifep/efficacy"
-						class="mt-9 font-effra min-w-[424px] pt-9"
-					>
-						<chart-icon class="min-w-[106px]" />
-					</card>
-					<card
-						title="Safety"
-						subtitle="Comparable safety profile<br /> to piperacillin/tazobactam<sup class='text-[65%]'>1</sup>"
-						button-class="bg-cool-grey text-white"
-						button-text-class="max-h-4"
-						discover-more-path="/exblifep/safety"
-						class="mt-11 font-effra min-w-[424px] pt-9"
-					>
-						<shield-icon class="min-w-[106px]" />
-					</card>
-					<card
-						title="Dosing"
-						subtitle="Recommended dosing and<br /> administration details<sup class='text-[65%]'>5</sup>"
-						button-class="bg-electric-blue text-white"
-						button-text-class="max-h-4"
-						discover-more-path="/exblifep/dosing"
-						class="mt-11 font-effra min-w-[424px] pt-9"
-					>
-						<bottle-icon class="min-w-[106px]" />
-					</card>
-				</section>
-			</div>
+					<div class="flex">
+						<card
+							title="Efficacy"
+							subtitle="EXBLIFEP® superiority in primary<br /> endpoint vs. piperacillin/tazobactam<sup class='text-[65%]'>1</sup>"
+							button-class="bg-[#97D700] text-black"
+							button-text-class="max-h-4"
+							discover-more-path="/exblifep/efficacy"
+							class="mt-9 font-effra min-w-[424px] pt-9"
+						>
+							<chart-icon class="min-w-[106px]" />
+						</card>
+						<card
+							title="Safety"
+							subtitle="Comparable safety profile<br /> to piperacillin/tazobactam<sup class='text-[65%]'>1</sup>"
+							button-class="bg-cool-grey text-white"
+							button-text-class="max-h-4"
+							discover-more-path="/exblifep/safety"
+							class="mt-11 font-effra min-w-[424px] pt-9"
+						>
+							<shield-icon class="min-w-[106px]" />
+						</card>
+						<card
+							title="Dosing"
+							subtitle="Recommended dosing and<br /> administration details<sup class='text-[65%]'>5</sup>"
+							button-class="bg-electric-blue text-white"
+							button-text-class="max-h-4"
+							discover-more-path="/exblifep/dosing"
+							class="mt-11 font-effra min-w-[424px] pt-9"
+						>
+							<bottle-icon class="min-w-[106px]" />
+						</card>
+					</div>
+				</section> -->
 		</div>
 		<footer class="pt-2 font-effra">
 			<div class="flex items-end ml-[54px] max-w-[1446px] gap-x-9">
@@ -135,20 +131,3 @@ defineProps({
 	},
 });
 </script>
-
-<style scoped>
-.logo {
-	padding-left: 74px;
-	max-width: 250px;
-}
-
-.images-container {
-	position: relative;
-	max-width: 1046px;
-}
-
-.hallway-bed {
-	-webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
-	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
-}
-</style>
