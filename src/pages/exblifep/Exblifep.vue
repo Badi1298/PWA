@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-cols-1 grid-rows-1 pb-6 h-full">
-		<div class="relative flex flex-col">
+		<div class="relative flex flex-col pr-8 max-w-[969px]">
 			<VLazyImage
 				:src="ResistanceAndRecurrence"
 				alt="Resistance and Recurrence"
@@ -65,7 +65,11 @@
 									>EXBLIFEP® superiority in primary endpoint vs. piperacillin/tazobactam<sup class="text-[70%]">1</sup></the-body
 								>
 							</div>
-							<button class="bg-[#97D700] mb-[18px] w-[125px] py-[9px]">
+							<button
+								class="bg-[#97D700] mb-[18px] w-[125px] py-[9px]"
+								@click="router.push({ name: 'exblifep-efficacy' })"
+								@touchstart.prevent="router.push({ name: 'exblifep-efficacy' })"
+							>
 								<the-body class="max-h-[12px]">Discover more</the-body>
 							</button>
 						</div>
@@ -80,7 +84,11 @@
 									piperacillin/tazobactam<sup class="text-[70%]">1</sup></the-body
 								>
 							</div>
-							<button class="bg-cool-grey mb-[18px] w-[125px] py-[9px]">
+							<button
+								class="bg-cool-grey mb-[18px] w-[125px] py-[9px]"
+								@click="router.push({ name: 'exblifep-safety' })"
+								@touchstart.prevent="router.push({ name: 'exblifep-safety' })"
+							>
 								<the-body class="max-h-[12px] text-white">Discover more</the-body>
 							</button>
 						</div>
@@ -95,14 +103,18 @@
 									administration details<sup class="text-[70%]">5</sup></the-body
 								>
 							</div>
-							<button class="bg-electric-blue mb-[18px] w-[125px] py-[9px]">
+							<button
+								class="bg-electric-blue mb-[18px] w-[125px] py-[9px]"
+								@click="router.push({ name: 'exblifep-dosing' })"
+								@touchstart.prevent="router.push({ name: 'exblifep-dosing' })"
+							>
 								<the-body class="max-h-[12px] text-white">Discover more</the-body>
 							</button>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="flex">
+			<section class="flex justify-between mt-9">
 				<explore-another />
 				<div class="flex items-center text-[10px] text-cool-grey h-[50px] px-4 border border-black max-w-[468px]">
 					▼ This medicinal product is subject to additional monitoring. This will allow quick identification of new safety information. Healthcare
@@ -128,6 +140,8 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+
 import Logo from '/exblifep-logo.svg';
 import HallwayBed from '/hallway-bed.png';
 import ResistanceAndRecurrence from '/resistance-and-recurrence.png';
@@ -151,4 +165,6 @@ defineProps({
 		required: true,
 	},
 });
+
+const router = useRouter();
 </script>

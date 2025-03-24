@@ -337,7 +337,7 @@ const toggleSidebar = async () => {
 		tl.to(
 			sidebar.value,
 			{
-				width: 250,
+				width: 225,
 				clipPath: 'inset(0% 0 0 0)',
 				ease: 'power4.inOut',
 				duration: 0.4,
