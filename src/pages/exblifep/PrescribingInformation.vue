@@ -42,7 +42,7 @@ import { useRouter } from 'vue-router';
 import VLazyImage from 'v-lazy-image';
 
 import TheTitle from '@/components/exblifep/TheTitle.vue';
-import PrescribingInformation from '@/assets/images/prescribing-information-exblifep.png';
+import PrescribingInformation from '/prescribing-information-exblifep.png';
 
 const router = useRouter();
 </script>

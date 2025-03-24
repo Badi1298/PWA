@@ -34,7 +34,7 @@ import { useRouter } from 'vue-router';
 
 import VLazyImage from 'v-lazy-image';
 
-import PrescribingInformation from '@/assets/images/zevtera-prescribing.png';
+import PrescribingInformation from '/zevtera-prescribing.png';
 
 const router = useRouter();
 </script>

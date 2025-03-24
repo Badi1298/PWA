@@ -109,8 +109,8 @@
 </template>
 
 <script setup>
-import StrikeFast from '@/assets/images/strike-fast.png';
-import MabelioBullet from '@/assets/images/mabelio-bullet.png';
+import StrikeFast from '/strike-fast.png';
+import MabelioBullet from '/mabelio-bullet.png';
 
 import VLazyImage from 'v-lazy-image';
 

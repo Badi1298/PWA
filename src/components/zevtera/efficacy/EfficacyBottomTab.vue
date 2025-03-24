@@ -139,7 +139,7 @@ import { onMounted, ref, watch } from 'vue';
 
 import { gsap } from 'gsap';
 
-import PathogensChart from '@/assets/images/pathogens-chart.png';
+import PathogensChart from '/pathogens-chart.png';
 
 import TheFooter from '@/components/TheFooter.vue';
 import NextSection from '@/components/NextSection.vue';

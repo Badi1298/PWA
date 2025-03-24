@@ -118,7 +118,7 @@ import { usePageAnimation } from '@/composables/usePageAnimation.js';
 
 import VLazyImage from 'v-lazy-image';
 
-import Background from '@/assets/images/xyd-background.png';
+import Background from '/xyd-background.png';
 
 import Card from '@/components/Card.vue';
 import TheFooter from '@/components/TheFooter.vue';

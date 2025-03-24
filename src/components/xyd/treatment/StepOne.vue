@@ -85,7 +85,7 @@ import { ref, watch } from 'vue';
 
 import VLazyImage from 'v-lazy-image';
 
-import Chart from '@/assets/images/xyd-treatment-chart-1.svg';
+import Chart from '/xyd-treatment-chart-1.svg';
 
 import TheFooter from '@/components/TheFooter.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';

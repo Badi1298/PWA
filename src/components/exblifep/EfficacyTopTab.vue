@@ -145,8 +145,8 @@ import VLazyImage from 'v-lazy-image';
 import { trackAction } from '@/utils/analytics.js';
 import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 
-import ChartA from '@/assets/images/chart-a.png';
-import ChartB from '@/assets/images/chart-b.png';
+import ChartA from '/chart-a.png';
+import ChartB from '/chart-b.png';
 
 import TheTitle from './TheTitle.vue';
 import TheFooter from '@/components/TheFooter.vue';

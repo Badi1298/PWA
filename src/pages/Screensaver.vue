@@ -1,6 +1,6 @@
 <template>
 	<video
-		src="@/assets/images/screensaver.mp4"
+		src="/screensaver.mp4"
 		autoplay
 		muted
 		loop

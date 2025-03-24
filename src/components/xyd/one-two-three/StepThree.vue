@@ -148,7 +148,7 @@ import { ref, watch } from 'vue';
 
 import VLazyImage from 'v-lazy-image';
 
-import Background from '@/assets/images/step-3-background.png';
+import Background from '/step-3-background.png';
 
 import TheFooter from '@/components/TheFooter.vue';
 import NextSection from '@/components/NextSection.vue';

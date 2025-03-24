@@ -8,13 +8,13 @@ const routes = [
 		meta: { brand: 'NONE' },
 	},
 	{
-		path: '/',
+		path: '/home',
 		component: () => import('@/pages/Home.vue'),
 		name: 'home',
 		meta: { brand: 'NONE' },
 	},
 	{
-		path: '/exblifep',
+		path: '/',
 		component: () => import('@/pages/exblifep/ExblifepLayout.vue'),
 		name: 'exblifep-index',
 		children: [

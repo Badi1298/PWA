@@ -205,7 +205,7 @@ import { trackAction } from '@/utils/analytics.js';
 
 import VLazyImage from 'v-lazy-image';
 
-import Background from '@/assets/images/step-2-background.png';
+import Background from '/step-2-background.png';
 
 import TheFooter from '@/components/TheFooter.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';

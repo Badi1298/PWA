@@ -246,8 +246,8 @@ import VLazyImage from 'v-lazy-image';
 import { trackAction } from '@/utils/analytics.js';
 import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 
-import ChartA from '@/assets/images/zevtera-efficacy-day-3.png';
-import ChartB from '@/assets/images/zevtera-efficacy-day-4.png';
+import ChartA from '/zevtera-efficacy-day-3.png';
+import ChartB from '/zevtera-efficacy-day-4.png';
 
 import TheFooter from '@/components/TheFooter.vue';
 import TheTitle from '@/components/zevtera/TheTitle.vue';
