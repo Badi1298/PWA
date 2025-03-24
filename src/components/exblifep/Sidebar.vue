@@ -30,10 +30,10 @@
 				ref="sidebarContent"
 				class="relative flex flex-col flex-1 justify-end mb-[60px]"
 			>
-				<ul class="flex flex-col gap-y-4 px-4">
+				<ul class="flex flex-col gap-y-[30px] px-4">
 					<RouterLink :to="{ name: 'exblifep-home', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] text-[15px] rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/exblifep'),
 								'text-[#969696]': !isActive('/exblifep'),
@@ -53,12 +53,12 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 max-h-[22px]">Home</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[15px]">Home</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'exblifep-efficacy', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] text-[15px] rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/exblifep/efficacy'),
 								'text-[#969696]': !isActive('/exblifep/efficacy'),
@@ -78,12 +78,12 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 max-h-[22px]">Efficacy</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[15px]">Efficacy</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'exblifep-safety', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] text-[15px] rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/exblifep/safety'),
 								'text-[#969696]': !isActive('/exblifep/safety'),
@@ -103,12 +103,12 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 max-h-[22px]">Safety</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[15px]">Safety</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'exblifep-dosing', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[100px] text-[15px] rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/exblifep/dosing'),
 								'text-[#969696]': !isActive('/exblifep/dosing'),
@@ -128,7 +128,7 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2">
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[30px]">
 								Dosing and<br />
 								administration
 							</p>
@@ -136,7 +136,7 @@
 					</RouterLink>
 					<RouterLink :to="{ name: 'exblifep-summary', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] text-[15px] rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/exblifep/summary'),
 								'text-[#969696]': !isActive('/exblifep/summary'),
@@ -156,7 +156,7 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 max-h-[22px]">Summary</p>
+							<p class="sidebar-text absolute text-[15px] leading-tight max-h-[15px] left-[52px] top-1/2 -translate-y-1/2">Summary</p>
 						</li>
 					</RouterLink>
 				</ul>
@@ -174,7 +174,12 @@
 							alt="Book Icon"
 							class="w-[30px] h-auto justify-self-center"
 						/>
-						<p class="text-[15px] text-[#969696]">References</p>
+						<p
+							v-if="open"
+							class="text-[15px] leading-tight max-h-[15px] text-[#969696]"
+						>
+							References
+						</p>
 					</div>
 					<div
 						class="flex items-center gap-x-3 min-h-[50px]"
@@ -186,7 +191,10 @@
 							alt="PI Icon"
 							class="w-[30px] h-auto justify-self-center"
 						/>
-						<p class="text-[15px] text-[#969696]">
+						<p
+							v-if="open"
+							class="text-[15px] leading-tight max-h-[30px] text-[#969696]"
+						>
 							Prescribing<br />
 							information
 						</p>

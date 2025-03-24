@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { ref, onMounted, onUnmounted, watch, provide } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import { format } from 'date-fns';
 
@@ -7,6 +7,8 @@ export function usePageTimeTracker() {
 	const router = useRouter();
 	const brand = ref(route.meta.brand || null); // Allow null initially
 	const sessionId = ref(localStorage.getItem('sessionId') || crypto.randomUUID());
+
+	provide('sessionId', sessionId.value);
 
 	localStorage.setItem('sessionId', sessionId.value);
 	const startTime = ref(null);

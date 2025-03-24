@@ -13,7 +13,7 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted, provide } from 'vue';
 
 import { exportData } from '@/utils/analytics.js';
 import { usePageTimeTracker } from '@/composables/usePageTimeTracker.js';
@@ -49,10 +49,6 @@ onUnmounted(() => {
 </script>
 
 <style>
-body {
-	overflow-x: hidden;
-}
-
 .fade-enter-active,
 .fade-leave-active {
 	transition: opacity 0.4s;
