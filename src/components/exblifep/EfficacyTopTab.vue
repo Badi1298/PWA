@@ -142,7 +142,7 @@ import { gsap } from 'gsap';
 
 import VLazyImage from 'v-lazy-image';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 
 import ChartA from '/chart-a.png';
@@ -193,11 +193,11 @@ watch(
 
 const activateOverallSuccess = () => {
 	activeTab.value = Tabs.OVERALL_SUCCESS;
-	trackAction('Efficacy', 'overall-success', sessionId.value, brand.value);
+	// trackAction('Efficacy', 'overall-success', sessionId.value, brand.value);
 };
 
 const activateClinicalCure = () => {
 	activeTab.value = Tabs.CLINICAL_CURE;
-	trackAction('Efficacy', 'clinical-cure', sessionId.value, brand.value);
+	// trackAction('Efficacy', 'clinical-cure', sessionId.value, brand.value);
 };
 </script>

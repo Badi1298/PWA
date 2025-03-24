@@ -132,7 +132,7 @@ import { ref, computed, inject, watch, onMounted } from 'vue';
 
 import { gsap } from 'gsap';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 
 import SafetyShield from '@/icons/SafetyShield.vue';
 import HealthyPerson from '@/icons/HealthyPerson.vue';
@@ -187,7 +187,7 @@ const animateExpandable = () => {
 		});
 		gsap.to('.close-button', { autoAlpha: 1, duration: 0.3 });
 		gsap.to('.small-graph', { autoAlpha: 0, duration: 0.3 });
-		trackAction('Safety Profile', 'chart', sessionId.value, brand.value);
+		// trackAction('Safety Profile', 'chart', sessionId.value, brand.value);
 	} else {
 		gsap.to('.close-button', { autoAlpha: 0, duration: 0.3 });
 		gsap.to('.small-graph', { autoAlpha: 1, duration: 0.3 });

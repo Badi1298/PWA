@@ -135,7 +135,7 @@ import { ref, toRef, computed, inject, onMounted } from 'vue';
 
 import { gsap } from 'gsap';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 import { usePageAnimation } from '@/composables/usePageAnimation.js';
 
 import SafetyShield from '@/icons/SafetyShield.vue';
@@ -173,7 +173,7 @@ const showDosingTable = () => {
 		gsap.to(dosingTable.value, { height: 0, duration: 0.5 });
 	} else {
 		gsap.to(dosingTable.value, { height: 515, duration: 0.5 });
-		trackAction('Dosing', 'table', sessionId.value, brand.value);
+		// trackAction('Dosing', 'table', sessionId.value, brand.value);
 	}
 
 	dosingTableActive.value = !dosingTableActive.value;

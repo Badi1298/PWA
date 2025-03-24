@@ -201,7 +201,7 @@ import { onMounted, ref, computed, inject, watch } from 'vue';
 
 import { gsap } from 'gsap';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 
 import VLazyImage from 'v-lazy-image';
 
@@ -256,7 +256,7 @@ const animateExpandable = () => {
 		});
 		gsap.to('.close-button', { autoAlpha: 1, duration: 0.3 });
 		gsap.to('.small-graph', { autoAlpha: 0, duration: 0.3 });
-		trackAction('1, 2, 3', 'two-weeks-chart', sessionId.value, brand.value);
+		// trackAction('1, 2, 3', 'two-weeks-chart', sessionId.value, brand.value);
 	} else {
 		gsap.to(chart.value, { height: 0, duration: 0.6 });
 		gsap.to('.close-button', { autoAlpha: 0, duration: 0.3 });

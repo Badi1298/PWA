@@ -233,7 +233,7 @@ import { ref, toRef, computed, inject, onMounted } from 'vue';
 
 import { gsap } from 'gsap';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 import { usePageAnimation } from '@/composables/usePageAnimation.js';
 import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 
@@ -327,7 +327,7 @@ const animateSection = ({ activeRef, detailsRef, mainRef, swapCardSelector, fade
 
 const animateWellTolarated = () => {
 	if (!wellTolaratedActive.value) {
-		trackAction('Safety', 'well-tolerated', sessionId.value, brand.value);
+		// trackAction('Safety', 'well-tolerated', sessionId.value, brand.value);
 	}
 
 	return animateSection({
@@ -342,7 +342,7 @@ const animateWellTolarated = () => {
 
 const animateGutFlora = () => {
 	if (!gutFloraActive.value) {
-		trackAction('Safety', 'gut-flora', sessionId.value, brand.value);
+		// trackAction('Safety', 'gut-flora', sessionId.value, brand.value);
 	}
 
 	return animateSection({

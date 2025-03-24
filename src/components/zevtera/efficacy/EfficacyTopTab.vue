@@ -243,7 +243,7 @@ import { gsap } from 'gsap';
 
 import VLazyImage from 'v-lazy-image';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 
 import ChartA from '/zevtera-efficacy-day-3.png';
@@ -359,7 +359,7 @@ const animateSection = ({ activeRef, detailsRef, mainRef, swapCardSelector, fade
 
 const animateBacterialActivity = () => {
 	if (!bacterialActivityActive.value) {
-		trackAction('Efficacy', 'bactericidal-activity', sessionId.value, brand.value);
+		// trackAction('Efficacy', 'bactericidal-activity', sessionId.value, brand.value);
 	}
 
 	return animateSection({
@@ -374,7 +374,7 @@ const animateBacterialActivity = () => {
 
 const animateClinicalEfficacy = () => {
 	if (!clinicalEfficacyActive.value) {
-		trackAction('Efficacy', 'clinical-efficacy', sessionId.value, brand.value);
+		// trackAction('Efficacy', 'clinical-efficacy', sessionId.value, brand.value);
 
 		const tl = gsap.timeline();
 		tl.to('.select-tab', { opacity: 0, duration: 0.7, ease: 'power2.inOut' })
@@ -401,11 +401,11 @@ const animateClinicalEfficacy = () => {
 
 const activateDay3 = () => {
 	activeClinicalEfficayTab.value = clinicalEfficacyTabs.DAY_3;
-	trackAction('Efficacy', 'clinical-efficacy-day-3', sessionId.value, brand.value);
+	// trackAction('Efficacy', 'clinical-efficacy-day-3', sessionId.value, brand.value);
 };
 
 const activateDay4 = () => {
 	activeClinicalEfficayTab.value = clinicalEfficacyTabs.DAY_4;
-	trackAction('Efficacy', 'clinical-efficacy-day-4', sessionId.value, brand.value);
+	// trackAction('Efficacy', 'clinical-efficacy-day-4', sessionId.value, brand.value);
 };
 </script>

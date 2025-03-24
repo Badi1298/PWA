@@ -206,7 +206,7 @@ import { ref, computed, inject, onMounted, watch } from 'vue';
 
 import { gsap } from 'gsap';
 
-import { trackAction } from '@/utils/analytics.js';
+// import { trackAction } from '@/utils/analytics.js';
 
 import TheFooter from '@/components/TheFooter.vue';
 import NextSection from '@/components/NextSection.vue';
@@ -394,7 +394,7 @@ const activateTab = async (newTab) => {
 	const previousTab = tabs.value.find((tab) => tab.id === activeTab.value);
 	const nextTab = newTab;
 
-	trackAction('Dosing and administration', newTab.action, sessionId.value, brand.value);
+	// trackAction('Dosing and administration', newTab.action, sessionId.value, brand.value);
 
 	previousTab.active = false;
 
