@@ -3,7 +3,7 @@
 		<img
 			src="/exblifep-logo-no-triangle.png"
 			alt="Exblifep Logo"
-			class="absolute top-20 right-10 z-50 w-[183px]"
+			class="absolute top-8 right-[21px] z-50 w-[183px]"
 		/>
 		<div class="flex flex-1 flex-col h-screen">
 			<router-view v-slot="{ Component }">

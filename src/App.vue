@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div>
 		<router-view v-slot="{ Component }">
 			<transition
 				name="fade"
@@ -49,6 +49,10 @@ onUnmounted(() => {
 </script>
 
 <style>
+body {
+	overflow-x: hidden;
+}
+
 .fade-enter-active,
 .fade-leave-active {
 	transition: opacity 0.4s;
