@@ -1,6 +1,6 @@
 <template>
-	<div class="grid grid-cols-1 grid-rows-1 pb-6 relative z-10 h-full">
-		<div class="page-content flex flex-col justify-center font-effra pr-14">
+	<div class="grid grid-cols-1 grid-rows-1 relative z-10 h-full">
+		<div class="page-content flex flex-col justify-end font-effra pr-14">
 			<div>
 				<the-h1 class="text-electric-blue">
 					EXBLIFEP<span class="font-extrabold">®</span> is where microbiological eradication* meets efficacy<sup
@@ -11,10 +11,10 @@
 				<img
 					src="/lime-green-border.png"
 					alt="Lime Green Border"
-					class="h-1.5 w-[240px] my-5"
+					class="h-1.5 w-[240px] my-2.5"
 				/>
 			</div>
-			<section class="grid grid-cols-2 bg-white py-6 px-8 text-sm text-cool-grey gap-y-10 gap-x-12 max-w-[1380px]">
+			<section class="grid grid-cols-2 mt-5 bg-white py-6 px-8 text-sm text-cool-grey gap-y-10 gap-x-16 max-w-[860px]">
 				<div class="flex gap-x-3.5 items-center col-span-2">
 					<img
 						src="/summary-icon-1.png"
@@ -37,11 +37,13 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p>
+					<p class="min-w-[290px]">
 						EXBLIFEP® demonstrated
 						<span class="text-dark-blue font-bold">non-inferiority and superiority vs piperacillin/tazobactam</span> in the composite endpoint of
-						clinical cure and microbiological eradication in adults with cUTIs<br />
-						at Day 14 in the Primary Analysis Set?<sup class="text-[65%] -top-[0.6em] font-medium">†1</sup>
+						clinical cure and microbiological eradication in adults with cUTIs at Day 14 in the Primary Analysis Set?<sup
+							class="text-[65%] -top-[0.6em] font-medium"
+							>†1</sup
+						>
 					</p>
 				</div>
 				<div class="flex gap-x-3.5 items-center">
@@ -52,10 +54,12 @@
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
-						EXBLIFEP® is indicated to treat HAP/VAP, and<br />
+						EXBLIFEP® is indicated to treat HAP/VAP, and
 						<span class="text-dark-blue font-bold"
-							>could be a useful carbapenem-sparing option<br />
-							for ESBL Class A-producing pathogens<sup class="text-[65%] -top-[0.6em] font-extrabold">5,10</sup></span
+							>could be a useful carbapenem-<br />sparing option for ESBL Class A-<br />producing pathogens<sup
+								class="text-[65%] -top-[0.6em] font-extrabold"
+								>5,10</sup
+							></span
 						>
 					</p>
 				</div>
@@ -66,7 +70,7 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p>
+					<p class="min-w-[285px]">
 						EXBLIFEP® demonstrated <span class="text-dark-blue font-bold">high intrapulmonary penetration</span> and similar distribution kinetics
 						of both compounds into the ELF, supporting its use in the treatment of HAP/VAP<sup class="text-[65%] -top-[0.6em] font-medium">6,9</sup>
 					</p>
@@ -80,16 +84,13 @@
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
 						EXBLIFEP® demonstrated a
-						<span class="text-dark-blue font-bold"
-							>favourable overall<br />
-							safety profile, comparable to</span
-						>
+						<span class="text-dark-blue font-bold">favourable overall safety profile, comparable to</span>
 						piperacillin tazobactam<sup class="text-[65%] -top-[0.6em] font-medium">1,9</sup>
 					</p>
 				</div>
 			</section>
 
-			<section class="max-w-[1380px] bg-[#00EAFF] shadow-dark py-4 flex items-center mt-9 relative z-10 border-[6px] border-white">
+			<section class="max-w-[1380px] bg-[#00EAFF] shadow-dark py-4 flex items-center mt-7 relative z-10 border-[6px] border-white">
 				<div class="pl-[22px] pr-4 py-[7px] border-r-[3px] border-[#002470]">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +127,7 @@
 				</h2>
 			</section>
 		</div>
-		<footer class="flex flex-col">
+		<footer class="flex flex-col mt-10">
 			<the-footnotes class="footer max-w-[1380px] font-effra text-cool-grey">
 				AMR, antimicrobial resistance; AP, acute pyelonephritis; CFU, colony-forming unit; cUTI, complicated urinary tract infection; ELF, epithelial
 				lining fluid; HAP/VAP, hospital-acquired pneumonia/ventilator associated pneumonia; MIC, minimum inhibitory concentration.<br />
@@ -138,8 +139,7 @@
 				cefepime/enmetazobactam (MIC ≤ 8 μg/mL) or piperacillin/tazobactam (MIC ≤ 64 μg/mL).<sup>1</sup>
 			</the-footnotes>
 			<div class="flex justify-end items-center mt-3 mr-12">
-				<!-- <explore-another-short /> -->
-				aaa
+				<explore-another-short />
 			</div>
 		</footer>
 	</div>
