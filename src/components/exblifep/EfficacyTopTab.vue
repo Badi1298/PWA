@@ -3,16 +3,16 @@
 		ref="topTab"
 		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10"
 	>
-		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-[52px]">
+		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-5">
 			<img
 				src="/active-dot.png"
 				alt="Active Dot"
-				class="h-5 w-5 cursor-pointer"
+				class="w-2.5 h-2.5 cursor-pointer"
 			/>
 			<img
 				src="/inactive-dot.png"
 				alt="Active Dot"
-				class="h-5 w-5 cursor-pointer"
+				class="w-2.5 h-2.5 cursor-pointer"
 				@click="emit('goToBottomTab')"
 				@touchstart.prevent="emit('goToBottomTab')"
 			/>
@@ -20,10 +20,10 @@
 		<div class="page-content flex flex-col justify-end mb-2 font-effra">
 			<div class="relative flex justify-between mr-12">
 				<div>
-					<the-title class="max-w-[920px] leading-tight">
+					<the-h1 class="text-electric-blue max-h-[60px]">
 						EXBLIFEP<span class="font-extrabold">®</span> achieved superiority in overall treatment success* in patients with cUTIs vs
 						piperacillin/tazobactam<sup class="text-[50%] font-extrabold -top-[0.8em]">1</sup>
-					</the-title>
+					</the-h1>
 					<img
 						src="/lime-green-border.png"
 						alt="Lime Green Border"
@@ -34,20 +34,20 @@
 					<img
 						src="/touch.png"
 						alt="Touch to select tab"
-						class="w-[70px] h-[70px]"
+						class="w-[50px] h-[50px]"
 					/>
-					<span>Select a tab</span>
+					<the-h2>Select a tab</the-h2>
 				</div>
 			</div>
 
-			<p class="max-w-[1300px] text-xl text-cool-grey">
+			<the-body-lg class="text-cool-grey">
 				In ALLIUM, EXBLIFEP® demonstrated both non-inferiority and statistical superiority in overall treatment success (a composite endpoint of
 				clinical cure and microbiological eradication) at Day 14 vs piperacillin/tazobactam in patients in the PAS with cUTIs caused by gram-negative
 				pathogens<sup class="text-[60%] -top-[0.6em]">1</sup>
-			</p>
+			</the-body-lg>
 
 			<section class="flex pt-5 gap-x-[22px] z-10 relative">
-				<div class="flex flex-col w-[1280px]">
+				<div class="flex flex-col w-[860px]">
 					<div class="grid grid-cols-[1fr_1.68fr] gap-x-2">
 						<button
 							class="flex items-center justify-center py-3 rounded-t-[20px] text-2xl transition-colors duration-500"
@@ -55,7 +55,7 @@
 							@click="activateOverallSuccess"
 							@touchstart.prevent="activateOverallSuccess"
 						>
-							<span class="max-h-[26px]">Overall success*: Day 14 in PAS </span>
+							<the-body-lg class="font-medium max-h-[20px]">Overall success*: Day 14 in PAS </the-body-lg>
 						</button>
 						<button
 							class="flex items-center justify-center py-3 rounded-t-[20px] text-2xl transition-colors duration-500"
@@ -63,12 +63,12 @@
 							@click="activateClinicalCure"
 							@touchstart.prevent="activateClinicalCure"
 						>
-							<span class="max-h-[26px]">Clinical cure & Microbiological eradication: Day 14 in PAS </span>
+							<the-body-lg class="font-medium max-h-[20px]">Clinical cure & Microbiological eradication: Day 14 in PAS </the-body-lg>
 						</button>
 					</div>
 					<div
 						v-if="activeTab === Tabs.OVERALL_SUCCESS"
-						class="w-[1280px] h-[583px]"
+						class="w-[860px] h-[430px]"
 					>
 						<VLazyImage
 							:src="ChartA"
@@ -78,7 +78,7 @@
 					</div>
 					<div
 						v-if="activeTab === Tabs.CLINICAL_CURE"
-						class="relative w-[1280px] h-[583px]"
+						class="relative w-[860px] h-[430px]"
 					>
 						<VLazyImage
 							:src="ChartB"
@@ -127,7 +127,7 @@
 				<img
 					src="/down-button-blue.png"
 					alt="Down Button"
-					class="w-[140px] h-[50px] cursor-pointer"
+					class="w-[84px] h-[30px] cursor-pointer"
 				/>
 			</button>
 		</footer>
@@ -150,7 +150,12 @@ import ChartB from '/chart-b.png';
 
 import TheTitle from './TheTitle.vue';
 import TheFooter from '@/components/TheFooter.vue';
+import TheH1 from '@/components/exblifep/TheH1.vue';
+import TheH2 from '@/components/exblifep/TheH2.vue';
+import TheBody from '@/components/exblifep/TheBody.vue';
+import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
+import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';
 
 const Tabs = Object.freeze({
 	OVERALL_SUCCESS: 1,

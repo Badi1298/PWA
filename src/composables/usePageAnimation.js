@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 export function usePageAnimation(sidebarOpen) {
 	const animate = (value) => {
-		const marginLeft = value ? 124 : 224;
+		const marginLeft = value ? 55 : 114;
 		const duration = value ? 0.4 : 0.5;
 
 		gsap.to(['.page-content', '.footer'], {
@@ -14,7 +14,7 @@ export function usePageAnimation(sidebarOpen) {
 	};
 
 	onMounted(() => {
-		const marginLeft = sidebarOpen.value ? 124 : 224;
+		const marginLeft = sidebarOpen.value ? 55 : 114;
 		gsap.set(['.page-content', '.footer'], { marginLeft });
 	});
 
