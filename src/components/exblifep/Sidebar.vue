@@ -1,6 +1,6 @@
 <template>
 	<div class="flex">
-		<div class="flex items-center absolute z-20 top-[112px] w-[225px]">
+		<div class="flex items-center absolute z-20 top-[112px]">
 			<div
 				class="relative transform w-full"
 				@click="toggleSidebar"
@@ -18,7 +18,7 @@
 				</button>
 				<div
 					ref="sidebarLine"
-					class="bg-[#CDCDCD] absolute top-1/2 -translate-y-1/2 left-4 h-px w-[208px] -z-10"
+					class="bg-[#CDCDCD] absolute top-1/2 -translate-y-1/2 left-4 h-px -z-10"
 				></div>
 			</div>
 		</div>
@@ -231,9 +231,6 @@ const emit = defineEmits(['update:open']);
 const route = useRoute();
 const router = useRouter();
 
-const referencesPopupOpen = ref(false);
-const prescribingPopupOpen = ref(false);
-
 const sidebar = ref(null);
 const sidebarLine = ref(null);
 
@@ -284,7 +281,7 @@ const toggleSidebar = async () => {
 				sidebar.value,
 				{
 					width: 80,
-					clipPath: 'inset(15% 0 0 0)',
+					clipPath: 'inset(13.5% 0 0 0)',
 					ease: 'power4.inOut',
 					duration: 0.5,
 				},
