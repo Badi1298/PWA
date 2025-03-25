@@ -38,7 +38,7 @@
 		<div class="page-content flex flex-col justify-end font-gothic pb-6 relative max-w-[1446px]">
 			<h1 class="text-[40px] font-bold text-primary-purple">Xydalba™ provided effective treatment in a paediatric population<sup>5</sup></h1>
 
-			<section class="relative grid grid-cols-[1fr_0.3fr] gap-x-8 pr-[60px] mt-12">
+			<section class="relative grid grid-cols-[1fr_0.3fr] gap-x-8 pr-14 mt-12">
 				<div class="flex flex-col gap-y-6">
 					<div class="flex gap-[30px] items-center">
 						<img

@@ -29,7 +29,7 @@
 				Xydalba™ demonstrated clinical success at Day 14-15<sup class="text-[65%] -top-[0.5em]">8</sup>
 			</h1>
 
-			<section class="grid grid-cols-[1fr_0.34fr] items-end gap-x-6 mt-7 pr-[60px]">
+			<section class="grid grid-cols-[1fr_0.34fr] items-end gap-x-6 mt-7 pr-14">
 				<div>
 					<div class="bg-primary-green py-7 rounded-t-[20px] pl-10 text-xl font-bold text-white">
 						Xydalba™ provides clinical success at end-of-treatment similar to vancomycin/linezolid<sup class="text-[65%] -top-[0.55em]">8</sup>
@@ -57,7 +57,7 @@
 		</div>
 
 		<footer class="relative pb-6 pt-8">
-			<the-footer class="footer mb-4 max-w-[1446px] pr-[60px] font-gothic">
+			<the-footer class="footer mb-4 max-w-[1446px] pr-14 font-gothic">
 				*EMA primary end-point: Clinical success at End-of-treatment visit (Day 14-15) in the ITT population defined as decreased lesion size (both
 				length and width measurements), a temperature of ≤37.6°C, local signs of fluctuance and localized heat/warmth were absent; local signs of
 				tenderness to palpation and swelling/induration were no worse than mild; and for patients with a wound infection, the severity of purulent

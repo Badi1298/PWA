@@ -65,7 +65,7 @@
 				<div class="h-5 bg-primary-green absolute bottom-10 left-0 w-full"></div>
 			</div>
 
-			<section class="relative grid grid-cols-[1fr_0.3fr] gap-x-8 pr-[60px]">
+			<section class="relative grid grid-cols-[1fr_0.3fr] gap-x-8 pr-14">
 				<div>
 					<p class="text-2xl text-primary-green">
 						<span class="font-bold">Two weeks</span> of treatment in <span class="font-bold">one dose</span> of Xydalba™ provides:

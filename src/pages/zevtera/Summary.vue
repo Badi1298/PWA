@@ -6,7 +6,7 @@
 				alt="Zevtera Mabelio Logo"
 				class="w-[593px]"
 			/>
-			<div class="relative bg-transparent overflow-hidden mt-10 pr-[60px]">
+			<div class="relative bg-transparent overflow-hidden mt-10 pr-14">
 				<div class="flex z-20 gap-x-[80px]">
 					<img
 						src="/zevtera-summar-cards.png"

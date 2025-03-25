@@ -41,7 +41,7 @@
 				on early clinical response<sup class="text-[65%] -top-[0.5em]">8</sup>
 			</h1>
 
-			<section class="grid grid-cols-[1fr_0.34fr] items-end gap-x-6 mt-7 pr-[60px]">
+			<section class="grid grid-cols-[1fr_0.34fr] items-end gap-x-6 mt-7 pr-14">
 				<div>
 					<div class="bg-primary-green py-7 rounded-t-[20px] pl-10 text-xl font-bold text-white">
 						Xydalba™ provides clinical success at end-of-treatment similar to vancomycin/linezolid<sup class="text-[65%] -top-[0.55em]">8</sup>
@@ -75,7 +75,7 @@
 		</div>
 
 		<footer class="pt-6">
-			<the-footer class="footer mb-6 max-w-[1446px] pr-[60px] font-gothic">
+			<the-footer class="footer mb-6 max-w-[1446px] pr-14 font-gothic">
 				*FDA primary endpoint, EMA secondary endpoint: Early clinical response at 48 and 72 hours of therapy was defined as both cessation of spread of
 				the erythema associated with the infection (i.e. no increase in the surface area as compared with baseline) and a temperature of 37.6°C<br />
 				or lower at three consecutive readings performed 6 hours apart.<sup>8 †</sup>Without needing rescue antibacterial therapy<sup>9</sup>

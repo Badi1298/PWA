@@ -34,7 +34,7 @@
 				is consistent with adults<sup class="text-[60%] -top-[0.6em]">5</sup>
 			</h1>
 
-			<section class="relative grid grid-cols-[1fr_0.3fr] gap-x-8 pr-[60px] mt-24">
+			<section class="relative grid grid-cols-[1fr_0.3fr] gap-x-8 pr-14 mt-24">
 				<div class="flex flex-col gap-y-10">
 					<div class="flex gap-[30px] items-center">
 						<div class="border-[15px] rounded-full p-[31px] border-primary-purple">
@@ -110,7 +110,7 @@
 		</div>
 
 		<footer>
-			<the-footer class="footer mb-4 pr-[60px] font-gothic">
+			<the-footer class="footer mb-4 pr-14 font-gothic">
 				*Sponsor assessment. †mITT: randomised patients who received ≥1 dose of study drug and had a diagnosis of ABSSSI (or, in cohort 5,
 				suspected/confirmed sepsis) not known to be caused exclusively by a Gram-negative organism. <sup>†</sup>Vancomycin IV, oxacillin IV; or
 				flucloxacillin IV ABSSSI: Acute Bacterial Skin and Skin Structure Infections; EOT: End of treatment; mITT: Modified intent-to-treat; TOC: Test

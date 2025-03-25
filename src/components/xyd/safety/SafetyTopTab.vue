@@ -75,7 +75,7 @@
 		</div>
 
 		<footer class="relative pb-6">
-			<the-footer class="footer pr-[60px] font-gothic mb-[60px] mt-5"
+			<the-footer class="footer pr-14 font-gothic mb-[60px] mt-5"
 				>*Sponsor assessment. <sup>†</sup>mITT: randomised patients who received ≥1 dose of study drug and had a diagnosis of ABSSSI (or, in cohort 5,
 				suspected/confirmed sepsis) not known to be caused exclusively by a gram-negative organism. <sup>†</sup>Vancomycin IV, oxacillin IV; or
 				flucloxacillin IV<br />

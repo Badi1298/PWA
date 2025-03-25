@@ -24,7 +24,7 @@
 				class="w-2.5 h-2.5 cursor-pointer"
 			/>
 		</div>
-		<div class="page-content flex flex-col justify-center font-effra relative pr-[60px]">
+		<div class="page-content flex flex-col justify-center font-effra relative pr-14">
 			<div class="flex justify-between mr-12 items-center">
 				<div>
 					<the-h1 class="text-electric-blue">
@@ -126,11 +126,10 @@ import { ref, watch } from 'vue';
 
 import TheH1 from '@/components/exblifep/TheH1.vue';
 import TheH2 from '@/components/exblifep/TheH2.vue';
-import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
-import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';
-import TheFooter from '@/components/TheFooter.vue';
 import NextSection from '@/components/NextSection.vue';
+import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
+import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';
 
 const props = defineProps({
 	sidebarOpen: {
