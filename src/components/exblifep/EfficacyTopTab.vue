@@ -3,7 +3,7 @@
 		ref="topTab"
 		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10"
 	>
-		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-5">
+		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-[22px]">
 			<img
 				src="/active-dot.png"
 				alt="Active Dot"
@@ -167,11 +167,8 @@ import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 import ChartA from '/chart-a.png';
 import ChartB from '/chart-b.png';
 
-import TheTitle from './TheTitle.vue';
-import TheFooter from '@/components/TheFooter.vue';
 import TheH1 from '@/components/exblifep/TheH1.vue';
 import TheH2 from '@/components/exblifep/TheH2.vue';
-import TheBody from '@/components/exblifep/TheBody.vue';
 import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
 import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';

@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 export function useAnimateSelectTab(sidebarOpen) {
 	const positions = {
 		open: '0px',
-		closed: '250px',
+		closed: '100px',
 	};
 
 	const duration = computed(() => (sidebarOpen.value ? 0.4 : 0.5));
