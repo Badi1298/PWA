@@ -267,9 +267,8 @@ const toggleSidebar = async () => {
 			.to(
 				'.list-image',
 				{
-					left: '50%',
-					xPercent: -50,
-					duration: 0.5,
+					left: 9,
+					duration: 0.1,
 				},
 				0.2
 			)
@@ -314,7 +313,6 @@ const toggleSidebar = async () => {
 				'.list-image',
 				{
 					left: 12,
-					xPercent: 0,
 					duration: 0.4,
 				},
 				0.1
