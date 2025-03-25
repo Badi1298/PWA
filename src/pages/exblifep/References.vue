@@ -38,12 +38,12 @@
 					fill="white"
 				/>
 			</svg>
-			<div class="space-y-1 mt-6 text-sm text-cool-grey -ml-2">
+			<div class="mt-6 text-sm text-cool-grey -ml-2">
 				<div class="flex items-center">
 					<div class="flex items-end justify-end h-6 w-[3ch] text-right">1.</div>
 					<div class="ml-2">Kaye KS <span class="italic">et al. JAMA </span>2022;328(13):1304-1314.</div>
 				</div>
-				<div class="flex max-h-6">
+				<div class="flex">
 					<div class="w-[3ch] text-right">2.</div>
 					<div class="ml-2">Kiem S, Schentag JJ. Infect Chemother 2013;45(3):283-291.</div>
 				</div>
@@ -55,7 +55,7 @@
 					<div class="flex items-end justify-end h-6 w-[3ch] text-right">4.</div>
 					<div class="ml-2">Albin OR <span class="italic">et al. Clin Infect Dis </span>2020;71(12):3033-3041.</div>
 				</div>
-				<div class="flex leading-tight max-h-[46px]">
+				<div class="flex leading-tight">
 					<div class="w-[3ch] text-right">5.</div>
 					<div class="ml-2">
 						EXBLIFEP® Summary of Product Characteristics (March 2024). Available at: https://www.ema.europa.eu/en/documents/product-information/<br />exblifep-epar-product-information_en.pdf.
@@ -69,7 +69,7 @@
 					<div class="flex items-end justify-end h-6 w-[3ch] text-right">8.</div>
 					<div class="ml-2">Torres A <span class="italic">et al. Eur Respir J </span>2017;50(3):1700582.</div>
 				</div>
-				<div class="flex leading-tight max-h-[46px]">
+				<div class="flex leading-tight">
 					<div class="w-[3ch] text-right">9.</div>
 					<div class="ml-2">
 						European Medicines Agency. EXBLIFEP® Assessment report. Available at:
