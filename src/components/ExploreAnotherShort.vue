@@ -1,14 +1,14 @@
 <template>
 	<RouterLink :to="{ name: 'home', query: { navigatedAwayBy: 'explore-another-button' } }">
-		<div class="flex items-center shadow-explore font-futura rounded-r-[20px]">
-			<div class="flex items-center py-6 pl-10 pr-[46px] rounded-l-[20px] bg-[#195C68] h-[70px] relative z-10 text-white text-base shadow-explore">
+		<div class="flex items-center shadow-explore font-futura rounded-r-[15px]">
+			<div class="flex items-center pl-8 pr-[36px] rounded-l-[15px] bg-[#195C68] h-[55px] relative z-10 text-white text-[12.5px] shadow-explore">
 				Explore another brand
 			</div>
-			<div class="bg-white px-[17px] -ml-3 flex justify-end shadow-explore rounded-[20px] py-2.5 relative z-20">
+			<div class="bg-white px-[17px] -ml-3 flex justify-end items-center shadow-explore rounded-[15px] h-[55px] relative z-20">
 				<img
 					src="/chevron-right-green.png"
 					alt="Chevron Left Green"
-					class="w-[50px] h-[50px]"
+					class="w-[37.5px] h-[39px]"
 				/>
 			</div>
 		</div>

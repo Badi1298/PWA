@@ -1,5 +1,5 @@
 <template>
-	<div class="grid grid-cols-1 grid-rows-1 relative z-10 h-full">
+	<div class="grid grid-cols-1 grid-rows-1 pb-6 relative z-10 h-full">
 		<div class="page-content flex flex-col justify-end font-effra pr-14">
 			<div>
 				<the-h1 class="text-electric-blue">
@@ -14,7 +14,7 @@
 					class="h-1.5 w-[240px] my-2.5"
 				/>
 			</div>
-			<section class="grid grid-cols-2 mt-5 bg-white py-6 px-8 text-sm text-cool-grey gap-y-10 gap-x-16 max-w-[860px]">
+			<section class="grid grid-cols-2 mt-5 bg-white py-6 px-8 text-cool-grey gap-y-9 gap-x-16 max-w-[860px]">
 				<div class="flex gap-x-3.5 items-center col-span-2">
 					<img
 						src="/summary-icon-1.png"
@@ -22,13 +22,13 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p>
+					<the-body-lg>
 						EXBLIFEP® is indicated for the
 						<span class="text-dark-blue font-bold"
 							>treatment of adult patients with cUTI including pyelonephritis, HAP/VAP and bacteraemia associated with these infections,</span
 						>
 						caused by gram-negative bacteria<sup class="text-[65%] -top-[0.6em] font-medium">5</sup>
-					</p>
+					</the-body-lg>
 				</div>
 				<div class="flex gap-x-3.5 items-center">
 					<img
@@ -37,14 +37,14 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p class="min-w-[290px]">
+					<the-body-lg class="min-w-[290px]">
 						EXBLIFEP® demonstrated
 						<span class="text-dark-blue font-bold">non-inferiority and superiority vs piperacillin/tazobactam</span> in the composite endpoint of
 						clinical cure and microbiological eradication in adults with cUTIs at Day 14 in the Primary Analysis Set?<sup
 							class="text-[65%] -top-[0.6em] font-medium"
 							>†1</sup
 						>
-					</p>
+					</the-body-lg>
 				</div>
 				<div class="flex gap-x-3.5 items-center">
 					<img
@@ -53,7 +53,7 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p>
+					<the-body-lg>
 						EXBLIFEP® is indicated to treat HAP/VAP, and
 						<span class="text-dark-blue font-bold"
 							>could be a useful carbapenem-<br />sparing option for ESBL Class A-<br />producing pathogens<sup
@@ -61,7 +61,7 @@
 								>5,10</sup
 							></span
 						>
-					</p>
+					</the-body-lg>
 				</div>
 				<div class="flex gap-x-3.5 items-center">
 					<img
@@ -70,10 +70,10 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p class="min-w-[285px]">
+					<the-body-lg class="min-w-[285px]">
 						EXBLIFEP® demonstrated <span class="text-dark-blue font-bold">high intrapulmonary penetration</span> and similar distribution kinetics
 						of both compounds into the ELF, supporting its use in the treatment of HAP/VAP<sup class="text-[65%] -top-[0.6em] font-medium">6,9</sup>
-					</p>
+					</the-body-lg>
 				</div>
 				<div class="flex gap-x-3.5 items-center">
 					<img
@@ -82,15 +82,15 @@
 						class="w-[85px] h-[85px]"
 					/>
 					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
-					<p>
+					<the-body-lg>
 						EXBLIFEP® demonstrated a
 						<span class="text-dark-blue font-bold">favourable overall safety profile, comparable to</span>
 						piperacillin tazobactam<sup class="text-[65%] -top-[0.6em] font-medium">1,9</sup>
-					</p>
+					</the-body-lg>
 				</div>
 			</section>
 
-			<section class="max-w-[1380px] bg-[#00EAFF] shadow-dark py-4 flex items-center mt-7 relative z-10 border-[6px] border-white">
+			<section class="max-w-[1380px] bg-[#00EAFF] shadow-dark py-[7px] flex items-center mt-7 relative z-10 border-[3px] border-white">
 				<div class="pl-[22px] pr-4 py-[7px] border-r-[3px] border-[#002470]">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -128,17 +128,20 @@
 			</section>
 		</div>
 		<footer class="flex flex-col mt-10">
-			<the-footnotes class="footer max-w-[1380px] font-effra text-cool-grey">
+			<the-footnotes class="footer max-w-[1380px] font-effra text-cool-grey max-h-[84px]">
 				AMR, antimicrobial resistance; AP, acute pyelonephritis; CFU, colony-forming unit; cUTI, complicated urinary tract infection; ELF, epithelial
-				lining fluid; HAP/VAP, hospital-acquired pneumonia/ventilator associated pneumonia; MIC, minimum inhibitory concentration.<br />
-				*In the ALLIUM study, microbiological eradication is defined as &lt; 103 CFU/mL of qualifying baseline pathogen in urine.<sup>1</sup><br />
-				†Primary outcome was the proportion of patients in the primary analysis set (PAS) who achieved a composite outcome of complete resolution of the
-				baseline signs and symptoms present at screening (clinical cure) and reduction of qualifying baseline pathogen to less than 103 CFU/mL in urine
-				(microbiological eradication) at Day 14. The PAS included all patients who received at least 1 dose of study drug and had a gram-negative
-				baseline pathogen in urine at 105 CFU/mL or more or the same pathogen present in both blood and urine cultures that was not resistant to either
-				cefepime/enmetazobactam (MIC ≤ 8 μg/mL) or piperacillin/tazobactam (MIC ≤ 64 μg/mL).<sup>1</sup>
+				lining fluid; HAP/VAP, hospital-acquired pneumonia/ventilator<br />
+				associated pneumonia; MIC, minimum inhibitory concentration.<br />
+				*In the ALLIUM study, microbiological eradication is defined as &lt;10<sup>3</sup> CFU/mL of qualifying baseline pathogen in urine.<sup>1</sup
+				><br />
+				<sup>†</sup>Primary outcome was the proportion of patients in the primary analysis set (PAS) who achieved a composite outcome of complete
+				resolution of the baseline signs and symptoms present at screening<br />
+				(clinical cure) and reduction of qualifying baseline pathogen to less than 10<sup>3</sup> CFU/mL in urine (microbiological eradication) at Day
+				14. The PAS included all patients who received at least 1 dose of study<br />
+				drug and had a gram-negative baseline pathogen in urine at 10<sup>5</sup> CFU/mL or more or the same pathogen present in both blood and urine
+				cultures that was not resistant to either cefepime/<br />enmetazobactam (MIC ≤8 μg/mL) or piperacillin/tazobactam (MIC ≤64 μg/mL).<sup>1</sup>
 			</the-footnotes>
-			<div class="flex justify-end items-center mt-3 mr-12">
+			<div class="flex justify-end items-center mt-3.5 mr-12">
 				<explore-another-short />
 			</div>
 		</footer>
