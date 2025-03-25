@@ -23,7 +23,7 @@
 			@click="router.push({ name: 'exblifep-safety', query: { navigatedAwayBy: 'back-button' } })"
 			@touchstart.prevent="router.push({ name: 'exblifep-safety', query: { navigatedAwayBy: 'back-button' } })"
 		/>
-		<div class="page-content flex flex-col justify-end font-effra relative pb-12">
+		<div class="page-content flex flex-col justify-end font-effra relative pb-11">
 			<div class="relative flex justify-between mr-12">
 				<div>
 					<the-h1 class="text-electric-blue leading-tight">
@@ -35,7 +35,7 @@
 						class="h-1.5 w-[240px] my-2.5"
 					/>
 				</div>
-				<div class="select-tab absolute top-1/2 -translate-y-1/2 flex gap-x-3.5 items-center text-cool-grey text-2xl font-medium">
+				<div class="select-tab absolute -top-1/2 translate-y-1/2 flex gap-x-3.5 items-center text-cool-grey text-2xl font-medium">
 					<img
 						src="/touch.png"
 						alt="Touch to select tab"
@@ -173,42 +173,33 @@
 			</div>
 		</div>
 		<footer class="relative pb-6">
-			<the-footnotes class="footer mb-4 font-effra text-cool-grey"
+			<the-footnotes class="footer font-effra text-cool-grey"
 				>EXBLIFEP® is not indicated in children as the safety and efficacy in children below 18 years of age has not yet been established. No data are
 				available.<sup>5</sup>
 			</the-footnotes>
-			<div class="flex justify-between items-center mr-12">
+			<div class="flex justify-between items-center mr-12 mt-9">
 				<ExploreAnother />
 				<RouterLink :to="{ name: 'exblifep-summary', query: { navigatedAwayBy: 'next-section-button' } }">
 					<next-section class="bg-electric-blue" />
 				</RouterLink>
 			</div>
-			<!-- <button
-				class="absolute left-1/2 -translate-x-1/2 bottom-0"
-				@click="emit('goToBottomTab')"
-			>
-				<img
-					src="/down-button-blue.png"
-					alt="Down Button"
-					class="w-[140px] h-[50px] cursor-pointer"
-				/>
-			</button> -->
 		</footer>
 	</div>
 </template>
 
 <script setup>
 import { useRoute, useRouter } from 'vue-router';
-import { ref, computed, inject, onMounted, watch } from 'vue';
+import { ref, toRef, computed, inject, onMounted, watch } from 'vue';
 
 import { gsap } from 'gsap';
 
 // import { trackAction } from '@/utils/analytics.js';
 
+import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
+
 import TheH1 from '@/components/exblifep/TheH1.vue';
 import TheH2 from '@/components/exblifep/TheH2.vue';
 import NextSection from '@/components/NextSection.vue';
-import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
 import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';
 
@@ -227,6 +218,9 @@ const emit = defineEmits(['goToBottomTab']);
 
 const route = useRoute();
 const router = useRouter();
+
+const sidebarOpenRef = toRef(props, 'sidebarOpen');
+useAnimateSelectTab(sidebarOpenRef);
 
 const sessionId = inject('sessionId');
 
@@ -333,47 +327,6 @@ watch(tabs.value, (newValue) => {
 		gsap.to(emptyAdministrationButton.value, { opacity: 1, display: 'block', duration: 0.3 });
 	}
 });
-
-watch(
-	() => props.sidebarOpen,
-	(value) => {
-		if (value) {
-			const tl = gsap.timeline();
-
-			tl.to('.select-tab', {
-				opacity: 0,
-				duration: 0.3,
-			})
-				.set(
-					'.select-tab',
-					{
-						right: '0px',
-					},
-					'+=0.2'
-				)
-				.to('.select-tab', {
-					opacity: 1,
-				});
-		} else {
-			const tl = gsap.timeline();
-
-			tl.to('.select-tab', {
-				opacity: 0,
-				duration: 0.3,
-			})
-				.set(
-					'.select-tab',
-					{
-						right: 250,
-					},
-					'+=0.2'
-				)
-				.to('.select-tab', {
-					opacity: 1,
-				});
-		}
-	}
-);
 
 onMounted(() => {
 	gsap.set('.dosing', { width: 640, opacity: 1, borderRight: '2px solid #1F17F6', borderTop: '2px solid #1F17F6', borderBottom: '2px solid #1F17F6' });
