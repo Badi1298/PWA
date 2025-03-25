@@ -39,7 +39,7 @@
 				</div>
 			</div>
 
-			<section class="flex flex-col gap-x-12 mt-14">
+			<section class="flex flex-col gap-x-12 mt-16">
 				<div class="flex justify-between">
 					<div class="relative bg-white border-2 border-electric-blue rounded-[20px] w-[250px] px-4 pb-8 pt-16">
 						<img
