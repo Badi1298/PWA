@@ -156,10 +156,7 @@ import { usePageAnimation } from '@/composables/usePageAnimation.js';
 import ExploreAnotherShort from '@/components/ExploreAnotherShort.vue';
 
 import TheH1 from '@/components/exblifep/TheH1.vue';
-import TheH2 from '@/components/exblifep/TheH2.vue';
-import NextSection from '@/components/NextSection.vue';
 import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
-import ExploreAnother from '@/components/ExploreAnother.vue';
 import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';
 
 const props = defineProps({
