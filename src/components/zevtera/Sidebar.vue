@@ -1,35 +1,39 @@
 <template>
 	<div class="flex">
-		<div class="flex items-center absolute z-20 top-[17%] w-[324px]">
+		<div class="flex items-center absolute z-20 top-[112px]">
 			<div
 				class="relative transform w-full"
 				@click="toggleSidebar"
 				@touchstart.prevent="toggleSidebar"
 			>
-				<button class="absolute top-1/2 -translate-y-1/2 -left-5 bg-[#ECECEC] text-white p-2.5 rounded-md drop-shadow-md">
+				<button class="absolute -left-[15px] bg-[#ECECEC] text-white p-[6.5px] rounded-md">
 					<SimpleChevronRightIcon
-						class="w-6 h-6 transition-all duration-300"
-						:class="{ 'rotate-180': !open }"
+						v-if="open"
+						class="w-[17px] h-[17px]"
+					/>
+					<SimpleChevronLeftIcon
+						v-else
+						class="w-[17px] h-[17px]"
 					/>
 				</button>
 				<div
 					ref="sidebarLine"
-					class="bg-[#CDCDCD] absolute top-1/2 -translate-y-1/2 left-6 h-px w-full -z-10"
+					class="bg-[#CDCDCD] absolute top-1/2 -translate-y-1/2 left-4 h-px -z-10"
 				></div>
 			</div>
 		</div>
 		<aside
 			ref="sidebar"
-			class="z-10 flex flex-col mb-8 bg-white rounded-l-[20px] relative shadow-treatment sidebar"
+			class="z-10 flex flex-col bg-white relative shadow-treatment font-effra sidebar"
 		>
 			<div
 				ref="sidebarContent"
-				class="relative flex flex-col flex-1 justify-end mb-20"
+				class="relative flex flex-col flex-1 justify-end mb-[60px]"
 			>
-				<ul class="flex flex-col gap-y-4 px-4">
+				<ul class="flex flex-col gap-y-[30px] px-4">
 					<RouterLink :to="{ name: 'zevtera-home', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] font-uni-grotesk text-xl rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/zevtera'),
 								'text-[#969696]': !isActive('/zevtera'),
@@ -49,12 +53,12 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2">Home</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[15px]">Home</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'zevtera-efficacy', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] font-uni-grotesk text-xl rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/zevtera/efficacy'),
 								'text-[#969696]': !isActive('/zevtera/efficacy'),
@@ -74,12 +78,12 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2">Efficacy</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[15px]">Efficacy</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'zevtera-safety', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] font-uni-grotesk text-xl rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/zevtera/safety'),
 								'text-[#969696]': !isActive('/zevtera/safety'),
@@ -99,12 +103,12 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2">Safety</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[15px]">Safety</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'zevtera-dosing', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] font-uni-grotesk text-xl rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/zevtera/dosing'),
 								'text-[#969696]': !isActive('/zevtera/dosing'),
@@ -124,12 +128,15 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2">Dosing</p>
+							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2 leading-tight max-h-[30px]">
+								Dosing and<br />
+								administration
+							</p>
 						</li>
 					</RouterLink>
 					<RouterLink :to="{ name: 'zevtera-summary', query: { navigatedAwayBy: 'sidebar' } }">
 						<li
-							class="list__item relative px-3 py-5 min-h-[70px] font-uni-grotesk text-xl rounded-md flex gap-x-2.5 items-center"
+							class="list__item relative px-3 py-5 min-h-[50px] text-[15px] rounded-md flex gap-x-2.5 items-center"
 							:class="{
 								'bg-[#EFEFEF] font-bold text-black': isActive('/zevtera/summary'),
 								'text-[#969696]': !isActive('/zevtera/summary'),
@@ -149,107 +156,68 @@
 									class="w-[30px] h-[30px]"
 								/>
 							</div>
-							<p class="sidebar-text absolute left-[52px] top-1/2 -translate-y-1/2">Summary</p>
+							<p class="sidebar-text absolute text-[15px] leading-tight max-h-[15px] left-[52px] top-1/2 -translate-y-1/2">Summary</p>
 						</li>
 					</RouterLink>
 				</ul>
 			</div>
-			<transition
-				name="fade"
-				mode="out-in"
-			>
-				<div
-					v-if="open"
-					class="flex flex-col mx-4 py-2.5 border-t border-[#CDCDCD] min-h-[240px]"
-				>
-					<div class="grid grid-cols-2 gap-y-9 items-center">
-						<RouterLink :to="{ name: 'zevtera-references', query: { navigatedAwayBy: 'sidebar' } }">
-							<img
-								src="/book.png"
-								alt="Book Icon"
-								class="w-8 h-8 justify-self-center"
-								@click="referencesPopupOpen = true"
-								@touchstart.prevent="referencesPopupOpen = true"
-							/>
-						</RouterLink>
-						<RouterLink :to="{ name: 'zevtera-prescribing-information', query: { navigatedAwayBy: 'sidebar' } }">
-							<img
-								src="/pi.png"
-								alt="PI Icon"
-								class="w-[30px] h-auto justify-self-center"
-								@click="prescribingPopupOpen = true"
-								@touchstart.prevent="prescribingPopupOpen = true"
-							/>
-						</RouterLink>
+
+			<div class="flex flex-col min-h-[230px]">
+				<div class="flex flex-col w-full px-8 gap-y-1 border-y border-[#CDCDCD] min-h-36 pt-4">
+					<div
+						class="flex items-center gap-x-3 min-h-[50px]"
+						@click="router.push({ name: 'zevtera-references', query: { navigatedAwayBy: 'sidebar' } })"
+						@touchstart.prevent="router.push({ name: 'zevtera-references', query: { navigatedAwayBy: 'sidebar' } })"
+					>
+						<img
+							src="/book.png"
+							alt="Book Icon"
+							class="w-[30px] h-auto justify-self-center"
+						/>
+						<p
+							v-if="open"
+							class="text-[15px] leading-tight max-h-[15px] text-[#969696]"
+						>
+							References
+						</p>
 					</div>
-					<div class="grid grid-cols-2 text-center">
-						<RouterLink :to="{ name: 'zevtera-references', query: { navigatedAwayBy: 'sidebar' } }">
-							<p
-								class="text-xl font-uni-grotesk text-[#969696]"
-								@click="referencesPopupOpen = true"
-								@touchstart.prevent="referencesPopupOpen = true"
-							>
-								References
-							</p>
-						</RouterLink>
-						<RouterLink :to="{ name: 'zevtera-prescribing-information', query: { navigatedAwayBy: 'sidebar' } }">
-							<p
-								class="text-xl font-uni-grotesk text-[#969696]"
-								@click="prescribingPopupOpen = true"
-								@touchstart.prevent="prescribingPopupOpen = true"
-							>
-								Prescribing information
-							</p>
-						</RouterLink>
+					<div
+						class="flex items-center gap-x-3 min-h-[50px]"
+						@click="router.push({ name: 'zevtera-prescribing-information', query: { navigatedAwayBy: 'sidebar' } })"
+						@touchstart.prevent="router.push({ name: 'zevtera-prescribing-information', query: { navigatedAwayBy: 'sidebar' } })"
+					>
+						<img
+							src="/pi.png"
+							alt="PI Icon"
+							class="w-[30px] h-auto justify-self-center"
+						/>
+						<p
+							v-if="open"
+							class="text-[15px] leading-tight max-h-[30px] text-[#969696]"
+						>
+							Prescribing<br />
+							information
+						</p>
 					</div>
-					<img
-						src="/advanz-logo.png"
-						alt="Advanz Logo"
-						class="w-44 h-auto m-auto"
-					/>
 				</div>
-				<div
-					v-else
-					class="flex flex-col pt-9 border-t border-[#CDCDCD] min-h-[300px] -mt-[60px]"
-				>
-					<div class="grid grid-cols-1 gap-y-9 items-center border-b border-[#CDCDCD] pb-9">
-						<RouterLink :to="{ name: 'zevtera-references', query: { navigatedAwayBy: 'sidebar' } }">
-							<img
-								src="/book.png"
-								alt="Book Icon"
-								class="w-8 h-8 justify-self-center"
-								@click="referencesPopupOpen = true"
-								@touchstart.prevent="referencesPopupOpen = true"
-							/>
-						</RouterLink>
-						<RouterLink :to="{ name: 'zevtera-prescribing-information', query: { navigatedAwayBy: 'sidebar' } }">
-							<img
-								src="/pi.png"
-								alt="PI Icon"
-								class="w-[30px] h-auto justify-self-center"
-								@click="prescribingPopupOpen = true"
-								@touchstart.prevent="prescribingPopupOpen = true"
-							/>
-						</RouterLink>
-					</div>
-					<img
-						src="/advanz-logo-small.png"
-						alt="Advanz Logo"
-						class="w-12 h-auto m-auto"
-					/>
-				</div>
-			</transition>
+				<img
+					src="/advanz-logo.png"
+					alt="Advanz Logo"
+					class="w-[118px] h-auto m-auto"
+				/>
+			</div>
 		</aside>
 	</div>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { ref, onMounted } from 'vue';
 
 import { gsap } from 'gsap';
 
-import SimpleChevronRightIcon from '@/icons/SimpleChevronRightIcon.vue';
+import SimpleChevronLeftIcon from '../../icons/SimpleChevronLeftIcon.vue';
+import SimpleChevronRightIcon from '../../icons/SimpleChevronRightIcon.vue';
 
 const props = defineProps({
 	open: {
@@ -261,8 +229,7 @@ const props = defineProps({
 const emit = defineEmits(['update:open']);
 
 const route = useRoute();
-const referencesPopupOpen = ref(false);
-const prescribingPopupOpen = ref(false);
+const router = useRouter();
 
 const sidebar = ref(null);
 const sidebarLine = ref(null);
@@ -273,8 +240,7 @@ onMounted(() => {
 		display: 'block',
 	});
 	gsap.set(sidebar.value, {
-		width: 350,
-		marginTop: 32,
+		width: 225,
 	});
 });
 
@@ -298,9 +264,8 @@ const toggleSidebar = async () => {
 			.to(
 				'.list-image',
 				{
-					left: '50%',
-					xPercent: -50,
-					duration: 0.5,
+					left: 9,
+					duration: 0.1,
 				},
 				0.2
 			)
@@ -315,8 +280,8 @@ const toggleSidebar = async () => {
 			.to(
 				sidebar.value,
 				{
-					width: 118,
-					clipPath: 'inset(15% 0 0 0)',
+					width: 80,
+					clipPath: 'inset(13.5% 0 0 0)',
 					ease: 'power4.inOut',
 					duration: 0.5,
 				},
@@ -329,7 +294,7 @@ const toggleSidebar = async () => {
 		tl.to(
 			sidebar.value,
 			{
-				width: 350,
+				width: 225,
 				clipPath: 'inset(0% 0 0 0)',
 				ease: 'power4.inOut',
 				duration: 0.4,
@@ -345,7 +310,6 @@ const toggleSidebar = async () => {
 				'.list-image',
 				{
 					left: 12,
-					xPercent: 0,
 					duration: 0.4,
 				},
 				0.1

@@ -7,12 +7,12 @@
 						<VLazyImage
 							:src="MabelioBullet"
 							alt="Mabelio Bullet"
-							class="w-[1070px] h-[424px] object-cover"
+							class="w-[662px]"
 						/>
 						<VLazyImage
 							:src="StrikeFast"
 							alt="Strike Fast"
-							class="absolute bottom-0 right-16 w-[370px] h-auto object-cover"
+							class="absolute bottom-0 right-16 w-[278px] h-auto object-cover"
 						/>
 					</div>
 					<div class="px-24 pt-7">
@@ -47,7 +47,7 @@
 						</ul>
 					</div>
 				</section>
-				<section class="pt-36 -translate-x-1">
+				<!-- <section class="pt-36 -translate-x-1">
 					<h2 class="text-[32px] font-bold text-charcoal font-effra">I'm interested in:</h2>
 					<card
 						title="Efficacy"
@@ -91,7 +91,7 @@
 							class="w-[106px] h-auto"
 						/>
 					</card>
-				</section>
+				</section> -->
 			</div>
 		</div>
 		<footer>

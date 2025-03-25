@@ -14,7 +14,7 @@ const routes = [
 		meta: { brand: 'NONE' },
 	},
 	{
-		path: '/',
+		path: '/exblifep',
 		component: () => import('@/pages/exblifep/ExblifepLayout.vue'),
 		name: 'exblifep-index',
 		children: [
@@ -51,7 +51,7 @@ const routes = [
 		],
 	},
 	{
-		path: '/zevtera',
+		path: '/',
 		component: () => import('@/pages/zevtera/ZevteraLayout.vue'),
 		name: 'zevtera-index',
 		children: [
