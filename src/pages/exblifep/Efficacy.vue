@@ -18,8 +18,8 @@ import { ref, toRef } from 'vue';
 
 import { usePageAnimation } from '@/composables/usePageAnimation.js';
 
-import EfficacyTopTab from '../../components/exblifep/EfficacyTopTab.vue';
-import EfficacyBottomTab from '../../components/exblifep/EfficacyBottomTab.vue';
+import EfficacyTopTab from '@/components/exblifep/efficacy/EfficacyTopTab.vue';
+import EfficacyBottomTab from '@/components/exblifep/efficacy/EfficacyBottomTab.vue';
 
 const props = defineProps({
 	sidebarOpen: {
