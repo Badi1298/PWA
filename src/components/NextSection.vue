@@ -1,9 +1,9 @@
 <template>
-	<button class="flex justify-center items-center text-2xl gap-x-3 px-10 py-3 z-20 text-white">
-		<span>Next section</span>
+	<button class="flex justify-end items-center text-base gap-x-4 pl-8 pr-4 py-2 z-20 text-white">
+		<span class="">Next section</span>
 		<img
 			src="/chevron-right-white.png"
-			class="w-[50px] h-auto"
+			class="w-[35px] h-auto"
 		/>
 	</button>
 </template>
