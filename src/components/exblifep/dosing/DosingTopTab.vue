@@ -19,32 +19,32 @@
 		<img
 			src="/back-button-white.png"
 			alt="Back Button"
-			class="absolute top-1/2 -translate-y-1/2 h-[150px] cursor-pointer"
+			class="absolute top-1/2 -translate-y-1/2 h-[84px] cursor-pointer"
 			@click="router.push({ name: 'exblifep-safety', query: { navigatedAwayBy: 'back-button' } })"
 			@touchstart.prevent="router.push({ name: 'exblifep-safety', query: { navigatedAwayBy: 'back-button' } })"
 		/>
 		<div class="page-content flex flex-col justify-end font-effra relative pb-12">
 			<div class="relative flex justify-between mr-12">
 				<div>
-					<h1 class="text-[32px] font-bold text-electric-blue max-w-[920px] leading-tight">
+					<the-h1 class="text-electric-blue leading-tight">
 						Dosing and administration of EXBLIFEP<span class="font-extrabold">®</span><sup class="text-[50%] font-extrabold -top-[0.8em]">5</sup>
-					</h1>
+					</the-h1>
 					<img
 						src="/lime-green-border.png"
 						alt="Lime Green Border"
-						class="h-1.5 w-[300px] my-5"
+						class="h-1.5 w-[240px] my-2.5"
 					/>
 				</div>
 				<div class="select-tab absolute top-1/2 -translate-y-1/2 flex gap-x-3.5 items-center text-cool-grey text-2xl font-medium">
 					<img
 						src="/touch.png"
 						alt="Touch to select tab"
-						class="w-[70px] h-[70px]"
+						class="w-[50px] h-[50px]"
 					/>
-					<span class="text-cool-grey text-2xl">Touch a step to continue</span>
+					<the-h2 class="text-cool-grey text-2xl">Touch a step to continue</the-h2>
 				</div>
 			</div>
-			<div class="flex pt-10 gap-x-10">
+			<div class="flex pt-10 gap-x-7">
 				<div
 					class="flex"
 					@click="activateTab(tabs[0])"
@@ -55,19 +55,19 @@
 						ref="fullDosingButton"
 						src="/dosing-button-full.png"
 						alt="Dosing Full"
-						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
+						class="absolute h-[500px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
 						ref="emptyDosingButton"
 						src="/dosing-button-empty.png"
 						alt="Dosing Empty"
-						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
+						class="absolute h-[500px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 
 					<!-- Expanding Content Section -->
 					<div
-						:class="[tabs[0].class, tabs[0].active ? 'w-[1000px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
+						:class="[tabs[0].class, tabs[0].active ? 'w-[640px]' : 'w-0 opacity-0']"
+						class="flex justify-center flex-col bg-white pl-[60px] rounded-r-[30px] z-10 overflow-hidden max-h-[496px] ml-[61px]"
 					>
 						<div
 							class="opacity-0"
@@ -77,14 +77,14 @@
 								<img
 									src="/dosing-bottle.png"
 									alt="Dosing Bottle"
-									class="w-[150px] h-[150px]"
+									class="w-[106px] h-[106px]"
 								/>
-								<h3 class="text-[40px] font-semibold text-electric-blue -translate-y-4 -translate-x-3">
+								<the-h1 class="text-electric-blue font-semibold -translate-y-4 -translate-x-3">
 									{{ tabs[0].name }}
-								</h3>
+								</the-h1>
 							</div>
 							<div
-								class="flex flex-col pl-10 text-2xl text-cool-grey"
+								class="flex flex-col pl-10 text-base text-cool-grey"
 								v-html="tabs[0].details"
 							></div>
 						</div>
@@ -100,74 +100,71 @@
 						ref="fullAdministrationButton"
 						src="/administration-button-full.png"
 						alt="Dosing Full"
-						class="absolute h-[704px] w-auto z-20 cursor-pointer hidden opacity-0"
+						class="absolute h-[500px] w-auto z-20 cursor-pointer hidden opacity-0"
 					/>
 					<img
 						ref="emptyAdministrationButton"
 						src="/administration-button-empty.png"
 						alt="Dosing Empty"
-						class="absolute h-[704px] w-auto z-20 cursor-pointer"
+						class="absolute h-[500px] w-auto z-20 cursor-pointer"
 					/>
 
 					<!-- Expanding Content Section -->
 					<div
-						:class="[tabs[1].class, tabs[1].active ? 'w-[1000px]' : 'w-0 opacity-0']"
-						class="flex justify-center flex-col bg-white pl-28 rounded-r-[30px] ml-20 z-10 overflow-hidden max-h-[704px]"
+						:class="[tabs[1].class, tabs[1].active ? 'w-[640px]' : 'w-0 opacity-0']"
+						class="flex justify-center flex-col bg-white pl-[60px] rounded-r-[30px] z-10 overflow-hidden max-h-[496px] ml-[61px]"
 					>
 						<div
 							class="opacity-0"
 							:class="`${tabs[1].class}-content`"
 						>
-							<div class="flex items-end mt-8">
+							<div class="flex items-end mt-5">
 								<img
 									src="/iv-bag-blue.png"
 									alt="Dosing Bottle"
-									class="w-[150px] h-[150px]"
+									class="w-[106px] h-[106px]"
 								/>
-								<h3 class="text-[40px] font-semibold text-electric-blue -translate-y-4 -translate-x-3">
+								<the-h1 class="font-semibold text-electric-blue -translate-y-4 -translate-x-3">
 									{{ tabs[1].name }}
-								</h3>
+								</the-h1>
 							</div>
 							<div
-								class="relative flex flex-col pl-10 text-2xl text-cool-grey"
+								class="relative flex flex-col pl-10 text-base text-cool-grey"
 								v-html="tabs[1].details"
 							></div>
-							<div
-								class="max-w-fit bg-[#00EAFF] shadow-dark py-4 ml-10 flex mt-4 items-center z-10 border-[3px] border-white pr-20 translate-y-14"
-							>
-								<div class="pl-7 pr-3 py-2 border-r-2 border-[#002470]">
+							<div class="bg-[#00EAFF] shadow-dark py-3.5 flex items-center mt-7 relative z-10 border-2 border-white pr-5 max-w-[478px] ml-10">
+								<div class="pl-5 pr-1.5 py-1 border-r-1 border-[#002470]">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
-										width="41"
-										height="34"
-										viewBox="0 0 41 34"
+										width="30"
+										height="25"
+										viewBox="0 0 30 25"
 										fill="none"
 									>
-										<g clip-path="url(#clip0_269_13454)">
+										<g clip-path="url(#clip0_360_21688)">
 											<path
-												d="M0.165039 0.193726L16.876 16.9727L0.165039 33.7517H9.44893L26.1599 16.9727L21.518 12.316L9.44893 0.193726H0.165039Z"
+												d="M0.752441 0.459595L12.667 12.3901L0.752441 24.3206H7.37167L19.2863 12.3901L15.9767 9.07898L7.37167 0.459595H0.752441Z"
 												fill="#002470"
 											/>
 											<path
-												d="M14.4766 -0.000488281L31.1876 16.7785L14.4766 33.5523H23.7604L40.4714 16.7785L35.8295 12.1165L23.7604 -0.000488281H14.4766Z"
+												d="M10.9561 0.321533L22.8707 12.252L10.9561 24.1788H17.5753L29.4899 12.252L26.1803 8.93719L17.5753 0.321533H10.9561Z"
 												fill="#002470"
 											/>
 										</g>
 										<defs>
-											<clipPath id="clip0_269_13454">
+											<clipPath id="clip0_360_21688">
 												<rect
-													width="40.3065"
-													height="33.7523"
+													width="28.7377"
+													height="23.9991"
 													fill="white"
-													transform="translate(0.166016)"
+													transform="translate(0.75293 0.321899)"
 												/>
 											</clipPath>
 										</defs>
 									</svg>
 								</div>
-								<h2 class="pl-3 text-base font-bold text-[#002470] max-w-[1200px] leading-tight">
-									For more information on the reconstitution/dilution of EXBLIFEP®,<br />
-									speak to a member of the ADVANZ PHARMA team.
+								<h2 class="pl-1.5 text-sm font-bold text-[#002470] max-h-[28px] leading-tight">
+									For more information on the reconstitution/dilution of EXBLIFEP®, speak to a member of the ADVANZ PHARMA team.
 								</h2>
 							</div>
 						</div>
@@ -176,10 +173,10 @@
 			</div>
 		</div>
 		<footer class="relative pb-6">
-			<the-footer class="footer mb-4 font-effra"
+			<the-footnotes class="footer mb-4 font-effra text-cool-grey"
 				>EXBLIFEP® is not indicated in children as the safety and efficacy in children below 18 years of age has not yet been established. No data are
 				available.<sup>5</sup>
-			</the-footer>
+			</the-footnotes>
 			<div class="flex justify-between items-center mr-12">
 				<ExploreAnother />
 				<RouterLink :to="{ name: 'exblifep-summary', query: { navigatedAwayBy: 'next-section-button' } }">
@@ -208,9 +205,12 @@ import { gsap } from 'gsap';
 
 // import { trackAction } from '@/utils/analytics.js';
 
-import TheFooter from '@/components/TheFooter.vue';
+import TheH1 from '@/components/exblifep/TheH1.vue';
+import TheH2 from '@/components/exblifep/TheH2.vue';
 import NextSection from '@/components/NextSection.vue';
+import TheBodyLg from '@/components/exblifep/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
+import TheFootnotes from '@/components/exblifep/TheFootnotes.vue';
 
 const props = defineProps({
 	sidebarOpen: {
@@ -246,27 +246,27 @@ const tabs = ref([
 				The recommended dose for patients with normal renal<br /> function is
 				<span class="text-dark-blue font-bold">2.0 g/0.5 g cefepime/enmetazobactam.<sup class="text-[60%] font-extrabold -top-[0.6em]">5</sup></span>
 			</p>
-			<p class="pr-20 mt-5 leading-tight">
+			<p class="pr-20 mt-3.5 leading-tight">
 				The usual duration of treatment is 7 to 10 days. In patients with bacteraemia treatment up to 14 days may be required.<sup class="text-[60%] font-bold -top-[0.6em]"
 					>5</sup
 				>
 			</p>
-			<div class="max-w-fit bg-[#00EAFF] shadow-dark py-4 flex items-center mt-10 relative z-10 border-[3px] border-white pr-20 translate-y-5">
-				<div class="pl-7 pr-3 py-2 border-r-2 border-[#002470]">
-					<svg xmlns="http://www.w3.org/2000/svg" width="41" height="34" viewBox="0 0 41 34" fill="none">
-                        <g clip-path="url(#clip0_269_13454)">
-                        <path d="M0.165039 0.193726L16.876 16.9727L0.165039 33.7517H9.44893L26.1599 16.9727L21.518 12.316L9.44893 0.193726H0.165039Z" fill="#002470"/>
-                        <path d="M14.4766 -0.000488281L31.1876 16.7785L14.4766 33.5523H23.7604L40.4714 16.7785L35.8295 12.1165L23.7604 -0.000488281H14.4766Z" fill="#002470"/>
+			<div class="bg-[#00EAFF] shadow-dark py-3.5 flex items-center mt-11 relative z-10 border-2 border-white pr-5 translate-y-5 max-w-[478px]">
+				<div class="pl-5 pr-1.5 py-1 border-r-1 border-[#002470]">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 25" fill="none">
+                        <g clip-path="url(#clip0_360_21688)">
+                            <path d="M0.752441 0.459595L12.667 12.3901L0.752441 24.3206H7.37167L19.2863 12.3901L15.9767 9.07898L7.37167 0.459595H0.752441Z" fill="#002470"/>
+                            <path d="M10.9561 0.321533L22.8707 12.252L10.9561 24.1788H17.5753L29.4899 12.252L26.1803 8.93719L17.5753 0.321533H10.9561Z" fill="#002470"/>
                         </g>
                         <defs>
-                        <clipPath id="clip0_269_13454">
-                        <rect width="40.3065" height="33.7523" fill="white" transform="translate(0.166016)"/>
-                        </clipPath>
+                            <clipPath id="clip0_360_21688">
+                            <rect width="28.7377" height="23.9991" fill="white" transform="translate(0.75293 0.321899)"/>
+                            </clipPath>
                         </defs>
                     </svg>
 				</div>
-				<h2 class="pl-3 text-base font-bold text-[#002470] max-w-[1200px] leading-tight">
-					For more information on the reconstitution/dilution of EXBLIFEP®,<br /> speak to a member of the ADVANZ PHARMA team.
+				<h2 class="pl-1.5 text-sm font-bold text-[#002470] max-h-[28px] leading-tight">
+					For more information on the reconstitution/dilution of EXBLIFEP®, speak to a member of the ADVANZ PHARMA team.
 				</h2>
 			</div>
 		`,
@@ -281,7 +281,7 @@ const tabs = ref([
 		action: 'administration',
 		details: `
 			<p>Administered as:<sup class="text-[60%] -top-[0.6em]">5</sup></p>
-			<ul class="flex flex-col gap-y-3.5 list-disc pl-5 ml-3">
+			<ul class="flex flex-col gap-y-0.5 list-disc pl-5 ml-3">
 				<li class="text-dark-blue font-bold">
 					2-hour <span class="text-cool-grey font-normal">IV infusion for cUTI, includixng AP</span>
 				</li>
@@ -292,7 +292,7 @@ const tabs = ref([
 					4-hour <span class="text-cool-grey font-normal">IV infusion for patients with eGFR > 150 mL/min</span>
 				</li>
 			</ul>
-			<p class="mt-4">
+			<p class="mt-1.5">
 				Every <span class="text-dark-blue font-bold">8 hours<sup class="text-[60%] font-extrabold -top-[0.55em]">5</sup></span>
 			</p>
 		`,
@@ -364,7 +364,7 @@ watch(
 				.set(
 					'.select-tab',
 					{
-						right: '250px',
+						right: 250,
 					},
 					'+=0.2'
 				)
@@ -376,7 +376,7 @@ watch(
 );
 
 onMounted(() => {
-	gsap.set('.dosing', { width: '1000px', opacity: 1, borderRight: '2px solid #1F17F6', borderTop: '2px solid #1F17F6', borderBottom: '2px solid #1F17F6' });
+	gsap.set('.dosing', { width: 640, opacity: 1, borderRight: '2px solid #1F17F6', borderTop: '2px solid #1F17F6', borderBottom: '2px solid #1F17F6' });
 	gsap.set('.administration', { width: 20, opacity: 0, borderRight: '2px solid #1F17F6', borderTop: '2px solid #1F17F6', borderBottom: '2px solid #1F17F6' });
 	gsap.set('.dosing-content', { opacity: 1 });
 	gsap.set(fullDosingButton.value, { opacity: 1, display: 'block' });
@@ -384,7 +384,7 @@ onMounted(() => {
 	if (props.sidebarOpen) {
 		gsap.set('.select-tab', { right: '0' });
 	} else {
-		gsap.set('.select-tab', { right: '250px' });
+		gsap.set('.select-tab', { right: 250 });
 	}
 });
 
@@ -413,7 +413,7 @@ const activateTab = async (newTab) => {
 			`.${nextTab.class}`,
 			{
 				opacity: 1,
-				width: '1000px',
+				width: 640,
 				borderRight: '2px solid #1F17F6',
 				borderTop: '2px solid #1F17F6',
 				borderBottom: '2px solid #1F17F6',

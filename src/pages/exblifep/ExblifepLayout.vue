@@ -28,25 +28,25 @@
 				src="/background-green-circle.png"
 				alt="Green Circle"
 				:class="{ 'opacity-0': route.name === 'exblifep-home' }"
-				class="absolute w-[776px] bottom-0 right-0 -z-10"
+				class="absolute w-[628px] bottom-0 right-0 -z-10"
 			/>
 			<img
 				v-else-if="route.name === 'exblifep-dosing'"
 				src="/background-circle-blue.png"
 				alt=" Background Circle Blue"
-				class="absolute w-[776px] bottom-0 right-0 -z-10"
+				class="absolute w-[628px] bottom-0 right-0 -z-10"
 			/>
 			<img
 				v-else-if="route.name === 'exblifep-safety'"
 				src="/background-circle-grey.png"
 				alt="Background Circle Yellow"
-				class="absolute w-[776px] bottom-0 right-0 -z-10"
+				class="absolute w-[628px] bottom-0 right-0 -z-10"
 			/>
 			<img
 				v-else
 				src="/background-green-circle.png"
 				alt="Green Circle"
-				class="absolute w-[776px] bottom-0 right-0 -z-10"
+				class="absolute w-[628px] bottom-0 right-0 -z-10"
 			/>
 		</transition>
 	</main>
