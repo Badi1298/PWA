@@ -1,5 +1,10 @@
 <template>
 	<div class="grid grid-cols-1 grid-rows-1 pb-6 h-full">
+		<VLazyImage
+			:src="HallwayBed"
+			alt="Hallway Bed"
+			class="absolute left-0 top-0 w-screen h-screen object-cover -z-10"
+		/>
 		<div class="relative flex flex-col pr-8 max-w-[969px]">
 			<VLazyImage
 				:src="ResistanceAndRecurrence"
@@ -53,7 +58,7 @@
 					</div>
 				</div>
 				<div>
-					<the-h1 class="text-electric-blue">I'm interested in:</the-h1>
+					<the-h1 class="text-electric-blue max-h-[30px]">I'm interested in:</the-h1>
 					<div class="flex gap-x-2.5 mt-10">
 						<div class="relative flex flex-col items-center bg-white shadow-exblifep-card w-[276px] rounded-lg">
 							<div class="flex justify-center pt-1.5 bg-white absolute w-[76px] h-[76px] left-1/2 -translate-x-1/2 -top-[38px] rounded-full">
