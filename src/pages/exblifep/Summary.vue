@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-cols-1 grid-rows-1 pb-6 relative z-10 h-full">
-		<div class="page-content flex flex-col justify-center font-effra">
+		<div class="page-content flex flex-col justify-center font-effra pr-14">
 			<div>
 				<the-h1 class="text-electric-blue">
 					EXBLIFEP<span class="font-extrabold">®</span> is where microbiological eradication* meets efficacy<sup
@@ -21,7 +21,7 @@
 						alt="Summary Icon 1"
 						class="w-[85px] h-[85px]"
 					/>
-					<div class="min-w-[3px] h-[44px] bg-dark-blue"></div>
+					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
 						EXBLIFEP® is indicated for the
 						<span class="text-dark-blue font-bold"
@@ -36,7 +36,7 @@
 						alt="Summary Icon 2"
 						class="w-[85px] h-[85px]"
 					/>
-					<div class="min-w-[3px] h-[44px] bg-dark-blue"></div>
+					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
 						EXBLIFEP® demonstrated
 						<span class="text-dark-blue font-bold">non-inferiority and superiority vs piperacillin/tazobactam</span> in the composite endpoint of
@@ -50,7 +50,7 @@
 						alt="Summary Icon 3"
 						class="w-[85px] h-[85px]"
 					/>
-					<div class="min-w-[3px] h-[44px] bg-dark-blue"></div>
+					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
 						EXBLIFEP® is indicated to treat HAP/VAP, and<br />
 						<span class="text-dark-blue font-bold"
@@ -65,7 +65,7 @@
 						alt="Summary Icon 4"
 						class="w-[85px] h-[85px]"
 					/>
-					<div class="min-w-[3px] h-[44px] bg-dark-blue"></div>
+					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
 						EXBLIFEP® demonstrated <span class="text-dark-blue font-bold">high intrapulmonary penetration</span> and similar distribution kinetics
 						of both compounds into the ELF, supporting its use in the treatment of HAP/VAP<sup class="text-[65%] -top-[0.6em] font-medium">6,9</sup>
@@ -77,7 +77,7 @@
 						alt="Summary Icon 5"
 						class="w-[85px] h-[85px]"
 					/>
-					<div class="min-w-[3px] h-[44px] bg-dark-blue"></div>
+					<div class="min-w-[3px] h-[44px] bg-electric-blue"></div>
 					<p>
 						EXBLIFEP® demonstrated a
 						<span class="text-dark-blue font-bold"
@@ -90,21 +90,44 @@
 			</section>
 
 			<section class="max-w-[1380px] bg-[#00EAFF] shadow-dark py-4 flex items-center mt-9 relative z-10 border-[6px] border-white">
-				<div class="pl-9 pr-7 py-3 border-r-[3px] border-[#002470]">
-					<img
-						src="/chevron-right-bleu.png"
-						alt="Chevron Right Bleu"
-						class="w-[64px] h-[64px]"
-					/>
+				<div class="pl-[22px] pr-4 py-[7px] border-r-[3px] border-[#002470]">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						viewBox="0 0 40 40"
+						fill="none"
+					>
+						<g clip-path="url(#clip0_387_22384)">
+							<path
+								d="M0.828125 0.522461L16.7684 20.2623L0.828125 40.0021H9.68382L25.6241 20.2623L21.1962 14.7838L9.68382 0.522461H0.828125Z"
+								fill="#002470"
+							/>
+							<path
+								d="M14.4785 0.293945L30.4188 20.0338L14.4785 39.7674H23.3342L39.2745 20.0338L34.8466 14.5491L23.3342 0.293945H14.4785Z"
+								fill="#002470"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_387_22384">
+								<rect
+									width="38.4474"
+									height="39.7082"
+									fill="white"
+									transform="translate(0.828125 0.293945)"
+								/>
+							</clipPath>
+						</defs>
+					</svg>
 				</div>
-				<h2 class="pl-10 text-2xl font-bold text-[#002470] max-w-[1200px]">
-					At ADVANZ PHARMA, we are committed to taking your treatment options further to improve patient lives, by providing novel therapeutic options
-					in the fight against gram-negative and gram-positive infections
+				<h2 class="pl-6 text-[14px] leading-tight max-h-[28px] font-bold text-[#002470] max-w-[1200px]">
+					At ADVANZ PHARMA, we are committed to taking your treatment options further to improve patient lives,<br />
+					by providing novel therapeutic options in the fight against gram-negative and gram-positive infections
 				</h2>
 			</section>
 		</div>
 		<footer class="flex flex-col">
-			<the-footnotes class="footer max-w-[1380px] font-effra">
+			<the-footnotes class="footer max-w-[1380px] font-effra text-cool-grey">
 				AMR, antimicrobial resistance; AP, acute pyelonephritis; CFU, colony-forming unit; cUTI, complicated urinary tract infection; ELF, epithelial
 				lining fluid; HAP/VAP, hospital-acquired pneumonia/ventilator associated pneumonia; MIC, minimum inhibitory concentration.<br />
 				*In the ALLIUM study, microbiological eradication is defined as &lt; 103 CFU/mL of qualifying baseline pathogen in urine.<sup>1</sup><br />
@@ -114,8 +137,9 @@
 				baseline pathogen in urine at 105 CFU/mL or more or the same pathogen present in both blood and urine cultures that was not resistant to either
 				cefepime/enmetazobactam (MIC ≤ 8 μg/mL) or piperacillin/tazobactam (MIC ≤ 64 μg/mL).<sup>1</sup>
 			</the-footnotes>
-			<div class="flex justify-end items-center mt-4 mr-12">
-				<explore-another-short />
+			<div class="flex justify-end items-center mt-3 mr-12">
+				<!-- <explore-another-short /> -->
+				aaa
 			</div>
 		</footer>
 	</div>
