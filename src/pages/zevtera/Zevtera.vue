@@ -13,7 +13,7 @@
 					class="absolute bottom-14 -right-5 w-[278px] h-auto object-cover"
 				/>
 			</section>
-			<section class="pl-14 pt-7">
+			<section class="pl-14 pt-8">
 				<the-h1 class="relative !text-[30px] text-charcoal">
 					Allows the reduction of the number of agents<sup class="text-[60%] -top-[0.45em]">2</sup>,<br />
 					thanks to its expanded spectrum of antimicrobial activity<sup class="text-[60%] -top-[0.45em]">3</sup>
@@ -61,13 +61,38 @@
 					</ul>
 				</div>
 			</section>
+			<section class="pl-14 pt-7">
+				<the-h1 class="text-charcoal max-h-[30px]">I'm interested in:</the-h1>
+				<div class="flex gap-x-2.5 mt-10">
+					<div class="relative flex flex-col items-center bg-white shadow-exblifep-card w-[276px] rounded-lg">
+						<div class="flex justify-center pt-1.5 bg-white absolute w-[76px] h-[76px] left-1/2 -translate-x-1/2 -top-[38px] rounded-full">
+							<chart-icon class="w-10 h-10" />
+						</div>
+						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Efficacy</the-body-lg>
+						<div class="flex flex-col justify-between mt-1">
+							<the-body-lg class="text-center"
+								>Demonstrated efficacy with clinical efficacy from Days 3-4, with more pathogens covered<sup class="text-[61%]"
+									>5-8</sup
+								></the-body-lg
+							>
+							<button
+								class="bg-[#97D700] mb-[18px] w-[125px] py-[9px]"
+								@click="router.push({ name: 'exblifep-efficacy' })"
+								@touchstart.prevent="router.push({ name: 'exblifep-efficacy' })"
+							>
+								<the-body class="">Discover more</the-body>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 		<footer>
-			<the-footer class="transition-all duration-300 ml-14 font-uni-grotesk"
+			<the-footnotes class="transition-all duration-300 ml-14 font-uni-grotesk"
 				>Zevtera® is the trademark in UK, Germany, Spain, Denmark, Norway, Sweden and Finland; Mabelio® is the trademark in France and Italy.
 				Commercialised by ADVANZ PHARMA® in Germany, Spain, Italy,<br />
 				France, and UK. Zevtera® / Mabelio ® is licensed to ADVANZ PHARMA by Basilea Pharmaceutica International AG.<br />©2025 ADVANZ
-				PHARMA®</the-footer
+				PHARMA®</the-footnotes
 			>
 			<div class="flex justify-between items-center mt-4 mr-12">
 				<ExploreAnother />
@@ -77,20 +102,23 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router';
+
 import StrikeFast from '/strike-fast.png';
 import MabelioBullet from '/mabelio-bullet.png';
 
 import VLazyImage from 'v-lazy-image';
 
+import ChartIcon from '@/icons/ChartIcon.vue';
+import ShieldIcon from '@/icons/ShieldIcon.vue';
+import BottleIcon from '@/icons/BottleIcon.vue';
+
 import TheH1 from '@/components/zevtera/TheH1.vue';
 import TheH2 from '@/components/zevtera/TheH2.vue';
 import TheBody from '@/components/zevtera/TheBody.vue';
 import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
-import TheFootnotes from '@/components/zevtera/TheFootnotes.vue';
-
-import Card from '@/components/Card.vue';
-import TheFooter from '@/components/TheFooter.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
+import TheFootnotes from '@/components/zevtera/TheFootnotes.vue';
 
 defineProps({
 	sidebarOpen: {
@@ -98,4 +126,6 @@ defineProps({
 		required: true,
 	},
 });
+
+const router = useRouter();
 </script>
