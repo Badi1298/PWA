@@ -65,24 +65,25 @@
 					</h4>
 				</div>
 			</section>
-			<!-- <section
+			<section
 				ref="details"
-				class="absolute right-[60px] top-1/2 -translate-y-1/2 z-50 flex flex-col bg-white p-12 rounded-[15px] border-primary-green border-[5px] shadow-zevtera-efficacy-more-pathogens-card"
+				class="z-50 flex bg-white rounded-[15px] border-primary-green border-[5px] shadow-zevtera-efficacy-more-pathogens-card"
 			>
 				<h3
 					ref="detailsTitle"
-					class="font-bold text-2xl text-center font-stag-sans"
+					class="font-bold text-2xl text-charcoal text-center font-stag-sans"
 				>
 					Early improvement at Day 4 in patients with HAP<br />
 					(excluding VAP) by pathogen type(CE)<sup>6</sup>
 				</h3>
+				<p class="absolute top-0 left-0 text-[10px] text-[#555] text-center">Adapted from Scheeren T et al. 2019.6</p>
 				<img
 					ref="pathogensChart"
 					:src="PathogensChart"
 					alt="Pathogens Chart"
-					class="self-end"
+					class=""
 				/>
-				<p class="text-[10px] text-[#555] text-center mt-4">Adapted from Scheeren T et al. 2019.6</p>
+
 				<img
 					ref="expandIcon"
 					src="/expand-icon-purple.png"
@@ -112,7 +113,7 @@
 					and 25.<sup>6</sup><br /><br />
 					CI, confidence interval; HAP, hospital-acquired pneumonia; CE, clinically evaluable.
 				</p>
-			</section> -->
+			</section>
 		</div>
 
 		<footer>
@@ -179,12 +180,12 @@ watch(
 
 onMounted(() => {
 	gsap.set(details.value, {
-		width: 675,
-		height: 560,
+		width: 865,
+		height: 270,
 	});
 	gsap.set(pathogensChart.value, {
-		width: 503,
-		marginRight: 32,
+		width: 327,
+		// marginRight: 32,
 	});
 	gsap.set(detailsFooter.value, {
 		opacity: 0,
@@ -213,7 +214,7 @@ const expandDetails = () => {
 		tl.set([expandIcon.value, closeIcon.value], { pointerEvents: 'none' })
 			.to(detailsFooter.value, { opacity: 0, display: 'none', duration: 0.2 })
 			.to(details.value, { width: 675, height: 560, translateY: 0 }, '<')
-			.to(pathogensChart.value, { width: 503, marginRight: 32 }, '<')
+			.to(pathogensChart.value, { width: 327, marginRight: 32 }, '<')
 			.to(detailsTitle.value, { scale: 1 }, '<')
 			.to(expandIcon.value, { bottom: 20, opacity: 1 }, '<')
 			.to(closeIcon.value, { opacity: 0, display: 'none', bottom: 20 }, '<')
@@ -222,7 +223,7 @@ const expandDetails = () => {
 		// Expanding animations
 		tl.set([expandIcon.value, closeIcon.value], { pointerEvents: 'none' })
 			.to(details.value, { width: 1205, height: 860, translateY: -30, paddingTop: 30 })
-			.to(pathogensChart.value, { width: 800, marginRight: 200 }, '<')
+			.to(pathogensChart.value, { width: 556, marginRight: 200 }, '<')
 			.to(detailsTitle.value, { scale: 1.3 }, '<')
 			.to(expandIcon.value, { bottom: 130, opacity: 0 }, '<')
 			.to(closeIcon.value, { opacity: 1, display: 'block', bottom: 130 }, '<')
