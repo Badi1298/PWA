@@ -72,12 +72,13 @@
 							<chart-icon
 								width="40"
 								height="40"
+								color="#009656"
 							/>
 						</div>
 						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Efficacy</the-body-lg>
 						<div class="flex flex-col flex-1 justify-between items-center mt-1">
 							<the-body-lg class="text-center"
-								>Demonstrated efficacy with clinical efficacy from Days 3-4, with more pathogens covered<sup class="text-[61%]"
+								>Demonstrated efficacy with clinical efficacy from Days 3-4, with more pathogens covered<sup class="text-[61%] -top-[0.55em]"
 									>5-8</sup
 								></the-body-lg
 							>
@@ -100,7 +101,9 @@
 						</div>
 						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Safety</the-body-lg>
 						<div class="flex flex-col flex-1 justify-between items-center mt-1">
-							<the-body-lg class="text-center">ZEVTERA®/MABELIO® is generally well tolerated<sup class="text-[61%]">9</sup></the-body-lg>
+							<the-body-lg class="text-center"
+								>ZEVTERA®/MABELIO® is generally well tolerated<sup class="text-[60%] -top-[0.8em]">9</sup></the-body-lg
+							>
 							<button
 								class="bg-primary-light-orange w-[125px] py-[9px]"
 								@click="router.push({ name: 'exblifep-efficacy' })"
@@ -119,7 +122,7 @@
 						</div>
 						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Dosing</the-body-lg>
 						<div class="flex flex-col flex-1 justify-between items-center mt-1">
-							<the-body-lg class="text-center">Ease-of-use dosing<sup class="text-[61%]">4</sup></the-body-lg>
+							<the-body-lg class="text-center">Ease-of-use dosing<sup class="text-[60%] -top-[0.8em]">4</sup></the-body-lg>
 							<button
 								class="bg-[#FCC100] w-[125px] py-[9px]"
 								@click="router.push({ name: 'exblifep-efficacy' })"
@@ -134,7 +137,7 @@
 		</div>
 		<footer>
 			<explore-another class="mt-[30px]" />
-			<the-footnotes class="transition-all duration-300 ml-14 mt-[18px] text-[#555555]"
+			<the-footnotes class="transition-all duration-300 ml-14 mt-[18px] text-[#555555] opacity-70"
 				>Zevtera® is the trademark in UK, Germany, Spain, Denmark, Norway, Sweden and Finland; Mabelio® is the trademark in France and Italy.
 				Commercialised by ADVANZ PHARMA® in Germany, Spain, Italy,<br />
 				France, and UK. Zevtera® / Mabelio ® is licensed to ADVANZ PHARMA by Basilea Pharmaceutica International AG.<br />©2025 ADVANZ
@@ -158,7 +161,6 @@ import ShieldIcon from '@/icons/ShieldIcon.vue';
 import DosingIcon from '@/icons/DosingIcon.vue';
 
 import TheH1 from '@/components/zevtera/TheH1.vue';
-import TheH2 from '@/components/zevtera/TheH2.vue';
 import TheBody from '@/components/zevtera/TheBody.vue';
 import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
