@@ -1,5 +1,5 @@
 <template>
-	<div class="pb-6 pr-14">
+	<div class="pb-6 h-full max-w-[905px]">
 		<div class="flex flex-col justify-start">
 			<section class="relative">
 				<VLazyImage
@@ -14,7 +14,7 @@
 				/>
 			</section>
 			<section class="pl-14">
-				<the-h1 class="relative !text-[30px] text-charcoal">
+				<the-h1 class="relative !text-[30px] !leading-8 text-charcoal">
 					Allows the reduction of the number of agents<sup class="text-[60%] -top-[0.45em]">2</sup>,<br />
 					thanks to its expanded spectrum of antimicrobial activity<sup class="text-[60%] -top-[0.45em]">3</sup>
 				</the-h1>
@@ -66,7 +66,7 @@
 					<the-h1 class="text-charcoal">I'm interested in:</the-h1>
 					<div class="flex-1 bg-charcoal h-px"></div>
 				</div>
-				<div class="flex gap-x-2.5 mt-[54px]">
+				<div class="flex justify-between mt-[54px]">
 					<div class="relative flex flex-col items-center bg-white shadow-exblifep-card w-[276px] rounded-lg min-h-[145px] pb-[18px] px-5">
 						<div class="flex justify-center pt-1.5 bg-white absolute w-[76px] h-[76px] left-1/2 -translate-x-1/2 -top-[38px] rounded-full">
 							<chart-icon

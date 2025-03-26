@@ -1,5 +1,5 @@
 <template>
-	<main class="flex justify-between bg-zevtera">
+	<main class="flex justify-between bg-zevtera bg-center bg-cover">
 		<img
 			src="/zevtera-mabelio-logo.png"
 			alt="Exblifep Logo"
