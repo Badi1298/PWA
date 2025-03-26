@@ -18,7 +18,7 @@
 			/>
 		</div>
 		<div class="page-content flex flex-col font-effra pr-14">
-			<div class="relative flex justify-end mr-12 min-h-[80px]">
+			<div class="relative flex justify-end min-h-[80px]">
 				<img
 					src="/bullet-long.png"
 					alt="Bullet Long"
@@ -183,12 +183,34 @@
 				</div>
 				<div
 					ref="clinicalEfficacyDetails"
-					class="flex flex-col min-h-[750px] pl-[276px] pt-[74px] absolute top-1/2 -translate-y-1/2 left-[190px] right-[60px] bg-white z-10 rounded-[30px] overflow-hidden shadow-zevtera-efficacy-card"
+					class="flex flex-col absolute top-1/2 -translate-y-1/2 bg-white z-10 rounded-[30px] overflow-hidden detail min-w-[865px] px-[30px] py-6"
 				>
-					<div class="flex flex-col w-[863px]">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="41"
+						height="40"
+						viewBox="0 0 41 40"
+						fill="none"
+						class="absolute right-6 top-6"
+						@click="animateClinicalEfficacy"
+						@touchstart.prevent="animateClinicalEfficacy"
+					>
+						<ellipse
+							cx="20.7902"
+							cy="20"
+							rx="20.0929"
+							ry="20"
+							fill="#982384"
+						/>
+						<path
+							d="M13.4447 28.5713L12.126 27.2526L19.3787 19.9999L12.126 12.7471L13.4447 11.4285L20.6974 18.6812L27.9502 11.4285L29.2688 12.7471L22.0161 19.9999L29.2688 27.2526L27.9502 28.5713L20.6974 21.3186L13.4447 28.5713Z"
+							fill="white"
+						/>
+					</svg>
+					<div class="flex flex-col w-[736px]">
 						<div class="grid grid-cols-[1fr_1fr] gap-x-2">
 							<button
-								class="flex items-center justify-center py-3 rounded-t-[20px] text-2xl transition-colors duration-500 font-uni-grotesk"
+								class="flex items-center justify-center py-[11px] rounded-t-[20px] text-xl leading-[21px] transition-colors duration-500 font-uni-grotesk"
 								:class="[activeClinicalEfficayTab === clinicalEfficacyTabs.DAY_3 ? 'bg-primary-purple text-white font-bold' : 'bg-[#E4E4E4]']"
 								@click="activateDay3"
 								@touchstart.prevent="activateDay3"
@@ -196,7 +218,7 @@
 								<span class="max-h-[26px]">Day 3</span>
 							</button>
 							<button
-								class="flex items-center justify-center py-3 rounded-t-[20px] text-2xl transition-colors duration-500 font-uni-grotesk"
+								class="flex items-center justify-center py-[11px] rounded-t-[20px] text-xl leading-[21px] transition-colors duration-500 font-uni-grotesk"
 								:class="[activeClinicalEfficayTab === clinicalEfficacyTabs.DAY_4 ? 'bg-primary-purple text-white font-bold' : 'bg-[#E4E4E4]']"
 								@click="activateDay4"
 								@touchstart.prevent="activateDay4"
@@ -206,43 +228,43 @@
 						</div>
 						<div
 							v-if="activeClinicalEfficayTab === clinicalEfficacyTabs.DAY_3"
-							class="w-[863px] h-[464px] border-2 flex flex-col items-center pt-8 border-primary-purple"
+							class="w-[736px] h-[396px] border-2 flex flex-col items-center pt-7 border-primary-purple"
 						>
-							<h3 class="text-2xl font-stag-sans font-bold">Early improvement at Day 3 in patients with CAP by risk factors (CE)<sup>6</sup></h3>
+							<h3 class="text-xl leading-[21px] text-charcoal font-stag-sans font-bold">
+								Early improvement at Day 3 in patients with CAP by risk factors (CE)<sup class="-top-[0.4em]">6</sup>
+							</h3>
 							<VLazyImage
 								:src="ChartA"
 								alt="Chart A"
-								class="w-[803px] h-auto object-cover"
+								class="w-[674px] h-auto object-cover"
 							/>
 							<span class="text-[10px] mt-5 font-uni-grotesk text-[#555]">Adapted from Scheeren T et al. 2019.6</span>
 						</div>
 						<div
 							v-if="activeClinicalEfficayTab === clinicalEfficacyTabs.DAY_4"
-							class="w-[863px] h-[464px] border-2 flex flex-col items-center pt-8 border-primary-purple"
+							class="w-[736px] h-[396px] border-2 flex flex-col items-center pt-7 border-primary-purple"
 						>
-							<h3 class="text-2xl font-stag-sans font-bold text-center">
+							<h3 class="text-xl leading-[21px] font-stag-sans font-bold text-center">
 								Early improvement at Day 4 in patients with HAP<br />
 								(excluding VAP) by risk factor (CE)<sup>6</sup>
 							</h3>
 							<VLazyImage
 								:src="ChartB"
 								alt="Chart A"
-								class="w-[803px] h-auto object-cover -mt-8"
+								class="w-[675px] h-auto object-cover -mt-4"
 							/>
 							<span class="text-[10px] mt-5 font-uni-grotesk text-[#555]">Adapted from Scheeren T et al. 2019.6</span>
 						</div>
 					</div>
-					<footer class="text-[10px] text-[#555] mt-4 mr-12 font-uni-grotesk">
-						<span class="font-bold">STUDY DESIGN</span>: Post hoc analysis of data from two Phase III studies to evaluate early improvement outcomes
+					<footer class="text-[10px] leading-[12px] opacity-80 text-[#555] mt-2.5 font-uni-grotesk">
+						<span class="font-bold">STUDY DESIGN:</span> Post hoc analysis of data from two Phase III studies to evaluate early improvement outcomes
 						in subgroups of high-risk patients treated with ceftobiprole, compared with the respective active-control therapies(ceftriaxone ±
-						linezolid in CAP and ceftazidime plus linezolid in HAP). The HAP study was a multicentre, international, double-blind, non-inferiority
-						study of adult patients with HAP undertaken at 157 centres between April 2005 and May 2007. Key inclusion criteria comprised: a clinical
-						diagnosis of pneumonia after ≥72 h stay in hospital or a chronic care facility; clinical signs and symptoms of pneumonia; fever or
-						leucocytosis / leukopenia; new orpersistent radiographic infiltrates; and an Acute Physiology and Chronic Health Evaluation II (APACHE
-						II) score between 8 and 25.<sup>6</sup><br /><br />
+						linezolid in CAP and ceftazidime plus linezolid in HAP). The CAP study was a multicentre, international, double-blind, non-inferiority
+						study of hospitalized adult patients with CAP undertaken in 103 centres betweenJune 2006 and June 2007. Key inclusion criteria comprised
+						a diagnosis of acute bacterial CAP requiring hospitalisation (with no hospitalisation during the 14 days prior to onset of pneumonia
+						symptoms) and treatment with i.v.antibiotics for at least three days.<sup>6</sup><br />
 						CAP, Community-acquired pneumonia; CE, clinically evaluable; CI, confidence interval; COPD, chronic obstructive pulmonary disease; HAP,
-						hospital-acquired pneumonia; CE, clinically evaluable;<br />
-						TOC, test ofcure.
+						hospital-acquired pneumonia; CE, clinically evaluable; TOC, test ofcure.
 					</footer>
 				</div>
 			</section>
