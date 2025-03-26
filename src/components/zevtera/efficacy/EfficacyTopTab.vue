@@ -307,8 +307,6 @@ import ChartB from '/zevtera-efficacy-day-4.png';
 import ChartIcon from '@/icons/ChartIcon.vue';
 
 import TheH1 from '@/components/zevtera/TheH1.vue';
-import TheBody from '@/components/zevtera/TheBody.vue';
-import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
 import TheFootnotes from '@/components/zevtera/TheFootnotes.vue';
 

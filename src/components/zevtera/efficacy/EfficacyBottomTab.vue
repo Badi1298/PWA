@@ -123,7 +123,7 @@
 		</div>
 
 		<footer>
-			<the-footer class="footer mb-8">*Patients' groups who are severely ill or at high risk of poor outcomes</the-footer>
+			<the-footnotes class="footer mb-8 text-[#555555] opacity-70">*Patients' groups who are severely ill or at high risk of poor outcomes</the-footnotes>
 			<div class="flex justify-between items-center mt-4 mr-12">
 				<ExploreAnother />
 				<RouterLink :to="{ name: 'zevtera-safety', query: { navigatedAwayBy: 'next-section-button' } }">
@@ -141,10 +141,14 @@ import { gsap } from 'gsap';
 
 import PathogensChart from '/pathogens-chart.png';
 
-import TheFooter from '@/components/TheFooter.vue';
-import NextSection from '@/components/NextSection.vue';
 import TheTitle from '@/components/zevtera/TheTitle.vue';
+
+import TheH1 from '@/components/zevtera/TheH1.vue';
+import TheBody from '@/components/zevtera/TheBody.vue';
+import NextSection from '@/components/NextSection.vue';
+import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
+import TheFootnotes from '@/components/zevtera/TheFootnotes.vue';
 
 const props = defineProps({
 	sidebarOpen: {
