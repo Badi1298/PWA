@@ -67,19 +67,16 @@
 			</section>
 			<section
 				ref="details"
-				class="absolute bottom-[30px] z-50 flex bg-white rounded-[15px] border-primary-green border-[5px] shadow-zevtera-efficacy-more-pathogens-card pl-[50px]"
+				class="absolute bottom-[30px] z-50 flex bg-white rounded-[15px] border-primary-green border-[5px] shadow-zevtera-efficacy-more-pathogens-card"
 			>
 				<h3
 					ref="detailsTitle"
-					class="font-bold text-2xl leading-[26px] text-charcoal font-stag-sans pt-8"
+					class="absolute font-bold text-2xl leading-[26px] text-charcoal font-stag-sans"
 				>
-					Early improvement at<br />
-					Day 4 in patients with<br />
-					HAP (excluding VAP) by<br />
-					pathogen type(CE)<sup class="text-[65%] -top-[0.45em]">6</sup>
+					Early improvement at Day 4 in patients with HAP (excluding VAP) by pathogen type(CE)<sup class="text-[65%] -top-[0.45em]">6</sup>
 				</h3>
-				<p class="absolute bottom-[26px] left-[50px] text-[10px] text-[#555] text-center">
-					Adapted from Scheeren T et al. 2019.<sup class="text-[70%] font-bold">6</sup>
+				<p class="absolute font-uni-grotesk bottom-[26px] left-[50px] text-[10px] text-[#555] text-center opacity-80">
+					Adapted from Scheeren T et al. 2019.<sup class="text-[60%]">6</sup>
 				</p>
 				<img
 					ref="pathogensChart"
@@ -195,6 +192,11 @@ onMounted(() => {
 		right: 118,
 		top: 0,
 	});
+	gsap.set(detailsTitle.value, {
+		left: 50,
+		top: 32,
+		width: 275,
+	});
 	gsap.set(detailsFooter.value, {
 		opacity: 0,
 		display: 'none',
@@ -223,7 +225,7 @@ const expandDetails = () => {
 			.to(detailsFooter.value, { opacity: 0, display: 'none', duration: 0.2 })
 			.to(details.value, { width: 865, height: 270, translateY: 0 }, '<')
 			.to(pathogensChart.value, { width: 327, height: 235, right: 118, top: 0 }, '<')
-			.to(detailsTitle.value, { scale: 1 }, '<')
+			.to(detailsTitle.value, { scale: 1, left: 50, translateX: 0, top: 32, width: 275, textAlign: 'left' }, '<')
 			.to(expandIcon.value, { bottom: 20, opacity: 1 }, '<')
 			.to(closeIcon.value, { opacity: 0, display: 'none', bottom: 20 }, '<')
 			.set([expandIcon.value, closeIcon.value], { pointerEvents: 'auto' });
@@ -232,7 +234,7 @@ const expandDetails = () => {
 		tl.set([expandIcon.value, closeIcon.value], { pointerEvents: 'none' })
 			.to(details.value, { width: 865, height: 596, translateY: -30, paddingTop: 30 })
 			.to(pathogensChart.value, { width: 556, height: 400, right: 154, top: 67 }, '<')
-			.to(detailsTitle.value, { scale: 1.3 }, '<')
+			.to(detailsTitle.value, { scale: 1.1, left: '50%', translateX: '-50%', top: 25, width: 560, textAlign: 'center' }, '<')
 			.to(expandIcon.value, { bottom: 130, opacity: 0 }, '<')
 			.to(closeIcon.value, { opacity: 1, display: 'block', bottom: 130 }, '<')
 			.to(detailsFooter.value, { opacity: 1, display: 'block' }, 0.5)
