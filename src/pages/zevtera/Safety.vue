@@ -1,42 +1,42 @@
 <template>
 	<div class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10">
 		<div class="page-content flex flex-col font-stag-sans">
-			<div class="relative flex justify-end mr-12 mt-14 min-h-[80px]">
+			<div class="relative flex justify-end mr-12 min-h-[80px]">
 				<img
 					src="/bullet-long.png"
 					alt="Bullet Long"
-					class="absolute top-1/2 -translate-y-1/2 -left-20 w-[1400px] h-[162px]"
+					class="absolute top-0 -left-12 w-[860px] h-[100px]"
 				/>
-				<div class="select-tab absolute top-1/2 -translate-y-1/2 flex gap-x-3.5 items-center text-charcoal text-2xl font-bold font-uni-grotesk">
+				<div class="select-tab absolute top-6 flex gap-x-3.5 items-center text-charcoal text-base font-bold font-effra">
 					<img
 						src="/touch-purple.png"
 						alt="Touch to select tab"
-						class="w-[70px] h-[70px]"
+						class="w-[50px] h-[50px]"
 					/>
-					<span>Touch a step to continue</span>
+					<span class="max-h-[18px]">Touch a step to continue</span>
 				</div>
 			</div>
 
-			<div class="grid grid-cols-2 mr-[60px] items-center mt-3 max-w-[1474px]">
-				<the-title
-					>Less burden to<br />
-					treat your patients</the-title
-				>
+			<section class="grid grid-cols-2 items-end pr-14">
+				<h1 class="text-[40px] leading-[42px] font-stag-sans font-bold text-charcoal">
+					Less burden to<br />
+					treat your patients
+				</h1>
 				<div
-					class="flex items-center gap-x-5w-[582px] bg-primary-light-orange px-6 py-5 rounded-[20px] shadow-zevtera-efficacy-pathogens-card mt-8 min-w-[582px] justify-self-end"
+					class="flex items-center gap-x-4 bg-primary-light-orange px-[18px] py-4 rounded-[15px] shadow-zevtera-efficacy-pathogens-card min-w-[440px] justify-self-end"
 				>
 					<img
 						src="/tick-icon-black.png"
 						alt="Tick"
-						class="w-[82px] h-auto"
+						class="w-[61px] h-auto"
 					/>
-					<h4 class="text-[32px] font-bold text-charcoal ml-5">Less number of agents*<sup class="text-[60%]">2</sup></h4>
+					<h4 class="text-2xl leading-[26px] font-bold text-charcoal">Less number of agents*<sup class="text-[60%]">2</sup></h4>
 				</div>
-			</div>
-			<section class="relative grid grid-cols-3 flex-1 mt-8 mr-[60px] gap-x-16 pb-10">
+			</section>
+			<section class="relative grid grid-cols-3 flex-1 mt-8 gap-x-16 pb-10 pr-14">
 				<div
 					ref="wellTolarated"
-					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[20px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
+					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
 					@click="animateWellTolarated"
 					@touchstart.prevent="animateWellTolarated"
 				>
@@ -67,7 +67,7 @@
 				</div>
 				<div
 					ref="gutFlora"
-					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[20px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
+					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
 					@click="animateGutFlora"
 					@touchstart.prevent="animateGutFlora"
 				>
@@ -96,7 +96,7 @@
 				</div>
 				<div
 					ref="easeOfUse"
-					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[20px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
+					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
 				>
 					<RouterLink :to="{ name: 'zevtera-dosing', query: { navigatedAwayBy: 'ease-of-use-card' } }">
 						<img
@@ -132,7 +132,7 @@
 							alt="Adverse Events"
 							class="min-w-[450px] max-w-[450px] h-auto"
 						/>
-						<div class="flex flex-col gap-y-[50px] bg-[#F5F5F5] rounded-[20px] py-10 px-2.5">
+						<div class="flex flex-col gap-y-[50px] bg-[#F5F5F5] rounded-[15px] py-10 px-2.5">
 							<div class="flex flex-col items-center gap-y-6">
 								<img
 									src="/caution-orange-border.png"
