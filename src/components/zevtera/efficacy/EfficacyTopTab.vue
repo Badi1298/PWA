@@ -36,10 +36,7 @@
 			</div>
 
 			<section class="relative flex-1 content-end pb-6">
-				<div
-					ref="content"
-					class="flex flex-col gap-y-6"
-				>
+				<div class="flex flex-col gap-y-6">
 					<img
 						src="/zevtera-mabelio-logo.png"
 						alt="Zevevtra Mabelio Logo"
@@ -297,7 +294,6 @@ useAnimateSelectTab(sidebarOpenRef);
 const sessionId = inject('sessionId');
 
 const topTab = ref(null);
-const content = ref(null);
 
 const bacterialActivity = ref(null);
 const bacterialActivityDetails = ref(null);
@@ -321,53 +317,28 @@ watch(
 );
 
 onMounted(() => {
-	gsap.set(bacterialActivityDetails.value, { opacity: 0 });
-	gsap.set(clinicalEfficacyDetails.value, { opacity: 0 });
+	gsap.set(bacterialActivityDetails.value, { scale: 0 });
+	gsap.set(clinicalEfficacyDetails.value, { scale: 0 });
 	gsap.set('.bacterial-swap-card', { opacity: 0 });
 	gsap.set('.clinical-swap-card', { opacity: 0 });
 	gsap.set('.text-2', { display: 'none' });
 });
 
-const animateSection = ({ activeRef, detailsRef, mainRef, swapCardSelector, fadeElements, slideDivisor }) => {
+const animateSection = ({ activeRef, detailsRef }) => {
 	const tl = gsap.timeline();
 	const isActive = activeRef.value;
 
-	// Common animation properties
-	const opacityConfig = {
-		opacity: isActive ? 1 : 0,
-		pointerEvents: 'none',
+	const detailsScaleConfif = {
+		scale: isActive ? 0 : 1,
+		zIndex: isActive ? 10 : 999,
 		duration: 0.7,
 		ease: 'power2.inOut',
-	};
-
-	const detailsOpacityConfig = {
-		opacity: isActive ? 0 : 1,
-		duration: 0.7,
-		ease: 'power2.inOut',
-	};
-
-	const slideConfig = {
-		x: isActive ? 0 : -window.innerWidth / slideDivisor,
-		duration: 0.9,
-		ease: 'power2.inOut',
-		onComplete: () => {
-			activeRef.value = !isActive;
-		},
 	};
 
 	if (isActive) {
-		// Animate slide first, then opacity
-		tl.to(detailsRef.value, detailsOpacityConfig)
-			.to(mainRef.value, slideConfig, '-=0.5')
-			.to(swapCardSelector, { opacity: 0, duration: 0.7, ease: 'power2.inOut' }, '-=0.5')
-			.to(fadeElements, opacityConfig, '-=0.5')
-			.to(fadeElements, { pointerEvents: 'auto' });
+		tl.to(detailsRef.value, detailsScaleConfif);
 	} else {
-		// Animate opacity first, then slide
-		tl.to(fadeElements, opacityConfig)
-			.to(mainRef.value, slideConfig, '-=0.5')
-			.to(detailsRef.value, detailsOpacityConfig, '-=0.5')
-			.to(swapCardSelector, { opacity: 1, duration: 0.7, ease: 'power2.inOut' }, '-=0.5');
+		tl.to(detailsRef.value, detailsScaleConfif);
 	}
 
 	return tl;
@@ -383,10 +354,6 @@ const animateBacterialActivity = () => {
 	return animateSection({
 		activeRef: bacterialActivityActive,
 		detailsRef: bacterialActivityDetails,
-		mainRef: bacterialActivity,
-		swapCardSelector: '.bacterial-swap-card',
-		fadeElements: [clinicalEfficacy.value, content.value],
-		slideDivisor: props.sidebarOpen ? 3.6 : 2.9,
 	});
 };
 
@@ -411,9 +378,6 @@ const animateClinicalEfficacy = () => {
 		activeRef: clinicalEfficacyActive,
 		detailsRef: clinicalEfficacyDetails,
 		mainRef: clinicalEfficacy,
-		swapCardSelector: '.clinical-swap-card',
-		fadeElements: [bacterialActivity.value, content.value],
-		slideDivisor: props.sidebarOpen ? 1.97 : 1.67,
 	});
 };
 
