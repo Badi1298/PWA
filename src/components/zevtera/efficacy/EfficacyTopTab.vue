@@ -3,21 +3,21 @@
 		ref="topTab"
 		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10"
 	>
-		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-[52px]">
+		<div class="flex flex-col gap-y-3 absolute top-1/2 -translate-y-1/2 left-[22px]">
 			<img
 				src="/active-dot-purple.png"
 				alt="Active Dot"
-				class="h-5 w-5 cursor-pointer"
+				class="w-2.5 h-2.5 cursor-pointer"
 			/>
 			<img
 				src="/inactive-dot.png"
 				alt="Active Dot"
-				class="h-5 w-5 cursor-pointer"
+				class="w-2.5 h-2.5 cursor-pointer"
 				@click="emit('goToBottomTab')"
 				@touchstart.prevent="emit('goToBottomTab')"
 			/>
 		</div>
-		<div class="page-content flex flex-col font-effra">
+		<div class="page-content flex flex-col font-effra pr-14">
 			<div class="relative flex justify-end mr-12 min-h-[80px]">
 				<img
 					src="/bullet-long.png"
@@ -42,8 +42,8 @@
 				>
 					<the-h1 class="!text-[40px] !leading-[42px] text-charcoal">More for your difficult-to-treat patients*</the-h1>
 				</div>
-				<div class="grid grid-cols-3">
-					<div class="relative bg-primary-green flex flex-col justify-center rounded-[20px] overflow-hidden shadow-zevtera-efficacy-pathogens-card">
+				<div class="grid grid-cols-3 min-h-[380px] gap-x-[18px]">
+					<div class="relative bg-primary-green flex flex-col justify-end pb-12 rounded-[20px] overflow-hidden card">
 						<chart-icon
 							width="172"
 							height="171"
@@ -56,30 +56,27 @@
 					</div>
 					<div
 						ref="bacterialActivity"
-						class="relative bg-primary-green ml-10 rounded-[20px] max-w-[420px] cursor-pointer shadow-zevtera-efficacy-pathogens-card z-50"
+						class="relative bg-primary-green rounded-[20px] max-w-[420px] cursor-pointer card z-50"
 						@click="animateBacterialActivity"
 						@touchstart.prevent="animateBacterialActivity"
 					>
 						<img
 							src="/touch-purple.png"
 							alt="Touch to select tab"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6"
+							class="absolute w-[55px] h-[55px] top-3 right-4"
 						/>
 						<img
 							src="/swap-purple.png"
 							alt="Swap"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6 bacterial-swap-card"
+							class="absolute w-[55px] h-[55px] top-3 right-4 bacterial-swap-card"
 						/>
 						<img
 							src="/arrow-down-dark-green.png"
 							alt="Arrow Down"
-							class="h-[175px] w-auto mt-5"
+							class="w-[190px] mt-5"
 						/>
-						<h2 class="text-5xl text-white font-stag-sans font-bold mt-7 pl-7">
-							Fast<br />
-							bactericidal activity
-						</h2>
-						<p class="text-2xl text-white mt-4 font-uni-grotesk pl-7">
+						<h2 class="text-[30px] leading-[32px] text-white font-stag-sans font-bold mt-7 pl-7">Fast bactericidal activity</h2>
+						<p class="text-base text-white mt-4 font-uni-grotesk pl-7">
 							Exhibits rapid in vitro bactericidal activity in Gram-positive and Gram-negative pathogens<sup class="text-[50%] -top-[0.9em]"
 								>5</sup
 							>
@@ -87,27 +84,27 @@
 					</div>
 					<div
 						ref="clinicalEfficacy"
-						class="relative bg-primary-green rounded-[20px] overflow-hidden max-w-[420px] cursor-pointer shadow-zevtera-efficacy-pathogens-card z-50"
+						class="relative bg-primary-green rounded-[20px] overflow-hidden max-w-[420px] cursor-pointer card z-50"
 						@click="animateClinicalEfficacy"
 						@touchstart.prevent="animateClinicalEfficacy"
 					>
 						<img
 							src="/touch-purple.png"
 							alt="Touch to select tab"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6"
+							class="absolute w-[55px] h-[55px] top-3 right-4"
 						/>
 						<img
 							src="/swap-purple.png"
 							alt="Swap"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6 clinical-swap-card"
+							class="absolute w-[55px] h-[55px] top-3 right-4 clinical-swap-card"
 						/>
 						<img
 							src="/up-arrows-dark-green.png"
 							alt="Arrow Down"
-							class="h-[225px] w-auto mt-[22px] ml-7"
+							class="w-[140px] mt-[22px] ml-7"
 						/>
-						<h2 class="text-5xl text-white font-stag-sans font-bold mt-7 pl-7">Clinical efficacy from Days 3-4</h2>
-						<p class="text-2xl text-white mt-4 font-uni-grotesk pl-7 pr-4">
+						<h2 class="text-[30px] leading-[32px] text-white font-stag-sans font-bold mt-7 pl-7">Clinical efficacy from Days 3-4</h2>
+						<p class="text-base text-white mt-4 font-uni-grotesk pl-7 pr-4">
 							Early improvement at D3 in patients with CAP and at D4 in patients with HAP (CE)<sup class="text-[50%] -top-[0.9em]">6</sup>
 						</p>
 					</div>
@@ -419,3 +416,10 @@ const activateDay4 = () => {
 	// trackAction('Efficacy', 'clinical-efficacy-day-4', sessionId.value, brand.value);
 };
 </script>
+
+<style scoped>
+.card {
+	box-shadow: -31.877px 74.164px 22.77px 0px rgba(0, 0, 0, 0), -20.167px 47.491px 20.818px 0px rgba(0, 0, 0, 0.01),
+		-11.71px 26.673px 17.565px 0px rgba(0, 0, 0, 0.05), -5.204px 11.71px 13.011px 0px rgba(0, 0, 0, 0.09), -1.301px 3.253px 7.156px 0px rgba(0, 0, 0, 0.1);
+}
+</style>
