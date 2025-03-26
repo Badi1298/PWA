@@ -103,15 +103,15 @@
 				/>
 				<p
 					ref="detailsFooter"
-					class="text-[10px] text-[#555] mt-7 pr-28"
+					class="absolute bottom-5 font-uni-grotesk left-[30px] text-[10px] leading-3 text-[#555]"
 				>
 					<span class="font-bold">STUDY DESIGN:</span> Post hoc analysis of data from two Phase III studies to evaluate early improvement outcomes in
-					subgroups of high-risk patients treated with ceftobiprole, compared with the respective active-control therapies(ceftriaxone ± linezolid in
-					CAP and ceftazidime plus linezolid in HAP). The HAP study was a multicentre, international, double-blind, non-inferiority study of adult
-					patients with HAP undertaken at 157 centres between April 2005 and May 2007. Key inclusion criteria comprised: a clinical diagnosis of
-					pneumonia after ≥72 h stay in hospital or a chronic care facility; clinical signs and symptoms of pneumonia; fever or leucocytosis /
-					leukopenia; new orpersistent radiographic infiltrates; and an Acute Physiology and Chronic Health Evaluation II (APACHE II) score between 8
-					and 25.<sup>6</sup><br /><br />
+					subgroups of high-risk patients treated with ceftobiprole, compared with the<br />
+					respective active-control therapies(ceftriaxone ± linezolid in CAP and ceftazidime plus linezolid in HAP). The HAP study was a multicentre,
+					international, double-blind, non-inferiority study of adult patients with HAP undertaken at 157 centres between April 2005 and May 2007. Key
+					inclusion criteria comprised: a clinical diagnosis of pneumonia after ≥72 h stay in hospital or a chronic care facility; clinical signs and
+					symptoms of pneumonia; fever or leucocytosis / leukopenia; new orpersistent radiographic infiltrates; and an Acute Physiology and Chronic
+					Health Evaluation II (APACHE II) score between 8 and 25.<sup>6</sup><br />
 					CI, confidence interval; HAP, hospital-acquired pneumonia; CE, clinically evaluable.
 				</p>
 			</section>
@@ -225,19 +225,44 @@ const expandDetails = () => {
 			.to(detailsFooter.value, { opacity: 0, display: 'none', duration: 0.2 })
 			.to(details.value, { width: 865, height: 270, translateY: 0 }, '<')
 			.to(pathogensChart.value, { width: 327, height: 235, right: 118, top: 0 }, '<')
-			.to(detailsTitle.value, { scale: 1, left: 50, translateX: 0, top: 32, width: 275, textAlign: 'left' }, '<')
+			.to(
+				detailsTitle.value,
+				{
+					scale: 1,
+					left: 50,
+					translateX: 0,
+					top: 32,
+					onStart: () => {
+						gsap.to(detailsTitle.value, { width: 275, textAlign: 'left', duration: 0.2, ease: 'circ.out' });
+					},
+				},
+				'<'
+			)
 			.to(expandIcon.value, { bottom: 20, opacity: 1 }, '<')
 			.to(closeIcon.value, { opacity: 0, display: 'none', bottom: 20 }, '<')
+			// .to(detailsTitle.value, { width: 275, textAlign: 'left' }, '<')
 			.set([expandIcon.value, closeIcon.value], { pointerEvents: 'auto' });
 	} else {
 		// Expanding animations
 		tl.set([expandIcon.value, closeIcon.value], { pointerEvents: 'none' })
-			.to(details.value, { width: 865, height: 596, translateY: -30, paddingTop: 30 })
+			.to(details.value, { width: 865, height: 596, paddingTop: 30 })
 			.to(pathogensChart.value, { width: 556, height: 400, right: 154, top: 67 }, '<')
-			.to(detailsTitle.value, { scale: 1.1, left: '50%', translateX: '-50%', top: 25, width: 560, textAlign: 'center' }, '<')
+			.to(
+				detailsTitle.value,
+				{
+					scale: 1.1,
+					left: '50%',
+					translateX: '-50%',
+					top: 25,
+					onStart: () => {
+						gsap.to(detailsTitle.value, { width: 560, textAlign: 'center', duration: 0.5, ease: 'back.out' });
+					},
+				},
+				'<'
+			)
 			.to(expandIcon.value, { bottom: 130, opacity: 0 }, '<')
 			.to(closeIcon.value, { opacity: 1, display: 'block', bottom: 130 }, '<')
-			.to(detailsFooter.value, { opacity: 1, display: 'block' }, 0.5)
+			.to(detailsFooter.value, { opacity: 0.9, display: 'block' }, 0.5)
 			.set([expandIcon.value, closeIcon.value], { pointerEvents: 'auto' });
 	}
 };
