@@ -1,7 +1,7 @@
 <template>
 	<div
 		ref="bottomTab"
-		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10 pb-6 pr-14"
+		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10 pb-6 pr-[54px]"
 	>
 		<button
 			class="absolute left-1/2 top-0 z-50"
@@ -14,7 +14,7 @@
 				class="w-[84px] h-[30px] cursor-pointer"
 			/>
 		</button>
-		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-[22px]">
+		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-5">
 			<img
 				src="/inactive-dot.png"
 				alt="Active Dot"
@@ -34,37 +34,35 @@
 				alt="Bullet Long"
 				class="-translate-x-12 w-[860px] max-h-[100px]"
 			/>
-			<h1 class="text-[40px] leading-[42px] font-stag-sans font-bold text-charcoal">More pathogens covered</h1>
-			<section class="flex flex-col">
-				<div>
-					<div class="grid grid-cols-2">
-						<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
-							<img
-								src="/tick-icon-dark-green.png"
-								alt="Tick"
-								class="w-[82px] h-auto"
-							/>
-							<h4 class="text-[32px] font-bold font-stag-sans text-white">Documented use<sup class="text-[50%] -top-[0.7em]">3</sup></h4>
-						</div>
-						<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
-							<img
-								src="/tick-icon-dark-green.png"
-								alt="Tick"
-								class="w-[82px] h-auto"
-							/>
-							<h4 class="text-[32px] font-bold font-stag-sans text-white">Empiric use<sup class="text-[50%] -top-[0.7em]">2,7,8</sup></h4>
-						</div>
-					</div>
-					<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
+			<h1 class="text-[40px] leading-[42px] font-stag-sans font-bold text-charcoal mt-5">More pathogens covered</h1>
+			<section class="flex flex-col gap-y-5 mt-5">
+				<div class="grid grid-cols-2 gap-x-[30px]">
+					<div class="flex items-center gap-x-4 bg-primary-green px-5 py-4 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
 						<img
 							src="/tick-icon-dark-green.png"
 							alt="Tick"
-							class="w-[82px] h-auto"
+							class="w-[62px] h-auto"
 						/>
-						<h4 class="text-[32px] font-bold font-stag-sans text-white">
-							Adapted to your local stewardship program<sup class="text-[50%] -top-[0.7em]">4,8</sup>
-						</h4>
+						<h4 class="text-2xl leading-[26px] font-bold font-stag-sans text-white">Documented use<sup class="text-[50%] -top-[0.7em]">3</sup></h4>
 					</div>
+					<div class="flex items-center gap-x-4 bg-primary-green px-5 py-4 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
+						<img
+							src="/tick-icon-dark-green.png"
+							alt="Tick"
+							class="w-[62px] h-auto"
+						/>
+						<h4 class="text-2xl leading-[26px] font-bold font-stag-sans text-white">Empiric use<sup class="text-[50%] -top-[0.7em]">2,7,8</sup></h4>
+					</div>
+				</div>
+				<div class="flex items-center gap-x-4 bg-primary-green px-5 py-4 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
+					<img
+						src="/tick-icon-dark-green.png"
+						alt="Tick"
+						class="w-[62px] h-auto"
+					/>
+					<h4 class="text-2xl leading-[26px] font-bold font-stag-sans text-white">
+						Adapted to your local stewardship program<sup class="text-[50%] -top-[0.7em]">4,8</sup>
+					</h4>
 				</div>
 			</section>
 			<!-- <section

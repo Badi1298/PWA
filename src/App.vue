@@ -33,6 +33,7 @@ const resetInactivityTimer = () => {
 
 onMounted(() => {
 	resetInactivityTimer();
+	router.push('/zevtera');
 
 	window.addEventListener('mousemove', resetInactivityTimer);
 	window.addEventListener('keydown', resetInactivityTimer);

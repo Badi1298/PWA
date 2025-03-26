@@ -8,7 +8,7 @@ const routes = [
 		meta: { brand: 'NONE' },
 	},
 	{
-		path: '/home',
+		path: '/',
 		component: () => import('@/pages/Home.vue'),
 		name: 'home',
 		meta: { brand: 'NONE' },
@@ -51,7 +51,7 @@ const routes = [
 		],
 	},
 	{
-		path: '/',
+		path: '/zevtera',
 		component: () => import('@/pages/zevtera/ZevteraLayout.vue'),
 		name: 'zevtera-index',
 		children: [
