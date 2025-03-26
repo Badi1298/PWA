@@ -75,7 +75,7 @@
 				>
 					Early improvement at Day 4 in patients with HAP (excluding VAP) by pathogen type(CE)<sup class="text-[65%] -top-[0.45em]">6</sup>
 				</h3>
-				<p class="absolute font-uni-grotesk bottom-[26px] left-[50px] text-[10px] text-[#555] text-center opacity-80">
+				<p class="small-footer absolute font-uni-grotesk bottom-[26px] left-[50px] text-[10px] text-[#555] text-center opacity-80">
 					Adapted from Scheeren T et al. 2019.<sup class="text-[60%]">6</sup>
 				</p>
 				<img
@@ -97,13 +97,13 @@
 					ref="closeIcon"
 					src="/close-icon-purple.png"
 					alt="Expand Icon"
-					class="absolute right-7 w-[60px] h-[60px] cursor-pointer"
+					class="absolute right-6 top-6 w-[60px] h-[60px] cursor-pointer"
 					@click="expandDetails"
 					@touchstart.prevent="expandDetails"
 				/>
 				<p
 					ref="detailsFooter"
-					class="absolute bottom-5 font-uni-grotesk left-[30px] text-[10px] leading-3 text-[#555]"
+					class="absolute bottom-4 font-uni-grotesk left-[30px] text-[10px] leading-3 text-[#555]"
 				>
 					<span class="font-bold">STUDY DESIGN:</span> Post hoc analysis of data from two Phase III studies to evaluate early improvement outcomes in
 					subgroups of high-risk patients treated with ceftobiprole, compared with the<br />
@@ -121,7 +121,7 @@
 			<the-footnotes class="footer mb-[42px] text-[#555555] opacity-70"
 				>*Patients' groups who are severely ill or at high risk of poor outcomes</the-footnotes
 			>
-			<div class="flex justify-between items-center mt-4 mr-12">
+			<div class="flex justify-between items-center mt-4">
 				<ExploreAnother />
 				<RouterLink :to="{ name: 'zevtera-safety', query: { navigatedAwayBy: 'next-section-button' } }">
 					<next-section class="bg-primary-purple" />
@@ -138,12 +138,7 @@ import { gsap } from 'gsap';
 
 import PathogensChart from '/pathogens-chart.png';
 
-import TheTitle from '@/components/zevtera/TheTitle.vue';
-
-import TheH1 from '@/components/zevtera/TheH1.vue';
-import TheBody from '@/components/zevtera/TheBody.vue';
 import NextSection from '@/components/NextSection.vue';
-import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
 import TheFootnotes from '@/components/zevtera/TheFootnotes.vue';
 
@@ -203,7 +198,6 @@ onMounted(() => {
 	});
 	gsap.set(closeIcon.value, {
 		opacity: 0,
-		display: 'none',
 	});
 	gsap.set(expandIcon.value, {
 		opacity: 1,
@@ -238,19 +232,18 @@ const expandDetails = () => {
 				},
 				'<'
 			)
-			.to(expandIcon.value, { bottom: 20, opacity: 1 }, '<')
-			.to(closeIcon.value, { opacity: 0, display: 'none', bottom: 20 }, '<')
-			// .to(detailsTitle.value, { width: 275, textAlign: 'left' }, '<')
+			.to(expandIcon.value, { opacity: 1, duration: 0.3 }, '<')
+			.to(closeIcon.value, { opacity: 0, duration: 0.3 }, '<')
+			.to('.small-footer', { left: 50, x: 0, bottom: 26 }, '<')
 			.set([expandIcon.value, closeIcon.value], { pointerEvents: 'auto' });
 	} else {
 		// Expanding animations
 		tl.set([expandIcon.value, closeIcon.value], { pointerEvents: 'none' })
-			.to(details.value, { width: 865, height: 596, paddingTop: 30 })
-			.to(pathogensChart.value, { width: 556, height: 400, right: 154, top: 67 }, '<')
+			.to(details.value, { width: 865, height: 596 })
+			.to(pathogensChart.value, { width: 556, height: 400, right: 154, top: 65 }, '<')
 			.to(
 				detailsTitle.value,
 				{
-					scale: 1.1,
 					left: '50%',
 					translateX: '-50%',
 					top: 25,
@@ -260,8 +253,9 @@ const expandDetails = () => {
 				},
 				'<'
 			)
-			.to(expandIcon.value, { bottom: 130, opacity: 0 }, '<')
-			.to(closeIcon.value, { opacity: 1, display: 'block', bottom: 130 }, '<')
+			.to(expandIcon.value, { opacity: 0, duration: 0.3 }, '<')
+			.to(closeIcon.value, { opacity: 1, duration: 0.3 }, '<')
+			.to('.small-footer', { left: '50%', x: '-50%', bottom: 96 }, '<')
 			.to(detailsFooter.value, { opacity: 0.9, display: 'block' }, 0.5)
 			.set([expandIcon.value, closeIcon.value], { pointerEvents: 'auto' });
 	}
