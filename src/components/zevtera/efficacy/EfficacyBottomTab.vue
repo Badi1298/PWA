@@ -1,7 +1,7 @@
 <template>
 	<div
 		ref="bottomTab"
-		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10 pb-6"
+		class="grid grid-cols-1 grid-rows-1 min-h-screen relative z-10 pb-6 pr-14"
 	>
 		<button
 			class="absolute left-1/2 top-0 z-50"
@@ -11,56 +11,51 @@
 			<img
 				src="/page-vertical-up-purple.png"
 				alt="Down Button"
-				class="w-[140px] h-[50px] cursor-pointer"
+				class="w-[84px] h-[30px] cursor-pointer"
 			/>
 		</button>
-		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-[52px]">
+		<div class="flex flex-col gap-y-6 absolute top-1/2 -translate-y-1/2 left-[22px]">
 			<img
 				src="/inactive-dot.png"
 				alt="Active Dot"
-				class="h-5 w-5 cursor-pointer"
+				class="w-2.5 h-2.5 cursor-pointer"
 				@click="emit('goToTopTab')"
 				@touchstart.prevent="emit('goToTopTab')"
 			/>
 			<img
 				src="/active-dot-purple.png"
 				alt="Active Dot"
-				class="h-5 w-5 cursor-pointer"
+				class="w-2.5 h-2.5 cursor-pointer"
 			/>
 		</div>
 		<div class="page-content flex flex-col font-effra relative">
 			<img
 				src="/bullet-long.png"
 				alt="Bullet Long"
-				class="-translate-x-20"
+				class="-translate-x-12 w-[860px] max-h-[100px]"
 			/>
-			<div class="relative gap-x-28 items-center flex-1 content-center">
+			<h1 class="text-[40px] leading-[42px] font-stag-sans font-bold text-charcoal">More pathogens covered</h1>
+			<section class="flex flex-col">
 				<div>
-					<the-title
-						>More<br />
-						pathogens covered</the-title
-					>
-					<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[20px] shadow-zevtera-efficacy-pathogens-card mt-8 max-w-[582px]">
-						<img
-							src="/tick-icon-dark-green.png"
-							alt="Tick"
-							class="w-[82px] h-auto"
-						/>
-						<h4 class="text-[32px] font-bold font-stag-sans text-white">Documented use<sup class="text-[50%] -top-[0.7em]">3</sup></h4>
+					<div class="grid grid-cols-2">
+						<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
+							<img
+								src="/tick-icon-dark-green.png"
+								alt="Tick"
+								class="w-[82px] h-auto"
+							/>
+							<h4 class="text-[32px] font-bold font-stag-sans text-white">Documented use<sup class="text-[50%] -top-[0.7em]">3</sup></h4>
+						</div>
+						<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
+							<img
+								src="/tick-icon-dark-green.png"
+								alt="Tick"
+								class="w-[82px] h-auto"
+							/>
+							<h4 class="text-[32px] font-bold font-stag-sans text-white">Empiric use<sup class="text-[50%] -top-[0.7em]">2,7,8</sup></h4>
+						</div>
 					</div>
-					<div
-						class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[20px] shadow-zevtera-efficacy-pathogens-card mt-[18px] max-w-[582px]"
-					>
-						<img
-							src="/tick-icon-dark-green.png"
-							alt="Tick"
-							class="w-[82px] h-auto"
-						/>
-						<h4 class="text-[32px] font-bold font-stag-sans text-white">Empiric use<sup class="text-[50%] -top-[0.7em]">2,7,8</sup></h4>
-					</div>
-					<div
-						class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[20px] shadow-zevtera-efficacy-pathogens-card mt-[18px] max-w-[582px]"
-					>
+					<div class="flex items-center gap-x-5 bg-primary-green px-6 py-5 rounded-[15px] shadow-zevtera-efficacy-pathogens-card">
 						<img
 							src="/tick-icon-dark-green.png"
 							alt="Tick"
@@ -71,55 +66,55 @@
 						</h4>
 					</div>
 				</div>
-				<div
-					ref="details"
-					class="absolute right-[60px] top-1/2 -translate-y-1/2 z-50 flex flex-col bg-white p-12 rounded-[20px] border-primary-green border-[5px] shadow-zevtera-efficacy-more-pathogens-card"
+			</section>
+			<!-- <section
+				ref="details"
+				class="absolute right-[60px] top-1/2 -translate-y-1/2 z-50 flex flex-col bg-white p-12 rounded-[15px] border-primary-green border-[5px] shadow-zevtera-efficacy-more-pathogens-card"
+			>
+				<h3
+					ref="detailsTitle"
+					class="font-bold text-2xl text-center font-stag-sans"
 				>
-					<h3
-						ref="detailsTitle"
-						class="font-bold text-2xl text-center font-stag-sans"
-					>
-						Early improvement at Day 4 in patients with HAP<br />
-						(excluding VAP) by pathogen type(CE)<sup>6</sup>
-					</h3>
-					<img
-						ref="pathogensChart"
-						:src="PathogensChart"
-						alt="Pathogens Chart"
-						class="self-end"
-					/>
-					<p class="text-[10px] text-[#555] text-center mt-4">Adapted from Scheeren T et al. 2019.6</p>
-					<img
-						ref="expandIcon"
-						src="/expand-icon-purple.png"
-						alt="Expand Icon"
-						class="absolute right-7 w-[60px] h-[60px] cursor-pointer"
-						@click="expandDetails"
-						@touchstart.prevent="expandDetails"
-					/>
-					<img
-						ref="closeIcon"
-						src="/close-icon-purple.png"
-						alt="Expand Icon"
-						class="absolute right-7 w-[60px] h-[60px] cursor-pointer"
-						@click="expandDetails"
-						@touchstart.prevent="expandDetails"
-					/>
-					<p
-						ref="detailsFooter"
-						class="text-[10px] text-[#555] mt-7 pr-28"
-					>
-						<span class="font-bold">STUDY DESIGN:</span> Post hoc analysis of data from two Phase III studies to evaluate early improvement outcomes
-						in subgroups of high-risk patients treated with ceftobiprole, compared with the respective active-control therapies(ceftriaxone ±
-						linezolid in CAP and ceftazidime plus linezolid in HAP). The HAP study was a multicentre, international, double-blind, non-inferiority
-						study of adult patients with HAP undertaken at 157 centres between April 2005 and May 2007. Key inclusion criteria comprised: a clinical
-						diagnosis of pneumonia after ≥72 h stay in hospital or a chronic care facility; clinical signs and symptoms of pneumonia; fever or
-						leucocytosis / leukopenia; new orpersistent radiographic infiltrates; and an Acute Physiology and Chronic Health Evaluation II (APACHE
-						II) score between 8 and 25.<sup>6</sup><br /><br />
-						CI, confidence interval; HAP, hospital-acquired pneumonia; CE, clinically evaluable.
-					</p>
-				</div>
-			</div>
+					Early improvement at Day 4 in patients with HAP<br />
+					(excluding VAP) by pathogen type(CE)<sup>6</sup>
+				</h3>
+				<img
+					ref="pathogensChart"
+					:src="PathogensChart"
+					alt="Pathogens Chart"
+					class="self-end"
+				/>
+				<p class="text-[10px] text-[#555] text-center mt-4">Adapted from Scheeren T et al. 2019.6</p>
+				<img
+					ref="expandIcon"
+					src="/expand-icon-purple.png"
+					alt="Expand Icon"
+					class="absolute right-7 w-[60px] h-[60px] cursor-pointer"
+					@click="expandDetails"
+					@touchstart.prevent="expandDetails"
+				/>
+				<img
+					ref="closeIcon"
+					src="/close-icon-purple.png"
+					alt="Expand Icon"
+					class="absolute right-7 w-[60px] h-[60px] cursor-pointer"
+					@click="expandDetails"
+					@touchstart.prevent="expandDetails"
+				/>
+				<p
+					ref="detailsFooter"
+					class="text-[10px] text-[#555] mt-7 pr-28"
+				>
+					<span class="font-bold">STUDY DESIGN:</span> Post hoc analysis of data from two Phase III studies to evaluate early improvement outcomes in
+					subgroups of high-risk patients treated with ceftobiprole, compared with the respective active-control therapies(ceftriaxone ± linezolid in
+					CAP and ceftazidime plus linezolid in HAP). The HAP study was a multicentre, international, double-blind, non-inferiority study of adult
+					patients with HAP undertaken at 157 centres between April 2005 and May 2007. Key inclusion criteria comprised: a clinical diagnosis of
+					pneumonia after ≥72 h stay in hospital or a chronic care facility; clinical signs and symptoms of pneumonia; fever or leucocytosis /
+					leukopenia; new orpersistent radiographic infiltrates; and an Acute Physiology and Chronic Health Evaluation II (APACHE II) score between 8
+					and 25.<sup>6</sup><br /><br />
+					CI, confidence interval; HAP, hospital-acquired pneumonia; CE, clinically evaluable.
+				</p>
+			</section> -->
 		</div>
 
 		<footer>
