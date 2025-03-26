@@ -118,42 +118,67 @@
 
 				<div
 					ref="bacterialActivityDetails"
-					class="flex flex-col gap-y-5 absolute top-1/2 -translate-y-1/2 bg-white z-10 rounded-[30px] overflow-hidden shadow-zevtera-efficacy-card h-[570px] w-[865px] py-7 px-8"
+					class="flex flex-col absolute top-1/2 -translate-y-1/2 bg-white rounded-[22px] overflow-hidden detail w-[865px] pt-[25px] px-[30px] pb-[55px] gap-y-9"
 				>
-					<the-h1 class="text-charcoal pr-3">
-						ZEVTERA®/ MABELIO® exhibits rapid in vitro bactericidal<br />
-						activity in Gram-positive and Gram-negative pathogens<sup>5</sup>
-					</the-h1>
-					<div class="flex justify-center items-end mr-5 gap-x-28">
-						<div class="flex flex-col justify-between h-[284px]">
-							<h3 class="text-[11px] font-uni-grotesk italic text-center">Staphylococcus aureus*</h3>
-							<img
-								src="/bacterial-activity-sa.png"
-								alt="Bacterial Activity"
-								class="h-[260px] w-auto"
-							/>
-						</div>
-						<div class="flex flex-col justify-between h-[284px]">
-							<h3 class="text-[11px] font-uni-grotesk italic text-center">Escherichia coli*</h3>
-							<img
-								src="/bacterial-activity-ec.png"
-								alt="Bacterial Activity"
-								class="h-[247px] w-auto"
-							/>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="41"
+						height="40"
+						viewBox="0 0 41 40"
+						fill="none"
+						class="absolute right-6 top-6"
+						@click="animateBacterialActivity"
+						@touchstart.prevent="animateBacterialActivity"
+					>
+						<ellipse
+							cx="20.7902"
+							cy="20"
+							rx="20.0929"
+							ry="20"
+							fill="#982384"
+						/>
+						<path
+							d="M13.4447 28.5713L12.126 27.2526L19.3787 19.9999L12.126 12.7471L13.4447 11.4285L20.6974 18.6812L27.9502 11.4285L29.2688 12.7471L22.0161 19.9999L29.2688 27.2526L27.9502 28.5713L20.6974 21.3186L13.4447 28.5713Z"
+							fill="white"
+						/>
+					</svg>
+					<div class="flex flex-col gap-y-[33px]">
+						<the-h1 class="text-charcoal !leading-[26px] pr-3">
+							ZEVTERA®/ MABELIO® exhibits rapid in vitro bactericidal<br />
+							activity in Gram-positive and Gram-negative pathogens<sup>5</sup>
+						</the-h1>
+						<div class="flex justify-center items-end mr-5 gap-x-28">
+							<div class="flex flex-col justify-between h-[284px]">
+								<h3 class="text-[11px] font-uni-grotesk italic text-center">Staphylococcus aureus*</h3>
+								<img
+									src="/bacterial-activity-sa.png"
+									alt="Bacterial Activity"
+									class="h-[260px] w-auto"
+								/>
+							</div>
+							<div class="flex flex-col justify-between h-[284px]">
+								<h3 class="text-[11px] font-uni-grotesk italic text-center">Escherichia coli*</h3>
+								<img
+									src="/bacterial-activity-ec.png"
+									alt="Bacterial Activity"
+									class="h-[247px] w-auto"
+								/>
+							</div>
 						</div>
 					</div>
-					<footer class="text-[10px] leading-[12px] text-[#555] opacity-80 mt-9 font-uni-grotesk">
+
+					<footer class="text-[10px] leading-[12px] text-[#555] opacity-80 font-uni-grotesk">
 						Adapted from Hebeisen P et al. 2001<sup class="-top-[0.6em]">5</sup><br /><br />
-						*Overnight cultures of E. coli and MSSA/MRSA test strain were grown in 30 mL of Mueller-Hinton broth and diluted into fresh medium to
-						yield an inoculum of 106 CFU/mL or higher. Drug<br />
+						*Overnight cultures of <span class="italic">E. coli</span> and MSSA/MRSA test strain were grown in 30 mL of Mueller-Hinton broth and
+						diluted into fresh medium to yield an inoculum of 10<sup class="-top-[0.6em]">6</sup> CFU/mL or higher. Drug<br />
 						was added either with the inoculumor at intervals of 1.5 hours (early log phase) and 3 hours (log phase) after its addition. Drug
 						concentrations of 2 times the MIC were used. Ten-microlitre<br />
 						aliquots of appropriate dilutions were plated on Mueller-Hinton agar (MHA), and colonies were counted after 24 hours of incubation. To
 						check if resistant clones had been selected, the MICs<br />
 						were determined for those cultures that showed growth after 24 hours. Bactericidal activity was defined by a ≥ 3-log<sub>10</sub>
 						decrease in the number of CFU/mL within 24 hours.<sup class="-top-[0.6em]">5</sup><br />
-						CFU, colony-forming unit; MIC, minimum inhibitory concentration; MRSA, Methicillin-resistant S. aureus; MSSA, Methicillin-susceptible S.
-						aureus.
+						CFU, colony-forming unit; MIC, minimum inhibitory concentration; MRSA, Methicillin-resistant <span class="italic">S. aureus</span>;
+						MSSA, Methicillin-susceptible <span class="italic">S. aureus</span>.
 					</footer>
 				</div>
 				<div
@@ -259,9 +284,6 @@ import ChartB from '/zevtera-efficacy-day-4.png';
 
 import ChartIcon from '@/icons/ChartIcon.vue';
 
-import TheFooter from '@/components/TheFooter.vue';
-import TheTitle from '@/components/zevtera/TheTitle.vue';
-
 import TheH1 from '@/components/zevtera/TheH1.vue';
 import TheBody from '@/components/zevtera/TheBody.vue';
 import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
@@ -325,7 +347,7 @@ onMounted(() => {
 });
 
 const animateSection = ({ activeRef, detailsRef }) => {
-	const tl = gsap.timeline();
+	const tl = gsap.timeline({ onComplete: () => (activeRef.value = !activeRef.value) });
 	const isActive = activeRef.value;
 
 	const detailsScaleConfig = {
@@ -343,8 +365,6 @@ const animateSection = ({ activeRef, detailsRef }) => {
 
 	return tl;
 };
-
-// Now you can create the specific animations by passing the right parameters:
 
 const animateBacterialActivity = () => {
 	if (!bacterialActivityActive.value) {
@@ -396,5 +416,10 @@ const activateDay4 = () => {
 .card {
 	box-shadow: -31.877px 74.164px 22.77px 0px rgba(0, 0, 0, 0), -20.167px 47.491px 20.818px 0px rgba(0, 0, 0, 0.01),
 		-11.71px 26.673px 17.565px 0px rgba(0, 0, 0, 0.05), -5.204px 11.71px 13.011px 0px rgba(0, 0, 0, 0.09), -1.301px 3.253px 7.156px 0px rgba(0, 0, 0, 0.1);
+}
+
+.detail {
+	box-shadow: -28.6px 254.467px 71.867px 0px rgba(0, 0, 0, 0), -18.333px 162.8px 65.267px 0px rgba(0, 0, 0, 0.01),
+		-10.267px 91.667px 55px 0px rgba(0, 0, 0, 0.05), -4.4px 41.067px 41.067px 0px rgba(0, 0, 0, 0.09), -1.467px 10.267px 22.733px 0px rgba(0, 0, 0, 0.1);
 }
 </style>
