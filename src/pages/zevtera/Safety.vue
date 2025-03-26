@@ -33,10 +33,10 @@
 					<h4 class="text-2xl leading-[26px] font-bold text-charcoal">Less number of agents*<sup class="text-[60%]">2</sup></h4>
 				</div>
 			</section>
-			<section class="relative grid grid-cols-3 flex-1 mt-8 gap-x-16 pb-10 pr-14">
+			<section class="relative grid grid-cols-3 flex-1 mt-8 pb-10 pr-14">
 				<div
 					ref="wellTolarated"
-					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
+					class="relative flex flex-col w-[275px] h-[380px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
 					@click="animateWellTolarated"
 					@touchstart.prevent="animateWellTolarated"
 				>
@@ -44,51 +44,50 @@
 						<img
 							src="/touch-purple.png"
 							alt="Touch to select tab"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6"
+							class="absolute w-[55px] h-[55px] top-3 right-4"
 						/>
 						<img
 							src="/swap-purple.png"
 							alt="Swap"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6 bacterial-swap-card"
+							class="absolute w-[55px] h-[55px] top-3 right-4 bacterial-swap-card"
 						/>
 						<img
 							src="/tick-icon-black.png"
 							alt="Arrow Down"
-							class="w-[234px] mt-5 ml-6"
+							class="w-[155px] mt-5 ml-6"
 						/>
 					</div>
-					<div class="pb-28 text-charcoal">
-						<h2 class="text-5xl font-bold mt-7 pl-7">Well-tolerated</h2>
-						<p class="text-2xl mt-4 font-uni-grotesk pl-7">
-							ZEVTERA®/MABELIO® is<br />
-							generally well tolerated<sup class="text-[60%] -top-[0.7em]">9</sup>
+					<div class="pb-16 text-charcoal px-[18px]">
+						<h2 class="text-[30px] leading-[32px] text-charcoal font-bold mt-7">Well-tolerated</h2>
+						<p class="text-[15.6px] leading-[19px] mt-4 font-uni-grotesk">
+							Zevtera®/Mabelio® is generally well tolerated<sup class="text-[60%] -top-[0.7em]">9</sup>
 						</p>
 					</div>
 				</div>
 				<div
 					ref="gutFlora"
-					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
+					class="relative flex flex-col w-[275px] h-[380px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
 					@click="animateGutFlora"
 					@touchstart.prevent="animateGutFlora"
 				>
 					<img
 						src="/touch-purple.png"
 						alt="Touch to select tab"
-						class="absolute w-[85px] h-[85px] top-[18px] right-6"
+						class="absolute w-[55px] h-[55px] top-3 right-4"
 					/>
 					<img
 						src="/swap-purple.png"
 						alt="Swap"
-						class="absolute w-[85px] h-[85px] top-[18px] right-6 clinical-swap-card"
+						class="absolute w-[55px] h-[55px] top-3 right-4 clinical-swap-card"
 					/>
 					<img
 						src="/arrow-down-black.png"
 						alt="Arrow Down"
-						class="w-[291px] mt-4"
+						class="w-[190px] mt-9"
 					/>
-					<div class="pb-28 text-charcoal">
-						<h2 class="text-5xl font-bold mt-7 pl-7">Less impact on gut flora<sup class="text-[60%]">†4,10,11</sup></h2>
-						<p class="text-2xl mt-4 font-uni-grotesk pl-7">
+					<div class="pb-16 text-charcoal px-[18px]">
+						<h2 class="text-[30px] leading-[32px] text-charcoal font-bold mt-7">Less impact on gut flora<sup class="text-[60%]">†4,10,11</sup></h2>
+						<p class="text-[15.6px] leading-[19px] mt-4 font-uni-grotesk">
 							Low risk of adversely affecting<br />
 							the gut microflora
 						</p>
@@ -96,25 +95,25 @@
 				</div>
 				<div
 					ref="easeOfUse"
-					class="relative flex flex-col w-[419px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
+					class="relative flex flex-col w-[275px] h-[380px] justify-between bg-primary-light-orange rounded-[15px] cursor-pointer z-50 shadow-zevtera-efficacy-pathogens-card"
 				>
 					<RouterLink :to="{ name: 'zevtera-dosing', query: { navigatedAwayBy: 'ease-of-use-card' } }">
 						<img
 							src="/chevron-right-purple-circle.png"
 							alt="Touch to select tab"
-							class="absolute w-[85px] h-[85px] top-[18px] right-6"
+							class="absolute w-[55px] h-[55px] top-3 right-4"
 						/>
 
 						<img
 							src="/hand-cross-black.png"
 							alt="Arrow Down"
-							class="w-[276px] mt-4"
+							class="w-[204px]"
 						/>
-						<div class="pb-28 text-charcoal">
-							<h2 class="text-5xl font-bold mt-7 pl-7">Ease of use<sup class="text-[60%]">‡4</sup></h2>
-							<p class="text-2xl mt-4 font-uni-grotesk pl-7">Explore the ZEVTERA® dosing regimen</p>
-						</div>
 					</RouterLink>
+					<div class="pb-16 text-charcoal px-[18px]">
+						<h2 class="text-[30px] leading-[32px] text-charcoal font-bold mt-7">Ease of use<sup class="text-[60%]">‡4</sup></h2>
+						<p class="text-[15.6px] leading-[19px] mt-4 font-uni-grotesk">Explore the ZEVTERA®/MABELIO® dosing regimen</p>
+					</div>
 				</div>
 				<div
 					ref="wellTolaratedDetails"
