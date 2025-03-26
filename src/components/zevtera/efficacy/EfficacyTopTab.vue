@@ -18,98 +18,101 @@
 			/>
 		</div>
 		<div class="page-content flex flex-col font-effra">
-			<div class="relative flex justify-end mr-12 mt-16 min-h-[80px]">
+			<div class="relative flex justify-end mr-12 min-h-[80px]">
 				<img
 					src="/bullet-long.png"
 					alt="Bullet Long"
-					class="absolute top-1/2 -translate-y-1/2 -left-20 w-[1400px] h-[162px]"
+					class="absolute top-0 -left-12 w-[860px] h-[100px]"
 				/>
-				<div class="select-tab absolute top-1/2 -translate-y-1/2 flex gap-x-3.5 items-center text-charcoal text-2xl font-bold font-uni-grotesk">
+				<div class="select-tab absolute top-6 flex gap-x-3.5 items-center text-charcoal text-base font-bold font-effra">
 					<img
 						src="/touch-purple.png"
 						alt="Touch to select tab"
-						class="w-[70px] h-[70px]"
+						class="w-[50px] h-[50px]"
 					/>
-					<span class="text-1">Touch a step to continue</span>
-					<span class="text-2">Select a tab</span>
+					<span class="text-1 max-h-[18px]">Touch a step to continue</span>
+					<span class="text-2 max-h-[18px]">Select a tab</span>
 				</div>
 			</div>
 
-			<section class="relative grid grid-cols-3 flex-1 content-center">
+			<section class="relative flex-1 content-center">
 				<div
 					ref="content"
 					class="flex flex-col gap-y-16"
 				>
-					<the-title>More for your difficult-to-treat patients*</the-title>
-					<div
-						class="relative bg-primary-green px-6 h-[284px] flex flex-col justify-center rounded-[20px] overflow-hidden shadow-zevtera-efficacy-pathogens-card"
-					>
-						<h3 class="text-[32px] font-bold font-stag-sans text-white">
+					<the-h1 class="!text-[40px] !leading-[42px] text-charcoal">More for your difficult-to-treat patients*</the-h1>
+				</div>
+				<div class="grid grid-cols-3">
+					<div class="relative bg-primary-green flex flex-col justify-center rounded-[20px] overflow-hidden shadow-zevtera-efficacy-pathogens-card">
+						<chart-icon
+							width="172"
+							height="171"
+							color="#005522"
+						/>
+						<h3 class="text-[30px] leading-[32px] font-bold font-stag-sans text-white px-[18px] mt-6">
 							Demonstrated<br />
 							efficacy<sup>5,6</sup>
 						</h3>
+					</div>
+					<div
+						ref="bacterialActivity"
+						class="relative bg-primary-green ml-10 rounded-[20px] max-w-[420px] cursor-pointer shadow-zevtera-efficacy-pathogens-card z-50"
+						@click="animateBacterialActivity"
+						@touchstart.prevent="animateBacterialActivity"
+					>
 						<img
-							src="/chart-dark-green.png"
-							alt="Chart Dark Green"
-							class="absolute bottom-0 right-0 h-[255px] w-auto"
+							src="/touch-purple.png"
+							alt="Touch to select tab"
+							class="absolute w-[85px] h-[85px] top-[18px] right-6"
 						/>
+						<img
+							src="/swap-purple.png"
+							alt="Swap"
+							class="absolute w-[85px] h-[85px] top-[18px] right-6 bacterial-swap-card"
+						/>
+						<img
+							src="/arrow-down-dark-green.png"
+							alt="Arrow Down"
+							class="h-[175px] w-auto mt-5"
+						/>
+						<h2 class="text-5xl text-white font-stag-sans font-bold mt-7 pl-7">
+							Fast<br />
+							bactericidal activity
+						</h2>
+						<p class="text-2xl text-white mt-4 font-uni-grotesk pl-7">
+							Exhibits rapid in vitro bactericidal activity in Gram-positive and Gram-negative pathogens<sup class="text-[50%] -top-[0.9em]"
+								>5</sup
+							>
+						</p>
+					</div>
+					<div
+						ref="clinicalEfficacy"
+						class="relative bg-primary-green rounded-[20px] overflow-hidden max-w-[420px] cursor-pointer shadow-zevtera-efficacy-pathogens-card z-50"
+						@click="animateClinicalEfficacy"
+						@touchstart.prevent="animateClinicalEfficacy"
+					>
+						<img
+							src="/touch-purple.png"
+							alt="Touch to select tab"
+							class="absolute w-[85px] h-[85px] top-[18px] right-6"
+						/>
+						<img
+							src="/swap-purple.png"
+							alt="Swap"
+							class="absolute w-[85px] h-[85px] top-[18px] right-6 clinical-swap-card"
+						/>
+						<img
+							src="/up-arrows-dark-green.png"
+							alt="Arrow Down"
+							class="h-[225px] w-auto mt-[22px] ml-7"
+						/>
+						<h2 class="text-5xl text-white font-stag-sans font-bold mt-7 pl-7">Clinical efficacy from Days 3-4</h2>
+						<p class="text-2xl text-white mt-4 font-uni-grotesk pl-7 pr-4">
+							Early improvement at D3 in patients with CAP and at D4 in patients with HAP (CE)<sup class="text-[50%] -top-[0.9em]">6</sup>
+						</p>
 					</div>
 				</div>
-				<div
-					ref="bacterialActivity"
-					class="relative bg-primary-green ml-10 rounded-[20px] max-w-[420px] cursor-pointer shadow-zevtera-efficacy-pathogens-card z-50"
-					@click="animateBacterialActivity"
-					@touchstart.prevent="animateBacterialActivity"
-				>
-					<img
-						src="/touch-purple.png"
-						alt="Touch to select tab"
-						class="absolute w-[85px] h-[85px] top-[18px] right-6"
-					/>
-					<img
-						src="/swap-purple.png"
-						alt="Swap"
-						class="absolute w-[85px] h-[85px] top-[18px] right-6 bacterial-swap-card"
-					/>
-					<img
-						src="/arrow-down-dark-green.png"
-						alt="Arrow Down"
-						class="h-[175px] w-auto mt-5"
-					/>
-					<h2 class="text-5xl text-white font-stag-sans font-bold mt-7 pl-7">
-						Fast<br />
-						bactericidal activity
-					</h2>
-					<p class="text-2xl text-white mt-4 font-uni-grotesk pl-7">
-						Exhibits rapid in vitro bactericidal activity in Gram-positive and Gram-negative pathogens<sup class="text-[50%] -top-[0.9em]">5</sup>
-					</p>
-				</div>
-				<div
-					ref="clinicalEfficacy"
-					class="relative bg-primary-green rounded-[20px] overflow-hidden max-w-[420px] cursor-pointer shadow-zevtera-efficacy-pathogens-card z-50"
-					@click="animateClinicalEfficacy"
-					@touchstart.prevent="animateClinicalEfficacy"
-				>
-					<img
-						src="/touch-purple.png"
-						alt="Touch to select tab"
-						class="absolute w-[85px] h-[85px] top-[18px] right-6"
-					/>
-					<img
-						src="/swap-purple.png"
-						alt="Swap"
-						class="absolute w-[85px] h-[85px] top-[18px] right-6 clinical-swap-card"
-					/>
-					<img
-						src="/up-arrows-dark-green.png"
-						alt="Arrow Down"
-						class="h-[225px] w-auto mt-[22px] ml-7"
-					/>
-					<h2 class="text-5xl text-white font-stag-sans font-bold mt-7 pl-7">Clinical efficacy from Days 3-4</h2>
-					<p class="text-2xl text-white mt-4 font-uni-grotesk pl-7 pr-4">
-						Early improvement at D3 in patients with CAP and at D4 in patients with HAP (CE)<sup class="text-[50%] -top-[0.9em]">6</sup>
-					</p>
-				</div>
+
 				<div
 					ref="bacterialActivityDetails"
 					class="flex flex-col gap-y-5 pl-[260px] pt-14 pb-8 absolute top-1/2 -translate-y-1/2 left-[190px] right-[60px] bg-white z-10 rounded-[30px] overflow-hidden shadow-zevtera-efficacy-card"
@@ -249,9 +252,16 @@ import { useAnimateSelectTab } from '@/composables/useAnimateSelectTab.js';
 import ChartA from '/zevtera-efficacy-day-3.png';
 import ChartB from '/zevtera-efficacy-day-4.png';
 
+import ChartIcon from '@/icons/ChartIcon.vue';
+
 import TheFooter from '@/components/TheFooter.vue';
 import TheTitle from '@/components/zevtera/TheTitle.vue';
+
+import TheH1 from '@/components/zevtera/TheH1.vue';
+import TheBody from '@/components/zevtera/TheBody.vue';
+import TheBodyLg from '@/components/zevtera/TheBodyLg.vue';
 import ExploreAnother from '@/components/ExploreAnother.vue';
+import TheFootnotes from '@/components/zevtera/TheFootnotes.vue';
 
 const clinicalEfficacyTabs = Object.freeze({
 	DAY_3: 1,
