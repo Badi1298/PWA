@@ -35,14 +35,19 @@
 				</div>
 			</div>
 
-			<section class="relative flex-1 content-center">
+			<section class="relative flex-1 content-end pb-6">
 				<div
 					ref="content"
-					class="flex flex-col gap-y-16"
+					class="flex flex-col gap-y-6"
 				>
+					<img
+						src="/zevtera-mabelio-logo.png"
+						alt="Zevevtra Mabelio Logo"
+						class="w-[290px]"
+					/>
 					<the-h1 class="!text-[40px] !leading-[42px] text-charcoal">More for your difficult-to-treat patients*</the-h1>
 				</div>
-				<div class="grid grid-cols-3 min-h-[380px] gap-x-[18px]">
+				<div class="grid grid-cols-3 min-h-[380px] gap-x-[18px] mt-6">
 					<div class="relative bg-primary-green flex flex-col justify-end pb-12 rounded-[20px] overflow-hidden card">
 						<chart-icon
 							width="172"
@@ -56,7 +61,7 @@
 					</div>
 					<div
 						ref="bacterialActivity"
-						class="relative bg-primary-green rounded-[20px] max-w-[420px] cursor-pointer card z-50"
+						class="relative flex flex-col justify-between bg-primary-green rounded-[20px] max-w-[420px] cursor-pointer card z-50"
 						@click="animateBacterialActivity"
 						@touchstart.prevent="animateBacterialActivity"
 					>
@@ -73,18 +78,20 @@
 						<img
 							src="/arrow-down-dark-green.png"
 							alt="Arrow Down"
-							class="w-[190px] mt-5"
+							class="h-[114px] w-fit mt-[38px]"
 						/>
-						<h2 class="text-[30px] leading-[32px] text-white font-stag-sans font-bold mt-7 pl-7">Fast bactericidal activity</h2>
-						<p class="text-base text-white mt-4 font-uni-grotesk pl-7">
-							Exhibits rapid in vitro bactericidal activity in Gram-positive and Gram-negative pathogens<sup class="text-[50%] -top-[0.9em]"
-								>5</sup
-							>
-						</p>
+						<div class="flex flex-col pb-11">
+							<h2 class="text-[30px] leading-[32px] text-white font-stag-sans font-bold pl-[18px]">Fast bactericidal activity</h2>
+							<p class="text-[15.6px] leading-[19px] text-white mt-1.5 font-uni-grotesk pl-[18px]">
+								Exhibits rapid in vitro bactericidal activity in Gram-positive and Gram-negative pathogens<sup class="text-[50%] -top-[0.9em]"
+									>5</sup
+								>
+							</p>
+						</div>
 					</div>
 					<div
 						ref="clinicalEfficacy"
-						class="relative bg-primary-green rounded-[20px] overflow-hidden max-w-[420px] cursor-pointer card z-50"
+						class="relative flex flex-col justify-between bg-primary-green rounded-[20px] overflow-hidden max-w-[420px] cursor-pointer card z-50"
 						@click="animateClinicalEfficacy"
 						@touchstart.prevent="animateClinicalEfficacy"
 					>
@@ -101,12 +108,14 @@
 						<img
 							src="/up-arrows-dark-green.png"
 							alt="Arrow Down"
-							class="w-[140px] mt-[22px] ml-7"
+							class="w-[140px] mt-[42px] ml-7"
 						/>
-						<h2 class="text-[30px] leading-[32px] text-white font-stag-sans font-bold mt-7 pl-7">Clinical efficacy from Days 3-4</h2>
-						<p class="text-base text-white mt-4 font-uni-grotesk pl-7 pr-4">
-							Early improvement at D3 in patients with CAP and at D4 in patients with HAP (CE)<sup class="text-[50%] -top-[0.9em]">6</sup>
-						</p>
+						<div class="flex flex-col pb-11 pl-[18px]">
+							<h2 class="text-[30px] leading-[32px] text-white font-stag-sans font-bold">Clinical efficacy from Days 3-4</h2>
+							<p class="text-[15.6px] leading-[19px] text-white mt-1.5 font-uni-grotesk pr-4">
+								Early improvement at D3 in patients with CAP and at D4 in patients with HAP (CE)<sup class="text-[50%] -top-[0.9em]">6</sup>
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -217,8 +226,10 @@
 			</section>
 		</div>
 
-		<footer class="relative pb-6">
-			<the-footer class="footer mb-8">*Patients' groups who are severely ill or at high risk of poor outcomes</the-footer>
+		<footer class="relative pb-[30px]">
+			<the-footnotes class="footer mb-[42px] text-[#555555] opacity-70"
+				>*Patients' groups who are severely ill or at high risk of poor outcomes</the-footnotes
+			>
 			<explore-another />
 			<button
 				class="absolute left-1/2 bottom-0"
@@ -228,7 +239,7 @@
 				<img
 					src="/page-vertical-down-purple.png"
 					alt="Down Button"
-					class="w-[140px] h-[50px] cursor-pointer"
+					class="w-[84px] h-[30px] cursor-pointer"
 				/>
 			</button>
 		</footer>
