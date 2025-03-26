@@ -66,6 +66,49 @@
 				<div class="flex gap-x-2.5 mt-10">
 					<div class="relative flex flex-col items-center bg-white shadow-exblifep-card w-[276px] rounded-lg min-h-[145px] pb-[18px] px-5">
 						<div class="flex justify-center pt-1.5 bg-white absolute w-[76px] h-[76px] left-1/2 -translate-x-1/2 -top-[38px] rounded-full">
+							<chart-icon
+								width="40"
+								height="40"
+							/>
+						</div>
+						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Efficacy</the-body-lg>
+						<div class="flex flex-col flex-1 justify-between items-center mt-1">
+							<the-body-lg class="text-center"
+								>Demonstrated efficacy with clinical efficacy from Days 3-4, with more pathogens covered<sup class="text-[61%]"
+									>5-8</sup
+								></the-body-lg
+							>
+							<button
+								class="bg-primary-green w-[125px] py-[9px]"
+								@click="router.push({ name: 'exblifep-efficacy' })"
+								@touchstart.prevent="router.push({ name: 'exblifep-efficacy' })"
+							>
+								<the-body class="text-white">Discover more</the-body>
+							</button>
+						</div>
+					</div>
+					<div class="relative flex flex-col items-center bg-white shadow-exblifep-card w-[276px] rounded-lg min-h-[145px] pb-[18px] px-5">
+						<div class="flex justify-center pt-1.5 bg-white absolute w-[76px] h-[76px] left-1/2 -translate-x-1/2 -top-[38px] rounded-full">
+							<shield-icon
+								width="40"
+								height="40"
+								color="#EF7B00"
+							/>
+						</div>
+						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Safety</the-body-lg>
+						<div class="flex flex-col flex-1 justify-between items-center mt-1">
+							<the-body-lg class="text-center">ZEVTERA®/MABELIO® is generally well tolerated<sup class="text-[61%]">9</sup></the-body-lg>
+							<button
+								class="bg-primary-green w-[125px] py-[9px]"
+								@click="router.push({ name: 'exblifep-efficacy' })"
+								@touchstart.prevent="router.push({ name: 'exblifep-efficacy' })"
+							>
+								<the-body class="text-white">Discover more</the-body>
+							</button>
+						</div>
+					</div>
+					<div class="relative flex flex-col items-center bg-white shadow-exblifep-card w-[276px] rounded-lg min-h-[145px] pb-[18px] px-5">
+						<div class="flex justify-center pt-1.5 bg-white absolute w-[76px] h-[76px] left-1/2 -translate-x-1/2 -top-[38px] rounded-full">
 							<chart-icon class="w-10 h-10" />
 						</div>
 						<the-body-lg class="relative !text-base font-bold z-20 max-h-[18px] mt-[18px]">Efficacy</the-body-lg>
