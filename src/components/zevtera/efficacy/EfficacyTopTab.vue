@@ -118,42 +118,42 @@
 
 				<div
 					ref="bacterialActivityDetails"
-					class="flex flex-col gap-y-5 pl-[260px] pt-14 pb-8 absolute top-1/2 -translate-y-1/2 left-[190px] right-[60px] bg-white z-10 rounded-[30px] overflow-hidden shadow-zevtera-efficacy-card"
+					class="flex flex-col gap-y-5 absolute top-1/2 -translate-y-1/2 bg-white z-10 rounded-[30px] overflow-hidden shadow-zevtera-efficacy-card h-[570px] w-[865px] py-7 px-8"
 				>
-					<h2 class="text-[32px] font-bold font-stag-sans leading-tight text-charcoal pr-3">
+					<the-h1 class="text-charcoal pr-3">
 						ZEVTERA®/ MABELIO® exhibits rapid in vitro bactericidal<br />
 						activity in Gram-positive and Gram-negative pathogens<sup>5</sup>
-					</h2>
-					<div class="flex justify-center mr-5 gap-x-28">
-						<div>
-							<h3 class="text-2xl font-uni-grotesk italic mb-2.5 text-center">Staphylococcus aureus*</h3>
+					</the-h1>
+					<div class="flex justify-center items-end mr-5 gap-x-28">
+						<div class="flex flex-col justify-between h-[284px]">
+							<h3 class="text-[11px] font-uni-grotesk italic text-center">Staphylococcus aureus*</h3>
 							<img
 								src="/bacterial-activity-sa.png"
 								alt="Bacterial Activity"
-								class="h-[420px] w-auto"
+								class="h-[260px] w-auto"
 							/>
 						</div>
-						<div class="flex flex-col">
-							<h3 class="text-2xl font-uni-grotesk italic mb-2.5 text-center">Escherichia coli*</h3>
+						<div class="flex flex-col justify-between h-[284px]">
+							<h3 class="text-[11px] font-uni-grotesk italic text-center">Escherichia coli*</h3>
 							<img
 								src="/bacterial-activity-ec.png"
 								alt="Bacterial Activity"
-								class="max-h-[400px] w-auto flex-1 mt-auto"
+								class="h-[247px] w-auto"
 							/>
 						</div>
 					</div>
-					<footer class="text-[10px] text-[#555] mt-4 mr-12 font-uni-grotesk">
-						Adapted from Hebeisen P et al. 2001<sup>5</sup><br /><br />*Overnight cultures of <span class="italic">E. coli</span> and MSSA/MRSA test
-						strain were grown in 30 mL of Mueller-Hinton broth and diluted into fresh medium to yield an inoculum of 10<sup>6</sup> CFU/mL or
-						higher. Drug was added either with<br />
-						the inoculumor at intervals of 1.5 hours (early log phase) and 3 hours (log phase) after its addition. Drug concentrations of 2 times
-						the MIC were used. Ten-microlitre aliquots of appropriate dilutions were plated on Mueller-Hinton agar (MHA), and colonies were counted
-						after 24 hours of incubation. To check if resistant clones had been selected, the MICs were determined for those cultures that showed
-						growth after 24 hours. Bactericidal activity wasdefined by a ≥ 3-log<sub>10</sub> decrease in the number of CFU/mL within 24 hours.<sup
-							>5</sup
-						><br />
-						CFU, colony-forming unit; MIC, minimum inhibitory concentration; MRSA, Methicillin-resistant <span class="italic">S. aureus</span>;
-						MSSA, Methicillin-susceptible <span class="italic">S. aureus</span>.
+					<footer class="text-[10px] leading-[12px] text-[#555] opacity-80 mt-9 font-uni-grotesk">
+						Adapted from Hebeisen P et al. 2001<sup class="-top-[0.6em]">5</sup><br /><br />
+						*Overnight cultures of E. coli and MSSA/MRSA test strain were grown in 30 mL of Mueller-Hinton broth and diluted into fresh medium to
+						yield an inoculum of 106 CFU/mL or higher. Drug<br />
+						was added either with the inoculumor at intervals of 1.5 hours (early log phase) and 3 hours (log phase) after its addition. Drug
+						concentrations of 2 times the MIC were used. Ten-microlitre<br />
+						aliquots of appropriate dilutions were plated on Mueller-Hinton agar (MHA), and colonies were counted after 24 hours of incubation. To
+						check if resistant clones had been selected, the MICs<br />
+						were determined for those cultures that showed growth after 24 hours. Bactericidal activity was defined by a ≥ 3-log<sub>10</sub>
+						decrease in the number of CFU/mL within 24 hours.<sup class="-top-[0.6em]">5</sup><br />
+						CFU, colony-forming unit; MIC, minimum inhibitory concentration; MRSA, Methicillin-resistant S. aureus; MSSA, Methicillin-susceptible S.
+						aureus.
 					</footer>
 				</div>
 				<div
@@ -328,7 +328,7 @@ const animateSection = ({ activeRef, detailsRef }) => {
 	const tl = gsap.timeline();
 	const isActive = activeRef.value;
 
-	const detailsScaleConfif = {
+	const detailsScaleConfig = {
 		scale: isActive ? 0 : 1,
 		zIndex: isActive ? 10 : 999,
 		duration: 0.7,
@@ -336,9 +336,9 @@ const animateSection = ({ activeRef, detailsRef }) => {
 	};
 
 	if (isActive) {
-		tl.to(detailsRef.value, detailsScaleConfif);
+		tl.to(detailsRef.value, detailsScaleConfig);
 	} else {
-		tl.to(detailsRef.value, detailsScaleConfif);
+		tl.to(detailsRef.value, detailsScaleConfig);
 	}
 
 	return tl;
